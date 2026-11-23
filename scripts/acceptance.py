@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install into a new study and exercise the public user path without accounts."""
+"""Exercise the checkout's evidence checks on a fresh study without accounts."""
 import json
 from pathlib import Path
 import shutil
@@ -26,12 +26,11 @@ def main():
         dest = p / 'research'
         dest.mkdir()
         research = EXAMPLE / 'research'
-        run(ROOT / 'ai4sci.py', 'init', p, cwd=p)
-        kit = p / '.ai4sci-kit' / 'ai4sci.py'
+        kit = ROOT / 'ai4sci.py'
         for name in ('trapezoid-note.md', 'left-note.md', 'plan.json'):
             shutil.copy2(research / name, dest / name)
         shutil.copy2(EXAMPLE / 'run.py', p)
-        run(kit, 'freeze', '.', cwd=p)
+        run(kit, 'freeze', p, cwd=ROOT)
         run('run.py', cwd=p)
         for name in ('results.csv', 'errors.svg', 'run.json'):
             if (dest / name).read_bytes() != (research / name).read_bytes():
@@ -41,7 +40,7 @@ def main():
         report = json.loads(run(kit, 'audit', '.', cwd=p))
         if report['deliverability'] != 'ready':
             sys.exit(str(report))
-        print('PASS | installed kit: fresh computation, CSV/SVG/run match, manuscript ready')
+        print('PASS | checkout CLI: fresh computation, CSV/SVG/run match, manuscript ready')
         paper = dest / 'paper.md'
         original = paper.read_text()
         paper.write_text(original.replace('0.3359375', '0.7359375'))

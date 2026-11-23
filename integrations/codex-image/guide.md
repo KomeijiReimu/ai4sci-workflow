@@ -6,14 +6,15 @@
 
 使用 Python 3.11 或更高版本、Pillow 和支持 `app-server --listen stdio://` 的 [Codex CLI](https://github.com/openai/codex)。在本机运行 `codex login`，登录有原生图像生成权限的账号。生图使用该账号的额度；只提交可以交由服务商处理的提示词和参考图。
 
-在已安装工作流的**课题根目录**打开终端。若当前 Python 环境缺少 Pillow，在虚拟环境中运行 `python3 -m pip install Pillow`。先检查本地依赖和登录状态：
+在**课题目录**打开终端。将下面的 `/path/to/ai4sci-workflow` 换成工作流仓库的绝对路径。工具从仓库运行，任务记录和图片保存在当前课题。若当前 Python 环境缺少 Pillow，在虚拟环境中运行 `python3 -m pip install Pillow`。
 
 ```sh
-bridge=.ai4sci-kit/integrations/codex-image
+bridge="/path/to/ai4sci-workflow/integrations/codex-image"
+export CODEX_IMAGE2_PROJECT_DIR="$PWD"
 python3 "$bridge/cli.py" doctor
 ```
 
-在工作流仓库中直接使用时，将 `bridge` 设为 `integrations/codex-image`。`doctor` 只做本地检查。准备好提示词后，提交一次：
+`doctor` 检查本地依赖和登录状态。准备好提示词后，提交一次：
 
 ```sh
 python3 "$bridge/cli.py" generate '绘制数据分析流程示意图，从左到右依次为采样、校准、估计。用箭头连接三个步骤，在校准步骤下方标出参考样本。'
@@ -36,11 +37,11 @@ python3 "$bridge/cli.py" status JOB_ID --wait 20
 
 ## 在 OpenCode 中调用（可选）
 
-要让 OpenCode 通过 MCP 使用同一套生图工具，在课题根目录用装有 Pillow 的 Python 注册本地服务：
+若希望通过 MCP 调用生图工具，可在课题目录显式添加本地服务。这一步会修改该项目的 OpenCode 配置。沿用上面的 `bridge` 路径和装有 Pillow 的 Python：
 
 ```sh
 opencode mcp add codex-image --env "CODEX_IMAGE2_PROJECT_DIR=$PWD" -- \
-  "$(command -v python3)" "$PWD/.ai4sci-kit/integrations/codex-image/server.py"
+  "$(command -v python3)" "$bridge/server.py"
 opencode mcp list
 ```
 
@@ -51,9 +52,8 @@ payload=$(python3 -c '
 import json, sys
 from pathlib import Path
 root = Path.cwd()
-script = root / ".ai4sci-kit/integrations/codex-image/server.py"
-print(json.dumps({"config": {"type": "local", "command": [sys.executable, str(script)],
-                             "environment": {"CODEX_IMAGE2_PROJECT_DIR": str(root)}}}))')
+print(json.dumps({"config": {"type": "local", "command": [sys.executable, sys.argv[1]],
+                             "environment": {"CODEX_IMAGE2_PROJECT_DIR": str(root)}}}))' "$bridge/server.py")
 opencode api PUT /api/experimental/mcp/codex-image --data "$payload" && opencode mcp list
 ```
 

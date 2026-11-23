@@ -5,7 +5,9 @@ description: Route a computational research project from a question or idea thro
 
 # Run a study
 
-Determine the requested deliverable, existing inputs, compute budget and actual project directory. Reply and write in the requested language. For a literature-only task stop at a sourced synthesis; for an idea screen stop after the cheapest decisive test. For a full study deliver the manuscript, raw outputs, commands and evidence review. When resuming, read the files in `research/` first; do not rerun completed jobs on the strength of a chat summary.
+Identify two paths. `KIT` is the workflow checkout containing this file at `skills/ai4sci/SKILL.md`. `STUDY` is the named `studies/<topic>/` in that checkout, or the user's current external project. When an external session receives a path to this file, read any needed stage instructions directly from `$KIT/skills/<name>/SKILL.md`. Do not install the kit, copy skills or alter project configuration. Give both resolved paths to collaborators, run experiments from `STUDY`, and keep all research outputs there.
+
+Determine the requested deliverable, existing inputs and compute budget. Reply and write in the requested language. For a literature-only task stop at a sourced synthesis; for an idea screen stop after the cheapest decisive test. For a full study deliver the manuscript, raw outputs, commands and evidence review. When resuming, read the study's `research/` files first; do not rerun completed jobs on the strength of a chat summary.
 
 1. Use `ai4sci-idea` for a broad direction or a novelty check. Bring the chosen question and the closest existing result to the design stage.
 2. Use `ai4sci-experiment` to agree on what would answer the question, freeze the plan, run a pilot, then run the declared comparison. In a reproduction, match the source's conditions and disclose substitutions. Keep valid negative results.
@@ -20,4 +22,4 @@ Determine the requested deliverable, existing inputs, compute budget and actual 
 
 ## Files and commands
 
-The full local installation supplies `.ai4sci-kit/ai4sci.py`, `.ai4sci-kit/templates/` and `.ai4sci-kit/checks/contract.md`; use `ai4sci.py`, `templates/`, `checks/contract.md` when running from the distribution checkout. The study lives in the user's project, not in the toolkit. Start with `research/plan.json`; keep `run.json`, raw files, `claims.json` and `paper.md` there. Use `python3 .ai4sci-kit/ai4sci.py freeze .` before formal execution and `python3 .ai4sci-kit/ai4sci.py audit .` after drafting. A skills-only installation has instructions but not these executables: do not report an audit that was not run.
+Read `$KIT/checks/contract.md` and consult `$KIT/templates/plan.json` when preparing a formal study. Write the study's own `research/plan.json`, `run.json`, raw files, `claims.json` and `paper.md` under `STUDY`. With `KIT` and `STUDY` set to their actual paths, run `python3 "$KIT/ai4sci.py" freeze "$STUDY"` before the formal experiment and `python3 "$KIT/ai4sci.py" audit "$STUDY"` after drafting. Report the result of the check that actually ran.

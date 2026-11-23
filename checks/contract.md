@@ -1,6 +1,6 @@
 # Offline research audit
 
-The audit checks a frozen plan, a run record, and the evidence for marked statements in a manuscript. From the workflow checkout, run `python3 checks/audit.py PROJECT` (Python 3.9+, standard library). From an installed study root, run `python3 .ai4sci-kit/ai4sci.py audit .` (Python 3.10+). Paths inside the manifests are relative to the study root.
+The audit checks a frozen plan, a run record and the evidence for marked statements in a manuscript. With Python 3.10 or later, run `python3 ai4sci.py audit PROJECT` from the workflow checkout. `PROJECT` is the study directory, for example `studies/my-study` or an absolute path to an external study. From the study itself, run `python3 /path/to/ai4sci-workflow/ai4sci.py audit .` using the actual checkout path. Paths inside the manifests are always relative to the study root.
 
 ## Minimal study
 
@@ -10,7 +10,7 @@ The audit checks a frozen plan, a run record, and the evidence for marked statem
 {"question":"What is the estimate at the agreed sample size?","criteria":[{"id":"estimate","description":"Report the estimate and identify the method."}]}
 ```
 
-Before running the experiment, record the plan digest with `python3 ai4sci.py freeze PROJECT` from the checkout, or `python3 .ai4sci-kit/ai4sci.py freeze .` from the installed study root. This creates `research/plan.sha256`.
+Before running the experiment, record the plan digest with `python3 ai4sci.py freeze PROJECT` from the checkout. This creates `research/plan.sha256` in the study directory.
 
 `research/results.csv`:
 
@@ -75,7 +75,7 @@ Stdout is a JSON object. `run` describes the **audit**. `scientific_run` reports
 
 ## Compare two CSV outputs
 
-Reference and actual must be distinct files, not two paths (including symlinks or hardlinks) to the same file. Distinct files may contain identical data.
+From the workflow checkout, pass the paths of the two study outputs to `checks/compare.py`. The reference and actual outputs must be distinct files, even when their contents are identical.
 
 ```sh
 python3 checks/compare.py expected.csv actual.csv --id sample --column estimate --atol 0.001 --rtol 0.01

@@ -5,7 +5,6 @@
 .slim/deepwork/
 .codegraph/
 .local/
-.ai4sci-kit/
 /repositories/
 __pycache__/
 *.py[cod]

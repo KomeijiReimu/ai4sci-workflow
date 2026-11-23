@@ -2,15 +2,17 @@
 
 ## Run the two-note study with your model
 
-From the workflow checkout, run:
+Create `studies/integration-review/` in the workflow checkout. Put the [two integration notes](../examples/opencode-study/inputs/) in that directory as your source materials. Start `opencode` from the checkout root and ask:
+
+> Read `skills/ai4sci/SKILL.md` and the stage instructions it refers to. Use `studies/integration-review/` as the working directory. Using only the two notes as sources, choose an error prediction to test on uniform grids. Set the criteria before the run, use a CPU and the Python standard library, and write a short paper in Chinese. Have another reviewer recompute the main results. Save the experiment, data, figure, paper and review in the study directory.
+
+The notes supply the mathematical derivations. The experiment should compute the estimates on each grid and compare them with the predictions. Read `studies/integration-review/research/paper.md` and use the checkout's verifier to check the registered claims:
 
 ```sh
-python3 scripts/live_study.py .local/study-01
+python3 ai4sci.py audit studies/integration-review
 ```
 
-Use a directory that does not already exist. The script needs Git and OpenCode on `PATH` and uses your configured model account. It installs the kit in a new study, copies the two numerical integration notes and gives OpenCode the [original task](../examples/opencode-study/REQUEST.md). The notes contain the mathematical derivations; the model supplies the experiment, results and manuscript.
-
-On success, read `.local/study-01/study/research/paper.md` and `.local/study-01/audit.json`. The latter comes from the checker in the workflow checkout. To select a model, pass `--model provider/model`; `--timeout SECONDS` limits how long the script waits for OpenCode. If the run stops, its files and logs remain in `.local/study-01/`. Check them before starting another run. Keep the session logs private.
+The [archived study](../examples/opencode-study/REQUEST.md) includes a manuscript, raw data and an independent recalculation for comparison after the run.
 
 ## Compare two workflows
 
