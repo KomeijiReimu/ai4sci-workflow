@@ -4,6 +4,7 @@ Upstream revision, original paths and license: integrations/codex-image/guide.md
 """
 
 import base64
+from contextlib import ExitStack
 import importlib.util
 import json
 import os
@@ -30,11 +31,13 @@ class CodexImageTests(unittest.TestCase):
     def setUp(self):
         tmp = ROOT / '.local' / 'codex-image' / 'test-tmp'
         tmp.mkdir(parents=True, exist_ok=True)
-        self.project = Path(self.enterContext(tempfile.TemporaryDirectory(dir=tmp)))
+        contexts = ExitStack()
+        self.addCleanup(contexts.close)
+        self.project = Path(contexts.enter_context(tempfile.TemporaryDirectory(dir=tmp)))
         self.state = self.project / '.local' / 'codex-image'
         self.out = self.state / 'images' / 'out.png'
         for name, value in [('PROJECT_DIR', self.project), ('STATE_DIR', self.state), ('JOBS_DIR', self.state / 'jobs')]:
-            self.enterContext(mock.patch.object(MODULE, name, value))
+            contexts.enter_context(mock.patch.object(MODULE, name, value))
 
     def test_stdio_discovery(self):
         messages = [{'jsonrpc': '2.0', 'id': i, 'method': m} for i, m in enumerate(['initialize', 'tools/list'], 1)]
