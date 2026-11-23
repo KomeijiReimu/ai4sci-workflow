@@ -1,0 +1,67 @@
+{
+  "status": "completed",
+  "plan_sha256": "d61b75fe9dcbcb7af744e72a8acdc1f102910b668b150c19be34d3f7b0a303ab",
+  "pilot": {
+    "command": "python3 research/experiment.py --pilot",
+    "panels": 2,
+    "reference": "1/3",
+    "absolute_tolerance": 1e-15,
+    "results": {
+      "trapezoid": {
+        "estimate": 0.375,
+        "expected": 0.375,
+        "signed_error": 0.041666666666666685,
+        "expected_error_sign": 1,
+        "estimate_matches": true,
+        "error_sign_matches": true
+      },
+      "left": {
+        "estimate": 0.125,
+        "expected": 0.125,
+        "signed_error": -0.20833333333333331,
+        "expected_error_sign": -1,
+        "estimate_matches": true,
+        "error_sign_matches": true
+      }
+    },
+    "passed": true,
+    "exit_code": 0
+  },
+  "command": "python3 research/experiment.py",
+  "plot_command": "python3 research/plot_errors.py",
+  "environment": {
+    "python": "3.11.14 (main, Jan 14 2026, 13:59:47) [GCC 14.2.0]",
+    "device": "CPU",
+    "dependencies": "Python standard library"
+  },
+  "arms": [
+    {
+      "id": "trapezoid",
+      "conditions": {
+        "integrand": "x^2",
+        "interval": "[0,1]",
+        "panel_counts": "8,16,32,64,128,256",
+        "reference": "1/3"
+      }
+    },
+    {
+      "id": "left",
+      "conditions": {
+        "integrand": "x^2",
+        "interval": "[0,1]",
+        "panel_counts": "8,16,32,64,128,256",
+        "reference": "1/3"
+      }
+    }
+  ],
+  "sha256": {
+    "research/results.csv": "0b773cda10c9ecc16a6705935ba3c89dd02d5d4b021fa658eaf50b7941131031",
+    "research/consistency.csv": "886492a5d3488339fb6d6416bf881e6894723452052aeff5c5e23a5e1e1cb61f",
+    "research/error.svg": "0a4737ac4d8e3c19a34acd744025625d31a34ea2d3ac709b4b60f0988f0b1929"
+  },
+  "outputs": [
+    "research/results.csv",
+    "research/consistency.csv",
+    "research/error.svg"
+  ]
+}

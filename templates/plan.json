@@ -1,0 +1,10 @@
+{
+  "question": "Replace with the scientific question and target population or system.",
+  "design": "Replace with the strongest feasible baseline, what stays fixed, and a falsifying observation.",
+  "evaluation": "Replace with the split or reference, primary metric, units, tolerance and stopping rule.",
+  "data_already_inspected": "State what was seen before this plan; identify retrospective criteria.",
+  "budget": "Specify permitted data, execution budget and external services.",
+  "criteria": [
+    {"id": "K1", "description": "Replace with a measurable criterion and its required evidence."}
+  ]
+}

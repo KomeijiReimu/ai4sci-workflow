@@ -1,0 +1,18 @@
+{
+  "question": "How does doubling the panel count change the absolute integration errors of trapezoid and left-endpoint sums for x² on [0,1]?",
+  "hypotheses": [
+    "The composite trapezoid estimate exceeds 1/3 by 1/(6n²); doubling n gives observed order two.",
+    "Left-endpoint sums converge from below with order approaching one, not two."
+  ],
+  "protocol": [
+    "Use n = 4, 8, 16, 32, 64 equal panels, in that order. Evaluate f(x) = x*x at mesh points and compute each weighted sum directly in Python, not from the error formula.",
+    "Use 1/3 as the reference. For each method record absolute error E(n); from the second row onward compute p(n) = log2(E(n/2)/E(n)). Leave the first order fields blank.",
+    "Compare trapezoid signed errors with the independently derived formula at every n. Compare observed orders with the declared intervals below; retain the left sums as a negative control on the same mesh.",
+    "Save CSV and plot the two absolute-error series on log scales. Reproduce both artifacts and the completion record byte-for-byte from a clean directory."
+  ],
+  "criteria": [
+    {"id": "K1", "description": "Derive the exact reference and signed trapezoid error. On every sampled mesh the signed difference estimate minus 1/3 must match 1/(6n²) within 1e-14 absolute."},
+    {"id": "K2", "description": "All four trapezoid orders must be within 1e-9 of two."},
+    {"id": "K3", "description": "Left estimates must stay below 1/3 and absolute errors must decrease. All four left orders must lie in [0.9, 1.1], excluding two."}
+  ]
+}

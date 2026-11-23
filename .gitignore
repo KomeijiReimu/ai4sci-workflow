@@ -1,0 +1,14 @@
+# Local development, agent state, and comparison clones
+.tokpulse/
+.cortexkit/
+.slim/
+.slim/deepwork/
+.codegraph/
+.local/
+.ai4sci-kit/
+/repositories/
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*

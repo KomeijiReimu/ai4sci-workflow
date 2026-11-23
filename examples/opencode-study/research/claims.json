@@ -1,0 +1,45 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "K1",
+      "statement": "由原函数在积分端点作差，得到本题的解析参考值 1/3。",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "inputs/trapezoid-note.md", "quote": "An antiderivative of x² is x³/3. Evaluation at 1 and 0 gives the integral 1/3.", "displays": ["1", "3"]}
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "K2",
+      "statement": "复合梯形法在 n=256 的带符号误差为 +2.54313e-6，经验阶为 2.00000，符合冻结的二阶判据。",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"method": "trapezoid", "n": "256"}, "column": "signed_error", "value": 2.54313e-6, "display": "+2.54313e-6", "atol": 5e-12},
+        {"kind": "number", "path": "research/results.csv", "key": {"method": "trapezoid", "n": "256"}, "column": "order", "value": 2.0, "display": "2.00000", "atol": 0.000005}
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "K3",
+      "statement": "左端点矩形法在 n=256 的带符号误差为 -1.95058e-3，经验阶为 0.99812，符合冻结的一阶判据。",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"method": "left", "n": "256"}, "column": "signed_error", "value": -1.95058e-3, "display": "-1.95058e-3", "atol": 5e-9},
+        {"kind": "number", "path": "research/results.csv", "key": {"method": "left", "n": "256"}, "column": "order", "value": 0.99812, "display": "0.99812", "atol": 0.000005}
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "K4",
+      "statement": "在全部正式网格上，梯形法、左端点法的带符号误差相对各自解析式的最大绝对偏差分别为 1.865e-17 和 2.082e-17，均在冻结容差内，且两组各网格的符号均与解析预测一致。",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/consistency.csv", "key": {"method": "trapezoid"}, "column": "max_abs_discrepancy", "value": 1.865e-17, "display": "1.865e-17", "atol": 5e-21},
+        {"kind": "number", "path": "research/consistency.csv", "key": {"method": "left"}, "column": "max_abs_discrepancy", "value": 2.082e-17, "display": "2.082e-17", "atol": 5e-21},
+        {"kind": "quote", "path": "research/consistency.csv", "quote": "trapezoid,1.8648277366750676e-17,True,True,"},
+        {"kind": "quote", "path": "research/consistency.csv", "quote": "left,2.0816681711721685e-17,True,True,"}
+      ]
+    }
+  ]
+}

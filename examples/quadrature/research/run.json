@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "command": "python3 run.py",
+  "outputs": [
+    "research/results.csv",
+    "research/errors.svg"
+  ],
+  "sha256": {
+    "research/results.csv": "4194c6afa0cbeb02ec8b6a7606a75f788088f8ba63b7845aa348ec4a6c006064",
+    "research/errors.svg": "164e27641272558cbe373cdf1c94439358e6ba9e492a6e63958c7f70f06463e1"
+  }
+}

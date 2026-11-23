@@ -1,0 +1,22 @@
+name: Offline research checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install image decoder for integration tests
+        run: python -m pip install Pillow
+      - name: Tests and clean-project reproduction
+        run: |
+          mkdir -p .local/tmp
+          export TMPDIR="$PWD/.local/tmp"
+          python -m unittest discover -s tests -v
+          python vendor/ai4s-desktop/scripts/dev/test_stats_integrity.py
+          python scripts/acceptance.py
+          python ai4sci.py audit examples/opencode-study

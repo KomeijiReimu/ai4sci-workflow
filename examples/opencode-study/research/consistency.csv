@@ -1,0 +1,3 @@
+method,max_abs_discrepancy,all_signs_match,consistency_pass,final_order,target_order,order_pass
+trapezoid,1.8648277366750676e-17,True,True,1.9999999999921272,2,True
+left,2.0816681711721685e-17,True,True,0.9981178144220304,1,True

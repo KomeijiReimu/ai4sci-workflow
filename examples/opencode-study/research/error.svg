@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="515" viewBox="0 0 780 515" xml:lang="zh-CN" role="img" aria-labelledby="title desc">
+<title id="title">均匀网格求积的绝对误差</title>
+<desc id="desc">双对数坐标，比较复合梯形法与左端点矩形法，每条曲线有六个网格点。</desc>
+<rect width="780" height="515" fill="#fff"/>
+<g fill="#17242f" font-family="Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, PingFang SC, WenQuanYi Zen Hei, sans-serif" font-size="15">
+<text x="390" y="37" text-anchor="middle" font-size="23" font-weight="bold">均匀网格求积的绝对误差</text>
+<text x="390" y="63" text-anchor="middle">f(x) = x²，积分区间 [0,1]，双对数坐标</text>
+<path d="M134.09 115 V430" stroke="#e1e7ec"/>
+<text x="134.09" y="455" text-anchor="middle">1/256</text>
+<path d="M250.45 115 V430" stroke="#e1e7ec"/>
+<text x="250.45" y="455" text-anchor="middle">1/128</text>
+<path d="M366.82 115 V430" stroke="#e1e7ec"/>
+<text x="366.82" y="455" text-anchor="middle">1/64</text>
+<path d="M483.18 115 V430" stroke="#e1e7ec"/>
+<text x="483.18" y="455" text-anchor="middle">1/32</text>
+<path d="M599.55 115 V430" stroke="#e1e7ec"/>
+<text x="599.55" y="455" text-anchor="middle">1/16</text>
+<path d="M715.91 115 V430" stroke="#e1e7ec"/>
+<text x="715.91" y="455" text-anchor="middle">1/8</text>
+<path d="M105 430.00 H745" stroke="#e1e7ec"/>
+<text x="94" y="435.00" text-anchor="end">10⁻⁶</text>
+<path d="M105 367.00 H745" stroke="#e1e7ec"/>
+<text x="94" y="372.00" text-anchor="end">10⁻⁵</text>
+<path d="M105 304.00 H745" stroke="#e1e7ec"/>
+<text x="94" y="309.00" text-anchor="end">10⁻⁴</text>
+<path d="M105 241.00 H745" stroke="#e1e7ec"/>
+<text x="94" y="246.00" text-anchor="end">10⁻³</text>
+<path d="M105 178.00 H745" stroke="#e1e7ec"/>
+<text x="94" y="183.00" text-anchor="end">10⁻²</text>
+<path d="M105 115.00 H745" stroke="#e1e7ec"/>
+<text x="94" y="120.00" text-anchor="end">10⁻¹</text>
+<path d="M105 115 V430 H745" fill="none" stroke="#17242f"/>
+<text x="425" y="492" text-anchor="middle">网格步长 h = 1/n（对数刻度）</text>
+<text x="31" y="273" transform="rotate(-90 31 273)" text-anchor="middle">绝对误差 |Q − I|（对数刻度）</text>
+<g id="trapezoid">
+<polyline points="715.91,214.81 599.55,252.74 483.18,290.67 366.82,328.60 250.45,366.53 134.09,404.46" fill="none" stroke="#165b96" stroke-width="2.5" stroke-dasharray="none"/>
+<path d="M235 88 h32" stroke="#165b96" stroke-width="2.5" stroke-dasharray="none"/>
+<text x="277" y="93">复合梯形法</text>
+<circle cx="715.91" cy="214.81" r="4.5" fill="#fff" stroke="#165b96" stroke-width="2"/>
+<circle cx="599.55" cy="252.74" r="4.5" fill="#fff" stroke="#165b96" stroke-width="2"/>
+<circle cx="483.18" cy="290.67" r="4.5" fill="#fff" stroke="#165b96" stroke-width="2"/>
+<circle cx="366.82" cy="328.60" r="4.5" fill="#fff" stroke="#165b96" stroke-width="2"/>
+<circle cx="250.45" cy="366.53" r="4.5" fill="#fff" stroke="#165b96" stroke-width="2"/>
+<circle cx="134.09" cy="404.46" r="4.5" fill="#fff" stroke="#165b96" stroke-width="2"/>
+<circle cx="251.00" cy="88.00" r="4.5" fill="#fff" stroke="#165b96" stroke-width="2"/>
+</g>
+<g id="left">
+<polyline points="715.91,129.02 599.55,147.40 483.18,166.08 366.82,184.90 250.45,203.79 134.09,222.72" fill="none" stroke="#a14013" stroke-width="2.5" stroke-dasharray="7 5"/>
+<path d="M425 88 h32" stroke="#a14013" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="467" y="93">左端点矩形法</text>
+<rect x="711.91" y="125.02" width="8" height="8" fill="#fff" stroke="#a14013" stroke-width="2"/>
+<rect x="595.55" y="143.40" width="8" height="8" fill="#fff" stroke="#a14013" stroke-width="2"/>
+<rect x="479.18" y="162.08" width="8" height="8" fill="#fff" stroke="#a14013" stroke-width="2"/>
+<rect x="362.82" y="180.90" width="8" height="8" fill="#fff" stroke="#a14013" stroke-width="2"/>
+<rect x="246.45" y="199.79" width="8" height="8" fill="#fff" stroke="#a14013" stroke-width="2"/>
+<rect x="130.09" y="218.72" width="8" height="8" fill="#fff" stroke="#a14013" stroke-width="2"/>
+<rect x="437.00" y="84.00" width="8" height="8" fill="#fff" stroke="#a14013" stroke-width="2"/>
+</g>
+</g>
+</svg>

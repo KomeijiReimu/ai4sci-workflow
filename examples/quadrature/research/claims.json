@@ -1,0 +1,29 @@
+{
+  "claims": [
+    {
+      "id": "C1", "criterion": "K1", "status": "supported",
+      "statement": "At n=8 the trapezoid estimate is 0.3359375, above the exact integral as predicted by the positive panel bias.",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"n": "8"}, "column": "estimate", "value": 0.3359375, "atol": 0, "display": "0.3359375"},
+        {"kind": "quote", "path": "research/trapezoid-note.md", "quote": "An antiderivative of x² is x³/3. Evaluation at 1 and 0 gives the integral 1/3."},
+        {"kind": "quote", "path": "research/trapezoid-note.md", "quote": "The signed trapezoid error (estimate minus integral) is 1/(6n²)."}
+      ]
+    },
+    {
+      "id": "C2", "criterion": "K2", "status": "supported",
+      "statement": "At n=64 the observed trapezoid order rounds to 2.000000.",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"n": "64"}, "column": "trap_order", "value": 2.000000, "atol": 1e-9, "display": "2.000000"}
+      ]
+    },
+    {
+      "id": "C3", "criterion": "K3", "status": "supported",
+      "statement": "The left-sum order rises from 0.935870 on the first doubling to 0.992427 on the last, consistent with first-order rather than second-order decay.",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"n": "8"}, "column": "left_order", "value": 0.935870, "atol": 5e-7, "display": "0.935870"},
+        {"kind": "number", "path": "research/results.csv", "key": {"n": "64"}, "column": "left_order", "value": 0.992427, "atol": 5e-7, "display": "0.992427"},
+        {"kind": "quote", "path": "research/left-note.md", "quote": "The absolute left-sum error is 1/(2n) − 1/(6n²), whose leading term scales as 1/n."}
+      ]
+    }
+  ]
+}

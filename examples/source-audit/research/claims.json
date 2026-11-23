@@ -1,0 +1,6 @@
+{
+  "claims": [
+    {"id":"C1","criterion":"source","status":"supported","statement":"笔记给出的精确参照积分为1/3。","evidence":[{"kind":"quote","path":"research/trapezoid-note.md","quote":"Evaluation at 1 and 0 gives the integral 1/3.","displays":["1","3"]}]},
+    {"id":"C2","criterion":"scope","status":"supported","statement":"在笔记讨论的均匀网格上，梯形和与左端点和之差可以通过消去内部节点来计算。","evidence":[{"kind":"quote","path":"research/left-note.md","quote":"On the uniform mesh these differences telescope: all interior endpoint values cancel."}]}
+  ]
+}
