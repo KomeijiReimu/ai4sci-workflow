@@ -2,6 +2,12 @@
 
 The [root MIT license](LICENSE) covers this project's original work. Redistributed files retain their upstream notices and licenses.
 
+The [Palmer penguin measurements](examples/penguins/data/PROVENANCE.md) are distributed under [CC0](examples/penguins/data/LICENSE.md). The [climate note](examples/climate-sources/research/paper.md) summarizes two bulletins from the World Meteorological Organization and Copernicus. Short English excerpts are kept in the study's [inputs directory](examples/climate-sources/inputs/). The [source record](examples/climate-sources/research/sources.json) links each excerpt to the original publication and passage. The project's MIT license does not relicense these sources.
+
+The local reading task in the [paired pilot](evaluations/paired-pilot/method.md) includes excerpts from the CPython and NumPy documentation. Their [license notices](evaluations/paired-pilot/source-notices/) accompany the task. The original prompts, submissions and run records in `evaluations/` are preserved as evaluation evidence.
+
+The [astronomy spot check](evaluations/discoverybench-771/README.md) uses a pinned public task from Allen Institute for AI's DiscoveryBench. The case report credits the organizers, links the original dataset and identifies its [Open Data Commons Attribution License](https://github.com/allenai/discoverybench/blob/c31fcf011e070f021a5f5b906896d0821f6880e8/discoverybench/license.md). The raw table and answer key are not bundled.
+
 | Source at the revision used | How this project uses it |
 |---|---|
 | [AutoSciRub `2c6c5839`](https://github.com/zjunlp/AutoSciRub/tree/2c6c58392ee6399e08f2526e35176f0e2c716e16/plugins/autoscirub/skills) (MIT) | The criterion-level verification and targeted revision protocols are reproduced unchanged in `skills/ai4sci-experiment/references/autoscirub/`, alongside their license. |
