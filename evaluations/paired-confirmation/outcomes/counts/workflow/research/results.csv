@@ -1,0 +1,17 @@
+section,estimand,site,route,inspected,on_time,value,lower,upper,note
+pooled,pooled_rate,ALL,Slate,160,81,0.506250,,,all inspected tiles pooled over sites
+pooled,pooled_rate,ALL,Amber,140,114,0.814286,,,all inspected tiles pooled over sites
+pooled,pooled_contrast,ALL,Slate-minus-Amber,,,-0.308036,,,"naive marginal difference, not target weighted"
+pooled,overall_rate,ALL,Both,300,195,0.650000,,,all routes and sites
+within_site,site_rate,Basalt,Slate,120,48,0.400000,,,inspected tiles as denominator
+within_site,site_rate,Basalt,Amber,20,6,0.300000,,,inspected tiles as denominator
+within_site,site_rate,Linden,Slate,20,19,0.950000,,,inspected tiles as denominator
+within_site,site_rate,Linden,Amber,120,108,0.900000,,,inspected tiles as denominator
+within_site,site_rate,Quartz,Slate,20,14,0.700000,,,inspected tiles as denominator
+within_site,site_rate,Quartz,Amber,,,,,,unobserved cell: no observations collected (protocol C)
+covered_target,target_rate,Covered,Slate,,,0.606250,,,target weights renormalized over Basalt+Linden
+covered_target,target_rate,Covered,Amber,,,0.525000,,,target weights renormalized over Basalt+Linden
+covered_target,target_contrast,Covered,Slate-minus-Amber,,,0.081250,,,covered-site target-weighted contrast
+full_target,target_rate,Full,Slate,,,0.625000,,,50/30/20 target weights; inspected-tile counts are site-weighted
+full_target,target_rate_bounds,Full,Amber,,,,0.420000,0.620000,missing Quartz Amber rate at zero and one
+full_target,target_contrast_bounds,Full,Slate-minus-Amber,,,,0.005000,0.205000,tight bounds over missing rate in the unit interval

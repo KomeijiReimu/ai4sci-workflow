@@ -1,0 +1,26 @@
+PRIMARY METHOD DOCUMENTATION EXCERPTS
+NumPy 2.4.4, numpy.percentile, Parameters > method; References.
+https://numpy.org/doc/2.4/reference/generated/numpy.percentile.html
+
+    method : str, optional
+        This parameter specifies the method to use for estimating the
+        percentile.  There are many different methods, some unique to NumPy.
+        See the notes for explanation.  The options sorted by their R type
+        as summarized in the H&F paper [1]_ are:
+
+        1. 'inverted_cdf'
+        2. 'averaged_inverted_cdf'
+        3. 'closest_observation'
+        4. 'interpolated_inverted_cdf'
+        5. 'hazen'
+        6. 'weibull'
+        7. 'linear'  (default)
+        8. 'median_unbiased'
+        9. 'normal_unbiased'
+
+[excerpt omitted]
+    References
+    ----------
+    .. [1] R. J. Hyndman and Y. Fan,
+       "Sample quantiles in statistical packages,"
+       The American Statistician, 50(4), pp. 361-365, 1996

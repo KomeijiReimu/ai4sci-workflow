@@ -1,0 +1,457 @@
+{
+  "wave": "confirmation",
+  "model": "deepseek/deepseek-flash",
+  "version": "OpenCode 2.4.1",
+  "cap_seconds": 360,
+  "kit_sha256sum_list_sha256": "f3fa809e6fbbd78c949eb95e14a86e758afd1a1ff42c420b18b1673f4dc7522c",
+  "head_at_capture": "0a52a31204d05548d6cb2708944ad01eb7178f2a",
+  "frozen_manifest_sha256": "9b49c8901d41f52148442bc4a6295ab23fefae1595deedfd42dccedc938c2808",
+  "original_public_manifest_sha256": "7c5c52d66f16b2ba3e480531b7435da7ef45665f020c5a87eea5ad996834f758",
+  "utc_capture_finished": "2026-11-23T17:03:30.765816+00:00",
+  "scores_file": "results.md",
+  "arms": [
+    {
+      "task": "counts",
+      "arm": "plain",
+      "cli_exit": 0,
+      "elapsed_s": 267.029,
+      "utc_start": "2026-11-23T17:03:42.295770+00:00",
+      "utc_end": "2026-11-23T17:08:09.325216+00:00",
+      "agent": "build",
+      "model": "deepseek/deepseek-flash",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "timeout_seconds": 360,
+      "provider_config_pipe_exit": 0,
+      "prompt_verified": true,
+      "model_text_events": 7,
+      "internal_retry_events": 0,
+      "tools": {
+        "shell": 11,
+        "read": 8,
+        "write": 2,
+        "edit": 26
+      },
+      "input_hashes_unchanged": true,
+      "artifact_files": [
+        "analysis/analyze.py",
+        "analysis/results.csv",
+        "analysis/results.json",
+        "research/paper.md"
+      ],
+      "explicit_kit_read_paths": [],
+      "shell_calls_mentioning_kit_mount": 0,
+      "published_artifacts_sha256": {
+        "research/paper.md": "f6707084e32c692c29037f826b41d6d7f11b93820926603fb557c037b8458fc9",
+        "analysis/analyze.py": "2eacc7648d01c5241e6b9def13d1598c300c01cdfabfeb12ecdaf44f4bb18b9e",
+        "analysis/results.csv": "0fbfd0fed0750ba01f61c02b73c572ded3d0a7a73f1371b0cc5cbe0534505b08",
+        "analysis/results.json": "c26785e884092f8cfc939f32331101fa9a265251ec510f517ed55049b983ce23"
+      }
+    },
+    {
+      "task": "counts",
+      "arm": "workflow",
+      "cli_exit": 0,
+      "elapsed_s": 260.986,
+      "utc_start": "2026-11-23T17:03:42.297288+00:00",
+      "utc_end": "2026-11-23T17:08:03.283393+00:00",
+      "agent": "build",
+      "model": "deepseek/deepseek-flash",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "timeout_seconds": 360,
+      "provider_config_pipe_exit": 0,
+      "prompt_verified": true,
+      "model_text_events": 3,
+      "internal_retry_events": 0,
+      "tools": {
+        "shell": 18,
+        "write": 8,
+        "edit": 7,
+        "read": 1
+      },
+      "input_hashes_unchanged": true,
+      "artifact_files": [
+        "research/analyze.py",
+        "research/claims.json",
+        "research/handoff.md",
+        "research/paper.md",
+        "research/plan.json",
+        "research/plan.sha256",
+        "research/results.csv",
+        "research/review.md",
+        "research/run.json",
+        "research/sources.json"
+      ],
+      "explicit_kit_read_paths": [],
+      "shell_calls_mentioning_kit_mount": 11,
+      "published_artifacts_sha256": {
+        "research/paper.md": "a039765c7d0852847f460adb1d125d57358e984029399976bbd0ad2255dd015e",
+        "research/analyze.py": "46c1a04c703543ce4dea4ac7216c8bde4b5bc2aa4b3d75f0c80d59ba3fa2df62",
+        "research/results.csv": "8252f6c42e80452da1b164474124303f8e82301a4958ef9cfff6de3af6ad3e55",
+        "research/plan.json": "66a5d21dad4899918dbcbea7667ff47d7dce6af40f5e58e5058d453f9ecdcaa3",
+        "research/plan.sha256": "ce672e9cb73013cbf49de9acf0eb93f9c787f0482013146eb4170e854c526e76",
+        "research/claims.json": "34e4454f8d8aa802051340624c2db401ea2a86ddd4f659aacfeb5dbc359a5484",
+        "research/run.json": "cc4ef203d371aae63e8299dea424910f0ea4e4e7fb97a0ec69db878550bcd66d",
+        "research/sources.json": "b75e93bc19f3a631cb13ab3dda298d011a31f27d6337061d27808b5ad43d7e0c"
+      }
+    },
+    {
+      "task": "reading",
+      "arm": "plain",
+      "cli_exit": 0,
+      "elapsed_s": 58.159,
+      "utc_start": "2026-11-23T17:03:42.308090+00:00",
+      "utc_end": "2026-11-23T17:04:40.467009+00:00",
+      "agent": "build",
+      "model": "deepseek/deepseek-flash",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "timeout_seconds": 360,
+      "provider_config_pipe_exit": 0,
+      "prompt_verified": true,
+      "model_text_events": 2,
+      "internal_retry_events": 0,
+      "tools": {
+        "read": 5,
+        "shell": 2,
+        "write": 1,
+        "edit": 2
+      },
+      "input_hashes_unchanged": true,
+      "artifact_files": [
+        "reading-list.md"
+      ],
+      "explicit_kit_read_paths": [],
+      "shell_calls_mentioning_kit_mount": 0,
+      "published_artifacts_sha256": {
+        "reading-list.md": "5352ccc827ac9bca7f281ce63a032e4e977958315ea03297a0310d2958ce3221"
+      }
+    },
+    {
+      "task": "reading",
+      "arm": "workflow",
+      "cli_exit": 0,
+      "elapsed_s": 144.129,
+      "utc_start": "2026-11-23T17:03:42.303786+00:00",
+      "utc_end": "2026-11-23T17:06:06.432803+00:00",
+      "agent": "build",
+      "model": "deepseek/deepseek-flash",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "timeout_seconds": 360,
+      "provider_config_pipe_exit": 0,
+      "prompt_verified": true,
+      "model_text_events": 2,
+      "internal_retry_events": 0,
+      "tools": {
+        "read": 9,
+        "shell": 6,
+        "write": 1,
+        "edit": 6
+      },
+      "input_hashes_unchanged": true,
+      "artifact_files": [
+        "reading-list.md"
+      ],
+      "explicit_kit_read_paths": [
+        "/media/skills/ai4sci/SKILL.md"
+      ],
+      "shell_calls_mentioning_kit_mount": 2,
+      "published_artifacts_sha256": {
+        "reading-list.md": "e7d4d8a831f27f01b5ac83827e2fd3fe541759900143858b8e4dd6b0e0a63bb6"
+      }
+    }
+  ],
+  "evaluator_checks": [
+    {
+      "command": "python3 analysis/analyze.py",
+      "arm": "plain",
+      "kind": "compute",
+      "exit": 0,
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "kit_digest": "f3fa809e6fbbd78c949eb95e14a86e758afd1a1ff42c420b18b1673f4dc7522c",
+      "original_sha256": {
+        "analysis/results.csv": "0fbfd0fed0750ba01f61c02b73c572ded3d0a7a73f1371b0cc5cbe0534505b08",
+        "analysis/results.json": "c26785e884092f8cfc939f32331101fa9a265251ec510f517ed55049b983ce23"
+      },
+      "rerun_sha256": {
+        "analysis/results.csv": "0fbfd0fed0750ba01f61c02b73c572ded3d0a7a73f1371b0cc5cbe0534505b08",
+        "analysis/results.json": "c26785e884092f8cfc939f32331101fa9a265251ec510f517ed55049b983ce23"
+      },
+      "byte_identical": true
+    },
+    {
+      "command": "python3 /media/ai4sci.py audit /mnt",
+      "arm": "workflow",
+      "kind": "audit",
+      "exit": 0,
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "kit_digest": "f3fa809e6fbbd78c949eb95e14a86e758afd1a1ff42c420b18b1673f4dc7522c",
+      "original_sha256": {},
+      "rerun_sha256": {},
+      "byte_identical": null,
+      "result": {
+        "claims": {
+          "C1": "supported",
+          "C10": "supported",
+          "C11": "supported",
+          "C2": "supported",
+          "C3": "supported",
+          "C4": "supported",
+          "C5": "supported",
+          "C6": "supported",
+          "C7": "supported",
+          "C8": "supported",
+          "C9": "supported"
+        },
+        "criterion_coverage": {
+          "causal_scope": {
+            "required_observations": 0,
+            "verified_observations": 0
+          },
+          "covered_target": {
+            "required_observations": 3,
+            "verified_observations": 3
+          },
+          "full_target_bounds": {
+            "required_observations": 5,
+            "verified_observations": 5
+          },
+          "missing_cell_protocol": {
+            "required_observations": 0,
+            "verified_observations": 0
+          },
+          "pooled": {
+            "required_observations": 3,
+            "verified_observations": 3
+          },
+          "within_site": {
+            "required_observations": 5,
+            "verified_observations": 5
+          }
+        },
+        "deliverability": "ready",
+        "error_count": 0,
+        "errors": [],
+        "incomplete": [],
+        "incomplete_count": 0,
+        "observation_outcomes": {
+          "causal_scope": [],
+          "covered_target": [
+            {
+              "column": "value",
+              "key": {
+                "estimand": "target_rate",
+                "route": "Slate",
+                "site": "Covered"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "target_rate",
+                "route": "Amber",
+                "site": "Covered"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "target_contrast",
+                "route": "Slate-minus-Amber",
+                "site": "Covered"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            }
+          ],
+          "full_target_bounds": [
+            {
+              "column": "value",
+              "key": {
+                "estimand": "target_rate",
+                "route": "Slate",
+                "site": "Full"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "lower",
+              "key": {
+                "estimand": "target_rate_bounds",
+                "route": "Amber",
+                "site": "Full"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "upper",
+              "key": {
+                "estimand": "target_rate_bounds",
+                "route": "Amber",
+                "site": "Full"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "lower",
+              "key": {
+                "estimand": "target_contrast_bounds",
+                "route": "Slate-minus-Amber",
+                "site": "Full"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "upper",
+              "key": {
+                "estimand": "target_contrast_bounds",
+                "route": "Slate-minus-Amber",
+                "site": "Full"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            }
+          ],
+          "missing_cell_protocol": [],
+          "pooled": [
+            {
+              "column": "value",
+              "key": {
+                "estimand": "pooled_rate",
+                "route": "Slate",
+                "site": "ALL"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "pooled_rate",
+                "route": "Amber",
+                "site": "ALL"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "pooled_contrast",
+                "route": "Slate-minus-Amber",
+                "site": "ALL"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            }
+          ],
+          "within_site": [
+            {
+              "column": "value",
+              "key": {
+                "estimand": "site_rate",
+                "route": "Slate",
+                "site": "Basalt"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "site_rate",
+                "route": "Amber",
+                "site": "Basalt"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "site_rate",
+                "route": "Slate",
+                "site": "Linden"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "site_rate",
+                "route": "Amber",
+                "site": "Linden"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            },
+            {
+              "column": "value",
+              "key": {
+                "estimand": "site_rate",
+                "route": "Slate",
+                "site": "Quartz"
+              },
+              "outcome": "met",
+              "path": "research/results.csv"
+            }
+          ]
+        },
+        "run": "complete",
+        "scientific_run": "completed",
+        "source_records": 3
+      }
+    },
+    {
+      "command": "python3 research/analyze.py",
+      "arm": "workflow",
+      "kind": "compute",
+      "exit": 0,
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "kit_digest": "f3fa809e6fbbd78c949eb95e14a86e758afd1a1ff42c420b18b1673f4dc7522c",
+      "original_sha256": {
+        "research/results.csv": "8252f6c42e80452da1b164474124303f8e82301a4958ef9cfff6de3af6ad3e55"
+      },
+      "rerun_sha256": {
+        "research/results.csv": "8252f6c42e80452da1b164474124303f8e82301a4958ef9cfff6de3af6ad3e55"
+      },
+      "byte_identical": true
+    }
+  ],
+  "additional_unscored_diagnostic": {
+    "scope": "Supplementary unscored diagnostic on separate copies after noticing literal numerical outputs. Not a model run, not a new criterion, and no original file was changed.",
+    "mutation": "K07 on_time 30 to 29; K09 on_time 14 to 15. Total counts and overall hits unchanged.",
+    "expected_full_contrast_lower_proportion": "13/1200",
+    "original_full_contrast_lower_proportion": "1/200",
+    "results": [
+      {
+        "arm": "plain",
+        "cmd": "python3 analysis/analyze.py",
+        "exit": 0,
+        "csv_lower_pp": "1.083333",
+        "json_dynamic_lower_pp": "1.083333",
+        "json_literal_lower_proportion": "1/200"
+      },
+      {
+        "arm": "workflow",
+        "cmd": "python3 research/analyze.py",
+        "exit": 0,
+        "csv_lower_proportion": "0.010833"
+      }
+    ]
+  }
+}

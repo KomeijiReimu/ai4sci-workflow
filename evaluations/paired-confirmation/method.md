@@ -1,0 +1,17 @@
+# Final confirmation: complete release-candidate runtime
+
+The numerical and document tasks, primary evidence, grading rubric, one-line workflow invocation, `deepseek/deepseek-flash` model, OpenCode 2.4.1 `build` agent, native tools, isolated environment and 360-second cap are the same as in the first pilot. The intervention was a complete snapshot of the then-current release runtime for **both** arms. Exactly four new material sessions were permitted: one plain and one workflow per task. There were no evaluator retries, no best-of selection, and no use of the original arm's output as a new baseline. The unchanged earlier public packet has SHA256SUMS digest `7c5c52d66f16b2ba3e480531b7435da7ef45665f020c5a87eea5ad996834f758`.
+
+The registry uses synthetic primary records; the document task uses partial historical CPython and NumPy documentation. Neither task involved browsing or journal full-text retrieval. Each isolated `/mnt` initially contained only the three supplied task files. Both arms could read the same kit at `/media`. Only the workflow prompt explicitly invoked it. The original key, earlier answers, agent config, project history and other sessions were outside the mounted home and study. This is a clean session with OpenCode's built-in instructions/tools, not an empty system prompt. Grading was by an unblinded evaluator against a fixed key.
+
+The driver used `unshare` for distinct user, mount and PID namespaces with a private server, XDG trees and model-route configuration held in memory. It preserved WSL's resolver within each namespace. In the model process `cwd=/mnt` and `PWD=/mnt`; `/media` was read-only. The material command in every case was:
+
+```sh
+/srv/bin/opencode --standalone --log-level error run --archived --model deepseek/deepseek-flash --agent build --format json --auto --title 'Matched offline research task' "$message"
+```
+
+The workflow message appends `Use the ai4sci workflow at /media, beginning with /media/skills/ai4sci/SKILL.md.` to the task message. To replay elsewhere, change both mount paths consistently and keep the rubric outside each fresh workspace. Generation is not seeded; equal time limits do not imply equal token consumption or latency.
+
+`kit-SHA256SUMS` enumerates all files from `checks/`, `skills/`, `templates/`, `vendor/` plus the four root files specified in the declaration. Its own SHA-256 is `f3fa809e6fbbd78c949eb95e14a86e758afd1a1ff42c420b18b1673f4dc7522c`. At capture, every listed file matched its working-tree counterpart, including `checks/sources.py`. Relative to the separate complete-kit integration check in the prior packet, only `ai4sci.py`, `checks/audit.py` and `checks/contract.md` changed. No examples or previous studies were included. External clean control-study commands and exits are in `preflight.json`; `freeze`, the formal control computation and `audit` all returned 0 before any material model call.
+
+The final wave is named in `results.md` separately from the original pilot. It removes the original missing-module confound, not all sources of variation. One paired sample per task per wave cannot estimate a general workflow effect. The namespace hid the host home and scoring key but was not a whole-filesystem sandbox: the workflow arm redirected its second registry audit to `/tmp/audit.json`, then removed it. The plain arm did not reference that path. Durable study results remained in the intended workspace.

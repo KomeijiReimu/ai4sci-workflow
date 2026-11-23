@@ -1,0 +1,19 @@
+metric,scope,site,route,numerator,denominator,value,unit,evidence,note
+on_time_rate,site_route,Basalt,Slate,48,120,0.400000,proportion,registry K07+K08,inspected tiles denominator (R-17 B)
+on_time_rate,site_route,Basalt,Amber,6,20,0.300000,proportion,registry K01+K05,inspected tiles denominator (R-17 B)
+on_time_rate,site_route,Linden,Slate,19,20,0.950000,proportion,registry K06,inspected tiles denominator (R-17 B)
+on_time_rate,site_route,Linden,Amber,108,120,0.900000,proportion,registry K02+K04,inspected tiles denominator (R-17 B)
+on_time_rate,site_route,Quartz,Slate,14,20,0.700000,proportion,registry K09,inspected tiles denominator (R-17 B)
+on_time_rate,site_route,Quartz,Amber,,,,proportion,R-17 C; no registry row,"absent route-site cell: no observations, not zero successes"
+on_time_rate,crude_pooled_all_observed_sites,,Slate,81,160,0.506250,proportion,registry all rows,composition-confounded crude rate; not the target estimand
+on_time_rate,crude_pooled_all_observed_sites,,Amber,114,140,0.814286,proportion,registry all rows,composition-confounded crude rate; not the target estimand
+contrast,crude_pooled_all_observed_sites,,Slate_minus_Amber,,,-30.803571,percentage_points,registry all rows,negative: Amber higher in the crude pool
+on_time_rate,target_weighted_covered_sites,,Slate,,,0.606250,proportion,"R-17 B; Basalt, Linden","weights renormalized over covered sites: Basalt=0.625000, Linden=0.375000"
+on_time_rate,target_weighted_covered_sites,,Amber,,,0.525000,proportion,"R-17 B; Basalt, Linden","weights renormalized over covered sites: Basalt=0.625000, Linden=0.375000"
+contrast,target_weighted_covered_sites,,Slate_minus_Amber,,,8.125000,percentage_points,"R-17 B; Basalt, Linden",exact over covered sites; no missing cells
+on_time_rate,full_target,,Slate,,,0.625000,proportion,R-17 B; all Slate cells observed,identified exactly: all three Slate cells observed
+on_time_rate,full_target,,Amber_lower,,,0.420000,proportion,R-17 B/C,"lower bound, missing Quartz-Amber rate p = 0"
+on_time_rate,full_target,,Amber_upper,,,0.620000,proportion,R-17 B/C,"upper bound, missing Quartz-Amber rate p = 1"
+contrast_bound,full_target,,Slate_minus_Amber_lower,,,0.500000,percentage_points,R-17 B/C,tightest protocol-allowed lower bound (p = 1)
+contrast_bound,full_target,,Slate_minus_Amber_upper,,,20.500000,percentage_points,R-17 B/C,tightest protocol-allowed upper bound (p = 0)
+break_even,full_target,,missing_Quartz_Amber_rate,,,1.025000,proportion,R-17 B/C,"rate at which Slate and Amber tie; outside [0,1] => sign identified"

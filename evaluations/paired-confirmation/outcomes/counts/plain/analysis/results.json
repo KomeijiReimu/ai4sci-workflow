@@ -1,0 +1,117 @@
+{
+  "protocol": "R-17",
+  "sources": {
+    "registry": "registry.csv",
+    "protocol": "registry-protocol.md",
+    "registry_sha256": "503579a19c88f33a470e47c0166f351242b8e47648051cb2f0a00a2c75cf4ee4",
+    "protocol_sha256": "d7baf171fc782767b4d06af42f062888e9981953789fb90b2757d2423fac25f5"
+  },
+  "target_weights": {
+    "Basalt": "0.500000",
+    "Linden": "0.300000",
+    "Quartz": "0.200000"
+  },
+  "covered_sites": [
+    "Basalt",
+    "Linden"
+  ],
+  "covered_weights": {
+    "Basalt": "0.625000",
+    "Linden": "0.375000"
+  },
+  "site_route": {
+    "Basalt|Slate": {
+      "inspected": 120,
+      "on_time": 48,
+      "rate": "0.400000",
+      "batches": [
+        "K07",
+        "K08"
+      ]
+    },
+    "Basalt|Amber": {
+      "inspected": 20,
+      "on_time": 6,
+      "rate": "0.300000",
+      "batches": [
+        "K01",
+        "K05"
+      ]
+    },
+    "Linden|Slate": {
+      "inspected": 20,
+      "on_time": 19,
+      "rate": "0.950000",
+      "batches": [
+        "K06"
+      ]
+    },
+    "Linden|Amber": {
+      "inspected": 120,
+      "on_time": 108,
+      "rate": "0.900000",
+      "batches": [
+        "K02",
+        "K04"
+      ]
+    },
+    "Quartz|Slate": {
+      "inspected": 20,
+      "on_time": 14,
+      "rate": "0.700000",
+      "batches": [
+        "K09"
+      ]
+    },
+    "Quartz|Amber": {
+      "inspected": 0,
+      "on_time": 0,
+      "rate": null,
+      "batches": []
+    }
+  },
+  "crude_pooled": {
+    "Slate": {
+      "inspected": 160,
+      "on_time": 81,
+      "rate": "0.506250"
+    },
+    "Amber": {
+      "inspected": 140,
+      "on_time": 114,
+      "rate": "0.814286"
+    }
+  },
+  "covered_weighted": {
+    "Slate": "0.606250",
+    "Amber": "0.525000",
+    "Slate_minus_Amber_pp": "8.125000"
+  },
+  "full_target": {
+    "Slate": "0.625000",
+    "Amber_base": "0.420000",
+    "Amber_missing_weight": "0.200000",
+    "Amber_bounds": [
+      "0.420000",
+      "0.620000"
+    ],
+    "contrast_bounds_pp": [
+      "0.500000",
+      "20.500000"
+    ],
+    "break_even_missing_rate": "1.025000",
+    "sign_identified": true
+  },
+  "exact_fractions": {
+    "slate_pooled": "81/160",
+    "amber_pooled": "57/70",
+    "covered_slate": "97/160",
+    "covered_amber": "21/40",
+    "covered_diff": "13/160",
+    "full_slate": "5/8",
+    "full_amber_base": "21/50",
+    "full_diff_lower": "1/200",
+    "full_diff_upper": "41/200",
+    "break_even": "41/40"
+  }
+}

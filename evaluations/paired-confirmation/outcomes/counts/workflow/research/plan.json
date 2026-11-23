@@ -1,0 +1,58 @@
+{
+  "question": "Under registry protocol R-17, does Slate have a higher on-time processing rate than Amber for the intended service population (50 percent Basalt, 30 percent Linden, 20 percent Quartz), and what can the registry support descriptively versus causally?",
+  "design": "Deterministic arithmetic on the supplied inspected-tile registry. Aggregate disjoint batch totals to site-route cells, compare Slate with Amber within site, then standardize to the protocol target weights. Covered sites are those where both routes were used. The unobserved Quartz Amber cell is left missing and bounded only over the logical proportion range, never imputed from an external rate. A falsifying observation would be a covered-site or full-target contrast at or below zero.",
+  "evaluation": "Exact rational arithmetic on inspected-tile counts; six-decimal reported values. Primary metric is the on-time proportion among inspected tiles, higher is better. Covered-site weights are renormalized from 50:30 to 50/80 and 30/80. Full-target bounds use the missing Quartz Amber rate in the closed unit interval. Stopping rule: one deterministic pass; stop when all criteria are reported.",
+  "data_already_inspected": "The supplied registry.csv, registry-protocol.md and briefing.txt were read while framing the question. No other data were used. Criteria and expected result cells were fixed here before the analysis script wrote research/results.csv; this is a retrospective analysis of supplied records, not a preregistered prospective experiment.",
+  "budget": "Offline only. Local Python standard library, no network, no installs, no external rates or shared memory.",
+  "require_source_manifest": true,
+  "criteria": [
+    {
+      "id": "pooled",
+      "description": "Report the observed all-site pooled on-time rate for each route with inspected tiles as the denominator, and the pooled Slate-minus-Amber difference.",
+      "required_observations": [
+        {"path": "research/results.csv", "key": {"estimand": "pooled_rate", "site": "ALL", "route": "Slate"}, "column": "value", "bounds": {"min": 0.50625, "max": 0.50625}},
+        {"path": "research/results.csv", "key": {"estimand": "pooled_rate", "site": "ALL", "route": "Amber"}, "column": "value", "bounds": {"min": 0.814285, "max": 0.814287}},
+        {"path": "research/results.csv", "key": {"estimand": "pooled_contrast", "site": "ALL", "route": "Slate-minus-Amber"}, "column": "value", "bounds": {"min": -0.308037, "max": -0.308035}}
+      ]
+    },
+    {
+      "id": "within_site",
+      "description": "Report the observed on-time rate for every site-route cell with inspected tiles as the denominator, and identify the unobserved cell.",
+      "required_observations": [
+        {"path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Basalt", "route": "Slate"}, "column": "value", "bounds": {"min": 0.4, "max": 0.4}},
+        {"path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Basalt", "route": "Amber"}, "column": "value", "bounds": {"min": 0.3, "max": 0.3}},
+        {"path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Linden", "route": "Slate"}, "column": "value", "bounds": {"min": 0.95, "max": 0.95}},
+        {"path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Linden", "route": "Amber"}, "column": "value", "bounds": {"min": 0.9, "max": 0.9}},
+        {"path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Quartz", "route": "Slate"}, "column": "value", "bounds": {"min": 0.7, "max": 0.7}}
+      ]
+    },
+    {
+      "id": "covered_target",
+      "description": "Report the target-weighted Slate and Amber rates and the Slate-minus-Amber contrast on sites where both routes were used, with target weights renormalized.",
+      "required_observations": [
+        {"path": "research/results.csv", "key": {"estimand": "target_rate", "site": "Covered", "route": "Slate"}, "column": "value", "bounds": {"min": 0.60625, "max": 0.60625}},
+        {"path": "research/results.csv", "key": {"estimand": "target_rate", "site": "Covered", "route": "Amber"}, "column": "value", "bounds": {"min": 0.525, "max": 0.525}},
+        {"path": "research/results.csv", "key": {"estimand": "target_contrast", "site": "Covered", "route": "Slate-minus-Amber"}, "column": "value", "bounds": {"min": 0.08125, "max": 0.08125}}
+      ]
+    },
+    {
+      "id": "full_target_bounds",
+      "description": "Report the full-target Slate rate and the tightest protocol-admissible bounds for the full-target Slate-minus-Amber contrast given the unobserved Quartz Amber cell.",
+      "required_observations": [
+        {"path": "research/results.csv", "key": {"estimand": "target_rate", "site": "Full", "route": "Slate"}, "column": "value", "bounds": {"min": 0.625, "max": 0.625}},
+        {"path": "research/results.csv", "key": {"estimand": "target_rate_bounds", "site": "Full", "route": "Amber"}, "column": "lower", "bounds": {"min": 0.42, "max": 0.42}},
+        {"path": "research/results.csv", "key": {"estimand": "target_rate_bounds", "site": "Full", "route": "Amber"}, "column": "upper", "bounds": {"min": 0.62, "max": 0.62}},
+        {"path": "research/results.csv", "key": {"estimand": "target_contrast_bounds", "site": "Full", "route": "Slate-minus-Amber"}, "column": "lower", "bounds": {"min": 0.005, "max": 0.005}},
+        {"path": "research/results.csv", "key": {"estimand": "target_contrast_bounds", "site": "Full", "route": "Slate-minus-Amber"}, "column": "upper", "bounds": {"min": 0.205, "max": 0.205}}
+      ]
+    },
+    {
+      "id": "missing_cell_protocol",
+      "description": "State what protocol R-17 permits and forbids for an unobserved route-site cell, and assess the unsigned newsletter's all-missed assertion."
+    },
+    {
+      "id": "causal_scope",
+      "description": "Distinguish the descriptive standardized comparison from a causal route effect, given nonrandom dispatch allocation."
+    }
+  ]
+}

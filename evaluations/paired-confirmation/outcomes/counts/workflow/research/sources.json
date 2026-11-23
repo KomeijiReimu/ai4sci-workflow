@@ -1,0 +1,31 @@
+{
+  "sources": [
+    {
+      "id": "registry",
+      "title": "Lattice Imaging Cooperative tile registry extract",
+      "origin": "Supplied study file registry.csv",
+      "locator": "All rows, batches K01-K09",
+      "access": "provided",
+      "path": "registry.csv",
+      "sha256": "503579a19c88f33a470e47c0166f351242b8e47648051cb2f0a00a2c75cf4ee4"
+    },
+    {
+      "id": "protocol",
+      "title": "Registry protocol R-17, signed records extract",
+      "origin": "Supplied study file registry-protocol.md",
+      "locator": "Methods paragraphs A-C",
+      "access": "provided",
+      "path": "registry-protocol.md",
+      "sha256": "d7baf171fc782767b4d06af42f062888e9981953789fb90b2757d2423fac25f5"
+    },
+    {
+      "id": "briefing",
+      "title": "Unsigned logistics newsletter extract",
+      "origin": "Supplied study file briefing.txt",
+      "locator": "Only paragraph",
+      "access": "provided",
+      "path": "briefing.txt",
+      "sha256": "3c6657ef6c56255961de6eb6450e6c8819e067a5b5a6b4a8c59ccf933f592ce5"
+    }
+  ]
+}

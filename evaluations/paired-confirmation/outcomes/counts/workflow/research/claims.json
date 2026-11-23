@@ -1,0 +1,115 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "pooled",
+      "statement": "Across all inspected tiles pooled over sites, the Slate on-time rate was 0.506250 and the Amber rate was 0.814286.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "pooled_rate", "site": "ALL", "route": "Slate"}, "column": "value", "value": 0.50625, "display": "0.506250", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "pooled_rate", "site": "ALL", "route": "Amber"}, "column": "value", "value": 0.814286, "display": "0.814286", "atol": 0.0000005}
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "pooled",
+      "statement": "The all-site pooled Slate-minus-Amber difference was -0.308036, so the marginal pooled comparison favors Amber.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "pooled_contrast", "site": "ALL", "route": "Slate-minus-Amber"}, "column": "value", "value": -0.308036, "display": "-0.308036", "atol": 0.0000005}
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "within_site",
+      "statement": "Within Basalt, Slate's on-time rate was 0.400000 and Amber's was 0.300000; within Linden, Slate's was 0.950000 and Amber's was 0.900000; within Quartz, Slate's was 0.700000.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Basalt", "route": "Slate"}, "column": "value", "value": 0.4, "display": "0.400000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Basalt", "route": "Amber"}, "column": "value", "value": 0.3, "display": "0.300000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Linden", "route": "Slate"}, "column": "value", "value": 0.95, "display": "0.950000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Linden", "route": "Amber"}, "column": "value", "value": 0.9, "display": "0.900000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "site_rate", "site": "Quartz", "route": "Slate"}, "column": "value", "value": 0.7, "display": "0.700000", "atol": 0.0000005}
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "within_site",
+      "statement": "The protocol requires inspected tiles, not batches, as the within-site denominator, so each site-route rate uses its inspected-tile count.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "Within each site, use inspected tiles, not batches, as the denominator."}
+      ]
+    },
+    {
+      "id": "C5",
+      "criterion": "covered_target",
+      "statement": "On the covered sites with target weights renormalized, Slate's weighted rate was 0.606250, Amber's was 0.525000, and the Slate-minus-Amber contrast was 0.081250.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_rate", "site": "Covered", "route": "Slate"}, "column": "value", "value": 0.60625, "display": "0.606250", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_rate", "site": "Covered", "route": "Amber"}, "column": "value", "value": 0.525, "display": "0.525000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_contrast", "site": "Covered", "route": "Slate-minus-Amber"}, "column": "value", "value": 0.08125, "display": "0.081250", "atol": 0.0000005}
+      ]
+    },
+    {
+      "id": "C6",
+      "criterion": "covered_target",
+      "statement": "The protocol sets the intended population at 50 percent Basalt, 30 percent Linden and 20 percent Quartz and renormalizes over sites where both routes were used, making the covered-site contrast a renormalized subset rather than the full-target contrast.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "The intended service population is 50 percent Basalt, 30 percent Linden and 20 percent Quartz.", "displays": ["50", "30", "20"]},
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "For the covered-site calculation retain only sites where both routes were used and renormalize target weights."}
+      ]
+    },
+    {
+      "id": "C7",
+      "criterion": "full_target_bounds",
+      "statement": "With fixed target weights the full-target Slate rate is 0.625000, while Amber's full-target rate lies between 0.420000 and 0.620000 because the Quartz Amber cell is unobserved.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_rate", "site": "Full", "route": "Slate"}, "column": "value", "value": 0.625, "display": "0.625000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_rate_bounds", "site": "Full", "route": "Amber"}, "column": "lower", "value": 0.42, "display": "0.420000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_rate_bounds", "site": "Full", "route": "Amber"}, "column": "upper", "value": 0.62, "display": "0.620000", "atol": 0.0000005}
+      ]
+    },
+    {
+      "id": "C8",
+      "criterion": "full_target_bounds",
+      "statement": "The full-target Slate-minus-Amber contrast therefore lies between 0.005000 and 0.205000, so its sign is positive throughout the protocol-admissible range.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_contrast_bounds", "site": "Full", "route": "Slate-minus-Amber"}, "column": "lower", "value": 0.005, "display": "0.005000", "atol": 0.0000005},
+        {"kind": "number", "path": "research/results.csv", "key": {"estimand": "target_contrast_bounds", "site": "Full", "route": "Slate-minus-Amber"}, "column": "upper", "value": 0.205, "display": "0.205000", "atol": 0.0000005},
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "No external performance rate is available for an unobserved combination."}
+      ]
+    },
+    {
+      "id": "C9",
+      "criterion": "causal_scope",
+      "statement": "The registry comparison is descriptive, not causal, because dispatchers chose the route from current queue length and allocation was not randomized.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "Dispatchers chose the route using current queue length; allocation was not randomized."}
+      ]
+    },
+    {
+      "id": "C10",
+      "criterion": "missing_cell_protocol",
+      "statement": "Protocol paragraph C rules out reading the missing Quartz Amber cell as a zero rate: an absent route–site combination means no observations were collected, not that every tile missed its deadline.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "An absent route–site combination means no observations were collected, not that every tile missed its deadline."}
+      ]
+    },
+    {
+      "id": "C11",
+      "criterion": "missing_cell_protocol",
+      "statement": "The newsletter's all-missed assertion is unsupported because its writer did not inspect the register or the protocol.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "briefing.txt", "quote": "The writer did not inspect the register or the protocol."}
+      ]
+    }
+  ]
+}

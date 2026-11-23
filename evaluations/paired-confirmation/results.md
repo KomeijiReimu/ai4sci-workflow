@@ -1,0 +1,16 @@
+# Paired research tasks: final confirmation
+
+Both arms correctly analyzed the pooled reversal and the unidentified point value of the full-target contrast, and both answered the reading question correctly. In the complete-runtime confirmation, plain OpenCode lost one registry point because its additional JSON file hardcoded exact fractions; its primary CSV was correct and genuinely computed. Both reading lists earned full credit. These are individual runs, not an average quality or speed estimate.
+
+| Wave | Task | Plain: grade · elapsed | Workflow: grade · elapsed |
+|---|---|---:|---:|
+| [Original pilot](../paired-pilot/) — partial kit | Registry | 10/10 · 60.485 s | 10/10 · 245.170 s |
+| Original pilot — partial kit | Document reading | 8/8 · 175.989 s | 7/8 · 69.997 s |
+| Final confirmation — complete kit | Registry | 9/10 · 267.029 s | 10/10 · 260.986 s |
+| Final confirmation — complete kit | Document reading | 8/8 · 58.159 s | 8/8 · 144.129 s |
+
+All eight scored OpenCode clients exited 0. Two earlier unscored pilot launches had no model response because of a resolver issue; both were stopped with exit 143. In the pilot's material registry session the kit lacked `checks/sources.py`: the workflow's own freeze and audit failed (audit exit 1), despite correct scientific results. A separate unscored integration check used a different task and a complete earlier kit; it did not replace a pilot arm. The original reading difference was a method crosswalk not demonstrated by the excerpts. The confirmation lists both give the correct candidate pairing **and** state that source limitation. No wave or attempt was selected for a best-of result.
+
+**Confirmation evidence.** `python3 /media/ai4sci.py freeze /mnt` succeeded before formal registry computation. Plain ran `python3 analysis/analyze.py`; workflow ran `python3 research/analyze.py`. Both exited 0 and, after deleting the prior outputs on copies, both independently regenerated every original output byte. The workflow ran `python3 /media/ai4sci.py audit /mnt` twice, both exit 0; the evaluator ran it again on an unchanged copy, exit 0, `ready`, 11 supported marked claims, 16/16 declared observation locators verified, three source records. The plain task did not require that audit. An auxiliary baseline manuscript-table comparison initially returned 1 and was repaired; an auxiliary workflow recalculation initially raised `KeyError` on the absent Quartz–Amber cell and then correctly recomputed the bounds. Neither was a new model attempt. All four confirmation sessions used the same model, tools, fresh private state and 360-second cap; see [method](method.md) for the temporary-filesystem limitation.
+
+**Inspect or replay:** [criterion-by-criterion scorecard](criterion-evidence.md), [frozen rubric](frozen-rubric.md), [sanitized execution and rerun receipts](execution.json), [pre-launch declaration](declaration.md), [preflight](preflight.json), [captured kit manifest](kit-SHA256SUMS). `outcomes/` contains the original reports, lists, computations and result tables. Pair an arm's generated files with `inputs/<task>/` to replay it without a model. No account identifiers, provider endpoints or raw transcripts are included.
