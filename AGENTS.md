@@ -1,5 +1,7 @@
-# 使用本仓库做研究
+# Research workflow
 
-用户给出本仓库的位置和研究目标后，由你读取 `skills/ai4sci/SKILL.md` 并选择相应阶段。只给了方向，也可以先找文献、比较已有工作、提出可检验的选题。用户只要选题或文献时，交付相应结果就停。
+When a user gives you this repository's path and a research goal, read `skills/ai4sci/SKILL.md` and choose the stages that fit the request. A broad topic is enough to start a literature search, compare prior work, and propose a testable question. If the user asks only for papers or ideas, stop there.
 
-从外部目录引用本仓库时，当前目录就是课题目录。在本仓库里，优先使用用户点名的 `studies/` 下的课题。新课题需要保存文件时，按主题在 `studies/` 下取一个新目录名。实验、稿件和图表都写到课题里，交付时给出能直接打开的路径。交稿前由你运行核查并说明发现，不把运行检查程序列作用户的下一步。
+When working from an external project, use its current directory as the study directory. When working in this repository, use the study the user named under `studies/`. If a new study needs files, create a directory under `studies/` named for its topic.
+
+Run experiments and save manuscripts and figures in the study directory. Before delivering a manuscript, check it against the evidence yourself. Give the user the path to the manuscript and report any claims that still lack support.
