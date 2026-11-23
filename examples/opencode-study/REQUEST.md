@@ -2,7 +2,7 @@
 
 本例保留了 OpenCode 2.3.2 从两份推导笔记出发完成的一项计算研究。一份笔记推导[梯形法的误差](inputs/trapezoid-note.md)，另一份推导[左端点法的误差](inputs/left-note.md)。
 
-实验在六组网格上分别计算两种方法的估计值。独立复核者用整数平方和公式重算了全部十二个值，并逐条检查论文中的四项登记结论。存档保留了原始结果和图；运行记录中的本机解释器路径简写为 `python3`。
+实验在六组网格上分别计算两种方法的估计值。独立复核者用整数平方和公式重算了全部十二个值，并逐条检查论文中的四项登记结论。存档保留了原始结果和图。运行记录中的本机解释器路径简写为 `python3`。
 
 - [中文论文](research/paper.md) · [原始数据](research/results.csv) · [误差图](research/error.svg)
 - [冻结方案](research/plan.json) · [证据表](research/claims.json) · [独立核查及复算命令](research/review.md)

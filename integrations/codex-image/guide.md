@@ -4,7 +4,7 @@
 
 ## 从命令行生成一张图
 
-使用 Python 3.11 或更高版本、Pillow 和支持 `app-server --listen stdio://` 的 [Codex CLI](https://github.com/openai/codex)。在本机运行 `codex login`，登录有原生图像生成权限的账号。生图使用该账号的额度；只提交可以交由服务商处理的提示词和参考图。
+使用 Python 3.11 或更高版本、Pillow 和支持 `app-server --listen stdio://` 的 [Codex CLI](https://github.com/openai/codex)。在本机运行 `codex login`，登录有原生图像生成权限的账号。生图使用该账号的额度。只提交可以交由服务商处理的提示词和参考图。
 
 在**课题目录**打开终端。将下面的 `/path/to/ai4sci-workflow` 换成工作流仓库的绝对路径。工具从仓库运行，任务记录和图片保存在当前课题。若当前 Python 环境缺少 Pillow，在虚拟环境中运行 `python3 -m pip install Pillow`。
 
@@ -20,20 +20,20 @@ python3 "$bridge/cli.py" doctor
 python3 "$bridge/cli.py" generate '绘制数据分析流程示意图，从左到右依次为采样、校准、估计。用箭头连接三个步骤，在校准步骤下方标出参考样本。'
 ```
 
-保存返回的 `jobId`。将下面的 `JOB_ID` 换成这个值，在同一课题目录查询；若仍在排队或运行，重复**查询**即可。
+保存返回的 `jobId`，用它替换下面的 `JOB_ID`，在同一课题目录查询任务状态。如果任务仍在排队或运行，重复**查询**即可。
 
 ```sh
 python3 "$bridge/cli.py" status JOB_ID --wait 20
 ```
 
-`status` 为 `completed` 时，打开 `outputPath` 指向的 PNG。工具已检查文件能够解码；请对照方法原文核对图中的文字、箭头方向和步骤关系，再将选用的图复制到稿件目录，在图注中注明“方法示意图”。
+`status` 为 `completed` 时，工具已确认 PNG 可以解码。打开 `outputPath` 指向的图片，对照方法原文核对图中的文字、箭头方向和步骤关系，再将选用的图复制到稿件目录，在图注中注明“方法示意图”。
 
 ## 失败或中断后接手
 
-- **`failed`**：查看 `error`。若 Codex 拒绝认证，用 `codex login` 重新登录；若提示缺少生图权限，先确认账号是否支持该功能。
+- **`failed`**：查看 `error`。若 Codex 拒绝认证，用 `codex login` 重新登录。如果提示缺少生图权限，先确认账号是否支持该功能。
 - **`unknown`**：请求可能已送达 Codex。保留 `jobId` 和 `.local/codex-image/jobs/JOB_ID.json`，用记录中已有的 `threadId` 或 `turnId` 核对原请求的活动。结果查清前不要重新提交，也不要换接口再发一次。
 
-图片保存在课题的 `.local/codex-image/images/`。任务记录可能包含提示词、参考文件路径或服务商回复；分享图片时不要一并公开任务目录。
+图片保存在课题的 `.local/codex-image/images/`。分享时只选要公开的图片，任务目录中的记录可能包含提示词、参考文件路径或服务商回复。
 
 ## 在 OpenCode 中调用（可选）
 
