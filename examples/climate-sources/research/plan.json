@@ -1,0 +1,9 @@
+{
+  "question": "What do WMO and Copernicus report for the global temperature anomaly in 2024, and what can one year establish about the Paris temperature goal?",
+  "scope": "A targeted retrospective comparison of the two agencies' 10 January 2025 releases. Both had been read before this evidence record was frozen. No new temperature analysis or systematic literature search.",
+  "require_source_manifest": true,
+  "criteria": [
+    {"id":"estimates","description":"Quote each release's estimate with its units and identify whether it is a consolidated estimate or a single reanalysis."},
+    {"id":"time","description":"Distinguish a calendar-year observation from a long-term temperature goal using the published explanation."}
+  ]
+}

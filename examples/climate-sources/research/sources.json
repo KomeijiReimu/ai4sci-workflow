@@ -1,0 +1,6 @@
+{
+  "sources": [
+    {"id":"WMO","title":"WMO confirms 2024 as warmest year on record at about 1.55°C above pre-industrial level","origin":"https://wmo.int/news/media-centre/wmo-confirms-2024-warmest-year-record-about-155degc-above-pre-industrial-level","locator":"10 January 2025, opening temperature assessment and Secretary-General Celeste Saulo's statement on the long-term goal","access":"full-text","path":"inputs/wmo.txt","sha256":"ed94e07a2c31517ce62751118793ddce08bb8776c2306971050e7bec1fc1141f"},
+    {"id":"C3S","title":"Copernicus: 2024 is the first year to exceed 1.5°C above pre-industrial level","origin":"https://climate.copernicus.eu/copernicus-2024-first-year-exceed-15degc-above-pre-industrial-level","locator":"10 January 2025, Global surface air temperature highlights, first bullet","access":"full-text","path":"inputs/c3s.txt","sha256":"c6b5f9878f044a2a41b364b8ddd153d14ed0b3e96e81f2f2263f5c27d1927c1d"}
+  ]
+}

@@ -1,0 +1,3 @@
+Representative linear relationships for (A): penguin flipper length (mm) and body mass (g)
+
+Within-species linear model is visualized for each penguin or iris species.

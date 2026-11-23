@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "command": "python3 run.py",
+  "plan_sha256": "b46d01ea97224d0e0d52bc552eca16af1adf8e0eea95be81c8a3bde7df66827b",
+  "run_py_sha256": "2cb5ea2882d8175367e79703045abf902a1cbb61bdd0d09646343ef13e920211",
+  "outputs": [
+    "research/predictions.csv",
+    "research/results.csv"
+  ],
+  "sha256": {
+    "research/predictions.csv": "8d4b5404d1a1327d8fee6471daa05e4fd959239e0537ae3aabf130ad6d6fee87",
+    "research/results.csv": "c2cd9e5f9e3bc2333535cbcf3fcd336571f996d1ed5dae13f2c0fe9ebc21871d"
+  },
+  "arms": [
+    {
+      "id": "training_mean",
+      "conditions": {
+        "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "metric": "MAE (g)",
+        "train_row_ids_sha256": "82f714d5aaae74ec01ed91979e20934e6eb493f62ad51051019a1db3cccd201d",
+        "test_row_ids_sha256": "3516cd05e3df99b0fa6363a513dae027f5bd015a010cc83adc6be801ca80647b"
+      }
+    },
+    {
+      "id": "flipper_ols",
+      "conditions": {
+        "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "metric": "MAE (g)",
+        "train_row_ids_sha256": "82f714d5aaae74ec01ed91979e20934e6eb493f62ad51051019a1db3cccd201d",
+        "test_row_ids_sha256": "3516cd05e3df99b0fa6363a513dae027f5bd015a010cc83adc6be801ca80647b"
+      }
+    }
+  ]
+}

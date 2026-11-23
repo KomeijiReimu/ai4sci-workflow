@@ -1,0 +1,7 @@
+{
+  "claims": [
+    {"id":"C1","criterion":"estimates","status":"supported","statement":"世界气象组织综合多套数据，给出的全球年平均地表温度距平为 1.55 °C，不确定幅度为 ± 0.13 °C。","evidence":[{"kind":"quote","path":"inputs/wmo.txt","quote":"1.55 °C (with a margin of uncertainty of ± 0.13 °C)","displays":["1.55","0.13"]},{"kind":"quote","path":"inputs/wmo.txt","quote":"WMO’s consolidated analysis of the six datasets"}]},
+    {"id":"C2","criterion":"estimates","status":"supported","statement":"哥白尼气候变化服务使用 ERA5 再分析资料，报告的年平均温度距平为 1.60 °C。","evidence":[{"kind":"quote","path":"inputs/c3s.txt","quote":"This is equivalent to 1.60°C above an estimate of the 1850-1900 temperature designated to be the pre-industrial level.","displays":["1.60"]},{"kind":"quote","path":"inputs/c3s.txt","quote":"According to ERA5"}]},
+    {"id":"C3","criterion":"time","status":"supported","statement":"一个日历年的平均温度不能单独判定是否越过《巴黎协定》的长期温控目标，后者考察的是数十年的升温。","evidence":[{"kind":"quote","path":"inputs/wmo.txt","quote":"measured over decades rather than an individual year"}]}
+  ]
+}
