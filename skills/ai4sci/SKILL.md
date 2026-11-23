@@ -1,13 +1,15 @@
 ---
 name: ai4sci
-description: Route a computational research project from a question or idea through a reproducible experiment to an evidence-checked manuscript. Use for 选题、计算实验、复现论文、查证据、写研究报告 or resuming an existing study. Enter or stop at the requested stage.
+description: Help with a research question, literature search, study design, analysis, reproduction or evidence-checked manuscript. Use for 文献调研、选题、研究设计、计算实验、复现、查证据、写研究报告 or resuming an existing study. Enter or stop at the requested stage.
 ---
 
 # Run a study
 
 The user's request can be just a checkout path and a research goal. Resolve `KIT` from this file's location in the checkout. Read the relevant `$KIT/skills/<name>/SKILL.md` yourself. From an external project, use the user's current directory as `STUDY`. From the checkout, use the named `studies/<topic>/` if supplied. For a new topic that needs files, choose a fresh, descriptive folder there. Give both paths to collaborators. Run experiments from `STUDY` and keep research outputs there. Do not install tools, copy skills or edit project configuration to start a study.
 
-Start at the stage the goal needs. A request to find papers can end with an annotated reading list. A request for ideas can end with candidate questions, their closest prior work and a feasible first test. Use the available search tools when the user has supplied only a topic. Neither of these requests needs a manuscript or an experiment run record. For a full study deliver the manuscript, raw outputs, commands and evidence review. When resuming, read the study's existing files before deciding whether to rerun anything.
+Start at the stage the goal needs. A request to find papers can end with an annotated reading list. A request for ideas can end with candidate questions, their closest prior work and a feasible first test. Use the available search tools when the user has supplied only a topic. Neither quick request needs a manuscript, experiment run record or handoff. For field, laboratory or observational work, help design the protocol and analyze supplied measurements. Identify who must collect missing observations; do not report a proposed physical procedure or a simulation as a performed experiment.
+
+For a full or multi-session study, maintain one short `$STUDY/research/handoff.md` using `$KIT/templates/handoff.md`. Update it at pauses and delivery; link to evidence rather than duplicating it. On resume, read the existing handoff, frozen plan, run record, outputs, draft and review (where present) before deciding whether anything needs to run again. For a full study deliver the manuscript, raw outputs, commands and evidence review.
 
 1. Use `ai4sci-idea` for a broad direction or a novelty check. Bring the chosen question and the closest existing result to the design stage.
 2. Use `ai4sci-experiment` to agree on what would answer the question, freeze the plan, run a pilot, then run the declared comparison. In a reproduction, match the source's conditions and disclose substitutions. Keep valid negative results.

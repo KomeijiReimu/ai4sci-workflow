@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Run research evidence checks from the workflow checkout (Python 3.10+)."""
 import argparse
+from dataclasses import asdict
 import hashlib
 import json
 import importlib.util
@@ -9,7 +10,7 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent
-VERSION = '0.1.0'
+VERSION = '0.2.0'
 
 
 def main():
@@ -24,17 +25,16 @@ def main():
     if args.cmd == 'freeze':
         research = Path(args.project) / 'research'
         raw = (research / 'plan.json').read_bytes()
-        plan = json.loads(raw)
-        if not isinstance(plan, dict) or not plan.get('question') or not plan.get('criteria'):
-            raise ValueError('plan.json must specify a question and criteria')
+        from checks.audit import parse_plan
+        parse_plan(raw)
         out = research / 'plan.sha256'
         digest = hashlib.sha256(raw).hexdigest() + '\n'
         if out.exists():
-            if out.read_text() != digest:
+            if out.read_bytes() != digest.encode('ascii'):
                 raise ValueError('plan changed after freeze: keep the original and document the new analysis separately')
         else:
-            with out.open('x') as f:
-                f.write(digest)
+            with out.open('xb') as f:
+                f.write(digest.encode('ascii'))
         print(f'{out}: {digest.strip()}')
         return 0
     if args.cmd == 'audit':
@@ -47,16 +47,26 @@ def main():
     sys.modules[spec.name] = mod
     spec.loader.exec_module(mod)
     files = mod.classify(args.files)
+    for path in args.files:
+        if path.name == 'plan.json' and path.parent.name == 'research':
+            from checks.audit import parse_plan
+            raw = path.read_bytes()
+            parse_plan(raw)
+            files.append(mod.SrcFile(str(path), raw.decode('utf-8'), 'prereg'))
     by_path = {f.path: f.kind for f in files}
     for path in args.files:
         if str(path) not in by_path:
             raise ValueError(f'missing, empty, unreadable or unrecognized statistical input: {path}')
     kinds = set(by_path.values())
-    result = mod.run([str(p) for p in args.files])
+    reports = [f for f in files if f.kind == 'report']
+    plans = [f for f in files if f.kind == 'prereg']
+    code = [f for f in files if f.kind == 'code']
+    findings = mod.check_interpretation(reports) + mod.check_prereg(plans, code) + mod.check_seed(code)
+    result = {'findings': [{'check': 'integrity', **asdict(f)} for f in findings], 'note': mod.NOTE}
     result['coverage'] = {
         'causal_wording': 'scanned' if 'report' in kinds else 'not checked: no report',
         'seed': 'scanned' if 'code' in kinds else 'not checked: no code',
-        'plan_adherence': 'scanned' if {'code', 'prereg'} <= kinds else 'not checked: supply code and an analysis_plan or prereg text',
+        'plan_adherence': 'scanned' if {'code', 'prereg'} <= kinds else 'not checked: supply code and research/plan.json or a named preregistration',
     }
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return 0

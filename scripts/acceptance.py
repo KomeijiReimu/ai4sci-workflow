@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Exercise the checkout's evidence checks on a fresh study without accounts."""
+import hashlib
 import json
 from pathlib import Path
 import shutil
@@ -30,6 +31,15 @@ def main():
         for name in ('trapezoid-note.md', 'left-note.md', 'plan.json'):
             shutil.copy2(research / name, dest / name)
         shutil.copy2(EXAMPLE / 'run.py', p)
+        # Express the existing four-mesh prediction before this new run. Leave the
+        # historical plan and digest in the archive untouched.
+        plan_file = dest / 'plan.json'
+        plan = json.loads(plan_file.read_bytes())
+        criterion = next(item for item in plan['criteria'] if item['id'] == 'K2')
+        criterion['required_observations'] = [
+            {'path':'research/results.csv', 'key':{'n':str(n)}, 'column':'trap_order',
+             'bounds':{'min':1.999999999, 'max':2.000000001}} for n in (8, 16, 32, 64)]
+        plan_file.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         run(kit, 'freeze', p, cwd=ROOT)
         run('run.py', cwd=p)
         for name in ('results.csv', 'errors.svg', 'run.json'):
@@ -38,9 +48,23 @@ def main():
         for name in ('paper.md', 'claims.json'):
             shutil.copy2(research / name, dest / name)
         report = json.loads(run(kit, 'audit', '.', cwd=p))
-        if report['deliverability'] != 'ready':
+        outcomes = report['observation_outcomes']['K2']
+        if report['deliverability'] != 'ready' or [o['outcome'] for o in outcomes] != ['met']*4:
             sys.exit(str(report))
         print('PASS | checkout CLI: fresh computation, CSV/SVG/run match, manuscript ready')
+        table, receipt = dest/'results.csv', dest/'run.json'
+        original_table, original_receipt = table.read_bytes(), receipt.read_bytes()
+        table.write_bytes(b''.join(line for line in original_table.splitlines(keepends=True)
+                                   if not line.startswith((b'16,', b'32,'))))
+        record = json.loads(original_receipt)
+        record['sha256']['research/results.csv'] = hashlib.sha256(table.read_bytes()).hexdigest()
+        receipt.write_text(json.dumps(record), encoding='utf-8')
+        missing = json.loads(run(kit, 'audit', p, cwd=ROOT, expect=2))
+        if missing['criterion_coverage']['K2'] != {'required_observations':4, 'verified_observations':2}:
+            sys.exit(str(missing))
+        print('PASS | missing interior meshes rejected despite matching output checksum')
+        table.write_bytes(original_table)
+        receipt.write_bytes(original_receipt)
         paper = dest / 'paper.md'
         original = paper.read_text()
         paper.write_text(original.replace('0.3359375', '0.7359375'))

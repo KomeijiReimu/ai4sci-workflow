@@ -11,4 +11,6 @@ Run a small pilot to check inputs and units. Execute the declared baseline and t
 
 Select the comparison that answers the question: align tables by unique sample ID, check the entire ID set, and use prespecified tolerances rather than rounding until a comparison passes. `checks/compare.py --help` documents the offline comparison command. Treat changed grouping separately from merely renamed labels. Support conclusions with actual outputs rather than notebook prose.
 
+For a finite set of important comparisons, freeze the expected group, seed or timepoint cells in each criterion's `required_observations` (see `checks/contract.md`). Include the plan digest as `plan_sha256` in the run receipt and record input version or checksum, code revision or script checksum, and the environment needed to reproduce the result. When comparing several exploratory variants, record the common baseline, selection metric, budget and stopping rule. Keep the unselected results. Reserve fresh data or a separate confirmation run for the chosen variant.
+
 For more involved rubrics, consult the vendored [criterion verification](references/autoscirub/criterion-level-verification.md) and [targeted revision](references/autoscirub/targeted-revision.md) protocols. Use this project's file contract and available roles; their upstream file/tool names are not requirements here.
