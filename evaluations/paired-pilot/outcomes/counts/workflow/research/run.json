@@ -1,0 +1,18 @@
+{
+  "status": "completed",
+  "command": "python3 research/analyze.py",
+  "outputs": ["research/results.csv"],
+  "sha256": {
+    "research/results.csv": "d0bd3cb55e2f49ecb62aa3b04dd41e8f8d0161bbd01457bbc3b18077f6c21e49"
+  },
+  "plan_sha256": "5ad5ac5e5bbe704bb506eb8591071efdd4e0d8aef7200dc5c0104b21864462bf",
+  "environment": "Python 3.13.5, standard library only, offline Linux",
+  "working_directory": "/mnt",
+  "inputs": {
+    "registry.csv": "503579a19c88f33a470e47c0166f351242b8e47648051cb2f0a00a2c75cf4ee4",
+    "registry-protocol.md": "d7baf171fc782767b4d06af42f062888e9981953789fb90b2757d2423fac25f5",
+    "briefing.txt": "3c6657ef6c56255961de6eb6450e6c8819e067a5b5a6b4a8c59ccf933f592ce5"
+  },
+  "code": {"research/analyze.py": "48f593608e5d647522c94a6b2ea23c0766f3173191af0689e52b800ee9aecfbe"},
+  "note": "Workflow freeze command failed with ModuleNotFoundError checks.sources; plan.sha256 was written as SHA-256 of the raw plan bytes plus LF, the digest the freeze command defines."
+}

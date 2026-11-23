@@ -1,0 +1,121 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "K1",
+      "statement": "Within Basalt, the Slate on-time rate is 0.4 and the Amber rate is 0.3.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "site_basalt_slate"}, "column": "rate", "value": 0.4, "atol": 0.0005, "display": "0.4"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "site_basalt_amber"}, "column": "rate", "value": 0.3, "atol": 0.0005, "display": "0.3"}
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "K1",
+      "statement": "Within Linden, the Slate on-time rate is 0.95 and the Amber rate is 0.9.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "site_linden_slate"}, "column": "rate", "value": 0.95, "atol": 0.0005, "display": "0.95"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "site_linden_amber"}, "column": "rate", "value": 0.9, "atol": 0.0005, "display": "0.9"}
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "K1",
+      "statement": "The only Quartz cell with observations is Slate, at an on-time rate of 0.7.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "site_quartz_slate"}, "column": "rate", "value": 0.7, "atol": 0.0005, "display": "0.7"}
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "K2",
+      "statement": "Pooled across observed sites, Slate is 81 of 160 on time for a rate of 0.506, while Amber is 114 of 140 for a rate of 0.814.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "pooled_slate"}, "column": "n_on_time", "value": 81, "atol": 0.5, "display": "81"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "pooled_slate"}, "column": "n_inspected", "value": 160, "atol": 0.5, "display": "160"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "pooled_slate"}, "column": "rate", "value": 0.506, "atol": 0.0005, "display": "0.506"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "pooled_amber"}, "column": "n_on_time", "value": 114, "atol": 0.5, "display": "114"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "pooled_amber"}, "column": "n_inspected", "value": 140, "atol": 0.5, "display": "140"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "pooled_amber"}, "column": "rate", "value": 0.814, "atol": 0.0005, "display": "0.814"}
+      ]
+    },
+    {
+      "id": "C5",
+      "criterion": "K2",
+      "statement": "The pooled reversal reflects site mix: 0.75 of Slate tiles are from Basalt, whereas 0.857 of Amber tiles are from Linden.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "mix_slate_basalt"}, "column": "share", "value": 0.75, "atol": 0.0005, "display": "0.75"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "mix_amber_linden"}, "column": "share", "value": 0.857, "atol": 0.0005, "display": "0.857"}
+      ]
+    },
+    {
+      "id": "C6",
+      "criterion": "K3",
+      "statement": "On covered sites the renormalized weights are 0.625 for Basalt and 0.375 for Linden, and the target-weighted rates are 0.606 for Slate and 0.525 for Amber, a difference of 0.081.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "covered_weight_basalt"}, "column": "weight", "value": 0.625, "atol": 0.0005, "display": "0.625"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "covered_weight_linden"}, "column": "weight", "value": 0.375, "atol": 0.0005, "display": "0.375"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "covered_weighted_slate"}, "column": "rate", "value": 0.606, "atol": 0.0005, "display": "0.606"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "covered_weighted_amber"}, "column": "rate", "value": 0.525, "atol": 0.0005, "display": "0.525"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "covered_contrast"}, "column": "rate", "value": 0.081, "atol": 0.0005, "display": "0.081"}
+      ]
+    },
+    {
+      "id": "C7",
+      "criterion": "K4",
+      "statement": "Over the protocol-permitted interval, the full-target Amber rate is bounded between 0.42 and 0.62, so the Slate-minus-Amber contrast lies between 0.005 and 0.205.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "full_amber"}, "column": "lower", "value": 0.42, "atol": 0.0005, "display": "0.42"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "full_amber"}, "column": "upper", "value": 0.62, "atol": 0.0005, "display": "0.62"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "full_contrast"}, "column": "lower", "value": 0.005, "atol": 0.0005, "display": "0.005"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "full_contrast"}, "column": "upper", "value": 0.205, "atol": 0.0005, "display": "0.205"}
+      ]
+    },
+    {
+      "id": "C8",
+      "criterion": "K4",
+      "statement": "Parity would require a Quartz Amber on-time rate of 1.025, above the permitted maximum of 1.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "parity_quartz_amber_rate"}, "column": "rate", "value": 1.025, "atol": 0.0005, "display": "1.025"},
+        {"kind": "number", "path": "research/results.csv", "key": {"metric_id": "quartz_amber_permitted"}, "column": "upper", "value": 1, "atol": 0.5, "display": "1"}
+      ]
+    },
+    {
+      "id": "C9",
+      "criterion": "K5",
+      "statement": "Because dispatchers chose the route using current queue length and allocation was not randomized, the contrast is descriptive rather than causal.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "Dispatchers chose the route using current queue length; allocation was not randomized."}
+      ]
+    },
+    {
+      "id": "C10",
+      "criterion": "K6",
+      "statement": "The target population named in protocol B is Basalt, Linden and Quartz, and the register contains records for all three sites.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "The intended service population is 50 percent Basalt, 30 percent Linden and 20 percent Quartz."},
+        {"kind": "quote", "path": "registry.csv", "quote": "K07,Basalt,Slate,75,30\nK02,Linden,Amber,50,45\nK09,Quartz,Slate,20,14"}
+      ]
+    },
+    {
+      "id": "C11",
+      "criterion": "K6",
+      "statement": "The newsletter's claim that Slate missed every deadline on sites absent from the register conflicts with protocol C, which says an absent route–site combination means no observations, not that every tile missed its deadline.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "briefing.txt", "quote": "The Slate roll-out almost certainly missed every deadline on the sites absent from the register."},
+        {"kind": "quote", "path": "registry-protocol.md", "quote": "An absent route–site combination means no observations were collected, not that every tile missed its deadline."}
+      ]
+    }
+  ]
+}

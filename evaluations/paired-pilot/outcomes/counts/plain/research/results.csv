@@ -1,0 +1,17 @@
+metric,site,route,inspected,on_time,rate,weight,notes
+site_route,Basalt,Slate,120,48,0.400000,,
+site_route,Basalt,Amber,20,6,0.300000,,
+site_route,Linden,Slate,20,19,0.950000,,
+site_route,Linden,Amber,120,108,0.900000,,
+site_route,Quartz,Slate,20,14,0.700000,,
+site_route,Quartz,Amber,0,0,,,unobserved
+pooled_all_sites,all,Slate,160,81,0.506250,,tile-pooled; confounded by site mix
+pooled_all_sites,all,Amber,140,114,0.814286,,tile-pooled; confounded by site mix
+covered_weighted,covered,Slate,,,0.606250,Basalt=0.6250;Linden=0.3750,Basalt+Linden only
+covered_weighted,covered,Amber,,,0.525000,Basalt=0.6250;Linden=0.3750,Basalt+Linden only
+covered_diff,covered,Slate-Amber,,,0.081250,,positive => Slate higher
+full_target,all,Slate,,,0.625000,1.0000,fully observed
+full_target_bound,all,Amber,,,0.420000,,Quartz-Amber=0 lower bound
+full_target_bound,all,Amber,,,0.620000,,Quartz-Amber=1 upper bound
+full_target_diff_bound,all,Slate-Amber,,,0.005000,,at Quartz-Amber=1 (tightest low end)
+full_target_diff_bound,all,Slate-Amber,,,0.205000,,at Quartz-Amber=0 (tightest high end)

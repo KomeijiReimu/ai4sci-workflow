@@ -1,0 +1,97 @@
+{
+  "covered_amber": 0.5249999999999999,
+  "covered_difference_slate_minus_amber": 0.08125000000000004,
+  "covered_sites": [
+    "Basalt",
+    "Linden"
+  ],
+  "covered_slate": 0.60625,
+  "covered_weights_renormalized": {
+    "Basalt": 0.625,
+    "Linden": 0.37499999999999994
+  },
+  "denominator": "inspected tiles",
+  "full_target": {
+    "amber_base_observed_sites": 0.42000000000000004,
+    "amber_bounds": [
+      0.42000000000000004,
+      0.6200000000000001
+    ],
+    "amber_quartz_weight": 0.2,
+    "assumption": "Quartz-Amber on-time rate in [0,1]; no external rate (protocol C)",
+    "difference_bounds": [
+      0.004999999999999893,
+      0.20499999999999996
+    ],
+    "difference_bounds_pp": [
+      0.49999999999998934,
+      20.499999999999996
+    ],
+    "missing_cell": "Quartz/Amber",
+    "sign_stable_positive": true,
+    "slate": 0.625
+  },
+  "pooled_all_sites": {
+    "Amber": {
+      "inspected": 140,
+      "on_time": 114,
+      "rate": 0.8142857142857143
+    },
+    "Slate": {
+      "inspected": 160,
+      "on_time": 81,
+      "rate": 0.50625
+    }
+  },
+  "pooled_difference_slate_minus_amber": -0.3080357142857143,
+  "site_route": [
+    {
+      "inspected": 120,
+      "on_time": 48,
+      "rate": 0.4,
+      "route": "Slate",
+      "site": "Basalt"
+    },
+    {
+      "inspected": 20,
+      "on_time": 6,
+      "rate": 0.3,
+      "route": "Amber",
+      "site": "Basalt"
+    },
+    {
+      "inspected": 20,
+      "on_time": 19,
+      "rate": 0.95,
+      "route": "Slate",
+      "site": "Linden"
+    },
+    {
+      "inspected": 120,
+      "on_time": 108,
+      "rate": 0.9,
+      "route": "Amber",
+      "site": "Linden"
+    },
+    {
+      "inspected": 20,
+      "on_time": 14,
+      "rate": 0.7,
+      "route": "Slate",
+      "site": "Quartz"
+    },
+    {
+      "inspected": 0,
+      "on_time": 0,
+      "rate": null,
+      "route": "Amber",
+      "site": "Quartz"
+    }
+  ],
+  "source": "../registry.csv",
+  "target_weights": {
+    "Basalt": 0.5,
+    "Linden": 0.3,
+    "Quartz": 0.2
+  }
+}

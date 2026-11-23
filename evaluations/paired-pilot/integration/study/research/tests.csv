@@ -1,0 +1,5 @@
+test,estimate,ci_low,ci_high,statistic,df,p_value,method
+overall_risk_difference,0.000000,-0.062663,0.076503,NA,NA,NA,Newcombe hybrid-score interval for difference in proportions
+overall_fisher_exact,NA,NA,NA,NA,NA,1.000000,Two-sided Fisher exact test on the 2x2 device-by-flag table
+mh_odds_ratio,1.084567,0.303345,3.877716,NA,NA,NA,Mantel-Haenszel common odds ratio; Robins-Breslow-Greenland interval
+cmh_test,NA,NA,NA,0.016306,1,0.898391,Cochran-Mantel-Haenszel chi-square without continuity correction

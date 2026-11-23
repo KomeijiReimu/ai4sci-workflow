@@ -1,0 +1,58 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "K1",
+      "statement": "Across 200 logged inspections there were 10 warning flags; Iris recorded 4 among 80 and Juniper 6 among 120, and both overall warning rates were 0.05.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "total", "device": "both", "shift": "all"}, "column": "checked", "value": 200, "display": "200", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "total", "device": "both", "shift": "all"}, "column": "flagged", "value": 10, "display": "10", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "overall", "device": "Iris", "shift": "all"}, "column": "flagged", "value": 4, "display": "4", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "overall", "device": "Iris", "shift": "all"}, "column": "checked", "value": 80, "display": "80", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "overall", "device": "Juniper", "shift": "all"}, "column": "flagged", "value": 6, "display": "6", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "overall", "device": "Juniper", "shift": "all"}, "column": "checked", "value": 120, "display": "120", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "overall", "device": "Iris", "shift": "all"}, "column": "rate", "value": 0.05, "display": "0.05", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "overall", "device": "Juniper", "shift": "all"}, "column": "rate", "value": 0.05, "display": "0.05", "atol": 0}
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "K2",
+      "statement": "The overall risk difference (Iris minus Juniper) was 0.0, with a Newcombe interval from -0.0627 to 0.0765, and the two-sided Fisher exact test gave p=1.0.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "overall_risk_difference"}, "column": "estimate", "value": 0.0, "display": "0.0", "atol": 0},
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "overall_risk_difference"}, "column": "ci_low", "value": -0.0627, "display": "-0.0627", "atol": 0.00005},
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "overall_risk_difference"}, "column": "ci_high", "value": 0.0765, "display": "0.0765", "atol": 0.00005},
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "overall_fisher_exact"}, "column": "p_value", "value": 1.0, "display": "1.0", "atol": 0}
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "K3",
+      "statement": "Within shifts, the warning rate was 0.15 for Iris and 0.05 for Juniper at dawn, and 0.0167 for Iris and 0.05 for Juniper at dusk; the Mantel-Haenszel odds ratio was 1.0846 with interval 0.3033 to 3.8777, and the Cochran-Mantel-Haenszel p-value was 0.8984.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "shift", "device": "Iris", "shift": "dawn"}, "column": "rate", "value": 0.15, "display": "0.15", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "shift", "device": "Juniper", "shift": "dawn"}, "column": "rate", "value": 0.05, "display": "0.05", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "shift", "device": "Iris", "shift": "dusk"}, "column": "rate", "value": 0.0167, "display": "0.0167", "atol": 0.00005},
+        {"kind": "number", "path": "research/results.csv", "key": {"analysis": "shift", "device": "Juniper", "shift": "dusk"}, "column": "rate", "value": 0.05, "display": "0.05", "atol": 0},
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "mh_odds_ratio"}, "column": "estimate", "value": 1.0846, "display": "1.0846", "atol": 0.00005},
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "mh_odds_ratio"}, "column": "ci_low", "value": 0.3033, "display": "0.3033", "atol": 0.00005},
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "mh_odds_ratio"}, "column": "ci_high", "value": 3.8777, "display": "3.8777", "atol": 0.00005},
+        {"kind": "number", "path": "research/tests.csv", "key": {"test": "cmh_test"}, "column": "p_value", "value": 0.8984, "display": "0.8984", "atol": 0.00005}
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "K4",
+      "statement": "A flag means a print-inspection warning, not a confirmed defect, and technicians assigned devices by availability, without randomization.",
+      "status": "supported",
+      "evidence": [
+        {"kind": "quote", "path": "field-note.md", "quote": "A flag means a print-inspection warning, not a confirmed defect."},
+        {"kind": "quote", "path": "field-note.md", "quote": "Technicians assigned devices by availability, without randomization."}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+analysis,device,shift,checked,flagged,rate,ci_low,ci_high
+total,both,all,200,10,0.050000,0.027383,0.089578
+overall,Iris,all,80,4,0.050000,0.019614,0.121623
+overall,Juniper,all,120,6,0.050000,0.023114,0.104803
+shift,Iris,dawn,20,3,0.150000,0.052369,0.360419
+shift,Juniper,dawn,40,2,0.050000,0.013821,0.165039
+shift,Iris,dusk,60,1,0.016667,0.002948,0.088551
+shift,Juniper,dusk,80,4,0.050000,0.019614,0.121623

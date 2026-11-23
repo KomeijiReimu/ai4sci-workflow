@@ -1,3 +1,4 @@
 # Archive bytes are part of the experiment: plans, snapshots and results are hashed.
 examples/** -text
 evaluations/** -text
+evaluations/**/*.csv whitespace=trailing-space,space-before-tab,cr-at-eol

@@ -1,0 +1,37 @@
+{
+  "question": "Among the logged poster inspections in scans.csv, did Iris have a different overall print-inspection warning rate from Juniper?",
+  "design": "Observational comparison of two devices using the four aggregated shift-by-device rows in scans.csv. The unit of analysis is one logged poster inspection; checked is the denominator and flagged the numerator. The primary comparison is the overall (both shifts combined) warning-rate difference, Iris minus Juniper, with a two-sided Fisher exact test. A prespecified sensitivity analysis stratifies by shift (dawn, dusk) using the Mantel-Haenszel odds ratio and the Cochran-Mantel-Haenszel test, because shift may confound device and device allocation was by availability without randomization. No causal device effect is estimated. A falsifying observation would be an overall rate difference whose interval excludes zero, or a stratified association test with p below 0.05.",
+  "evaluation": "Primary metric: overall warning proportion flagged/checked by device, as a proportion in [0,1]. Report counts, proportions, Wilson intervals, the risk difference with a Newcombe hybrid-score interval, and the two-sided Fisher exact p-value. Sensitivity analysis reports shift-specific proportions, the Mantel-Haenszel odds ratio and the Cochran-Mantel-Haenszel chi-square p-value. Interpretation uses a two-sided 0.05 level but no threshold-based dichotomization beyond the reported tests. Stopping rule: one deterministic analysis of the complete supplied file, with no additional data or subgroup search.",
+  "data_already_inspected": "scans.csv (all four rows) and field-note.md were read before this plan was written; these criteria are therefore retrospective, not preregistered. The observed equality of the crude rates motivated the shift-stratified sensitivity criterion.",
+  "budget": "Local files only. One analysis script using the Python 3 standard library; no network, no installs, no external services and no additional data collection.",
+  "criteria": [
+    {
+      "id": "K1",
+      "description": "Report the total and device-specific checked and flagged counts and warning proportions, with Wilson intervals, as numeric evidence in research/results.csv.",
+      "required_observations": [
+        {"path": "research/results.csv", "key": {"analysis": "overall", "device": "Iris", "shift": "all"}, "column": "rate"},
+        {"path": "research/results.csv", "key": {"analysis": "overall", "device": "Juniper", "shift": "all"}, "column": "rate"}
+      ]
+    },
+    {
+      "id": "K2",
+      "description": "Report the overall risk difference (Iris minus Juniper) with a Newcombe interval and the two-sided Fisher exact p-value from research/tests.csv.",
+      "required_observations": [
+        {"path": "research/tests.csv", "key": {"test": "overall_risk_difference"}, "column": "estimate"},
+        {"path": "research/tests.csv", "key": {"test": "overall_fisher_exact"}, "column": "p_value"}
+      ]
+    },
+    {
+      "id": "K3",
+      "description": "Report shift-specific warning proportions and the Mantel-Haenszel odds ratio with the Cochran-Mantel-Haenszel test p-value as a prespecified sensitivity analysis for shift confounding.",
+      "required_observations": [
+        {"path": "research/tests.csv", "key": {"test": "mh_odds_ratio"}, "column": "estimate"},
+        {"path": "research/tests.csv", "key": {"test": "cmh_test"}, "column": "p_value"}
+      ]
+    },
+    {
+      "id": "K4",
+      "description": "Interpret the outcome and allocation using the primary record: a flag is a print-inspection warning, not a confirmed defect, and devices were assigned by availability without randomization."
+    }
+  ]
+}

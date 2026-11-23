@@ -1,0 +1,28 @@
+{
+  "question": "Across rows of input/data.csv with a recorded galaxy_density_increase, does the recorded increase differ with the thirteen characteristics explicitly named in input/question.json?",
+  "design": "Row-level descriptive observational analysis; use the named distance (not proximity), radiation level (not percentile) and presence indicators (not strengths/counts). galaxy_ID is incomplete and repeats, so no independence or unique-galaxy interpretation is assumed. Do not use unrequested predictors or impute missing outcomes. Compare each available predictor against the same constant-mean reference on its own paired rows.",
+  "data_already_inspected": "Read the dictionary, header and first thirteen CSV records. A pre-plan schema check counted 500 records, with outcome text '1.0' 494 times and six blanks, and repeated/blank galaxy_ID labels. This feasibility constraint was known before freezing; no predictor-outcome comparisons were calculated. This is a descriptive design, not prospective discovery.",
+  "predictors": ["distance_to_nearest_star_forming_region", "star_formation_rate", "magnetic_field_presence", "galaxy_age", "dominant_stellar_age", "luminosity_variability", "has_binary_star_system", "velocity_dispersion_of_stars", "average_surface_temperature_of_stars", "ultraviolet_emission", "cosmic_radiation_level", "proportion_of_red_stars", "blue_signature_intensity"],
+  "binary": ["magnetic_field_presence", "has_binary_star_system", "ultraviolet_emission"],
+  "evaluation": "K1: verify numeric outcome support and count total, recorded and blank rows, distinct observed values, min, max and sample SD. K2: for each predictor, drop only rows missing it or the outcome; record pair count, observed predictor range and outcome range. For varying continuous predictors compare mean outcome above versus at/below its paired-sample median; for binary predictors compare True versus False. Report both group sizes and observed means, signed difference (higher/present minus lower/absent, in original unspecified outcome units), and Pearson correlation or explicit reason it is undefined. An empty group gives an undefined contrast. This is descriptive across the supplied rows, without a test split, causal attribution, p-values or extrapolation. If the observed response is constant, report the exact observed contrasts but make no inferential claim that physical effects are zero.",
+  "verification": "Recount the raw outcome strings and independently reconstruct group counts and means from the source rows. Counts and discrete values must agree exactly; numerical contrasts must agree within 1e-10. All thirteen rows must be present once.",
+  "budget": "Supplied CSV and dictionary only. Python standard library, single CPU process, no network, no installs. One formal pass plus one independent self-check, each capped at 60 seconds. Stop after the declared comparisons and audit; no search for alternative targets or subsets.",
+  "criteria": [
+    {"id":"K1","description":"Account for recorded and missing outcomes and verify the observed level(s) and variance."},
+    {"id":"K2","description":"Quantify each of the thirteen prespecified predictor comparisons on paired observations and identify estimability of association.","required_observations":[
+      {"path":"research/contrasts.csv","key":{"predictor":"distance_to_nearest_star_forming_region"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"star_formation_rate"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"magnetic_field_presence"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"galaxy_age"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"dominant_stellar_age"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"luminosity_variability"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"has_binary_star_system"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"velocity_dispersion_of_stars"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"average_surface_temperature_of_stars"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"ultraviolet_emission"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"cosmic_radiation_level"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"proportion_of_red_stars"},"column":"difference"},
+      {"path":"research/contrasts.csv","key":{"predictor":"blue_signature_intensity"},"column":"difference"}
+    ]}
+  ]
+}

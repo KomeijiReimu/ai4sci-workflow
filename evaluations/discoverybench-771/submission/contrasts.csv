@@ -1,0 +1,14 @@
+predictor,paired,predictor_min,predictor_max,outcome_min,outcome_max,split,cutoff,n_lower,n_upper,mean_lower,mean_upper,difference,pearson,undefined_reason
+distance_to_nearest_star_forming_region,494,4.8035,24.8821,1.0,1.0,median,14.3614,247,247,1.0,1.0,0.0,,constant outcome
+star_formation_rate,494,0.0,20.0,1.0,1.0,median,10.18905,247,247,1.0,1.0,0.0,,constant outcome
+magnetic_field_presence,449,0,1,1.0,1.0,presence,0,219,230,1.0,1.0,0.0,,constant outcome
+galaxy_age,494,0.1,13.8,1.0,1.0,median,6.9895,247,247,1.0,1.0,0.0,,constant outcome
+dominant_stellar_age,494,0.01,10000.0,1.0,1.0,median,4858.19815,247,247,1.0,1.0,0.0,,constant outcome
+luminosity_variability,494,0.0,50.0,1.0,1.0,median,24.681600000000003,247,247,1.0,1.0,0.0,,constant outcome
+has_binary_star_system,445,0,1,1.0,1.0,presence,0,215,230,1.0,1.0,0.0,,constant outcome
+velocity_dispersion_of_stars,494,10.0,300.0,1.0,1.0,median,154.07715000000002,247,247,1.0,1.0,0.0,,constant outcome
+average_surface_temperature_of_stars,494,3000.0,10000.0,1.0,1.0,median,6818.0,247,247,1.0,1.0,0.0,,constant outcome
+ultraviolet_emission,494,0,1,1.0,1.0,presence,0,242,252,1.0,1.0,0.0,,constant outcome
+cosmic_radiation_level,494,0.0,50.0,1.0,1.0,median,26.4253,247,247,1.0,1.0,0.0,,constant outcome
+proportion_of_red_stars,494,0.0401,0.2005,1.0,1.0,median,0.12595,247,247,1.0,1.0,0.0,,constant outcome
+blue_signature_intensity,494,0.0,100.0,1.0,1.0,median,50.617450000000005,247,247,1.0,1.0,0.0,,constant outcome

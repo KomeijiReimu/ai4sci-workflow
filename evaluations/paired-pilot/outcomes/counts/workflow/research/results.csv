@@ -1,0 +1,24 @@
+metric_id,scope,site,route,n_inspected,n_on_time,rate,share,weight,lower,upper,note
+site_basalt_slate,site,Basalt,Slate,120,48,0.4,,0.5,,,inspected tiles summed across disjoint batches
+site_basalt_amber,site,Basalt,Amber,20,6,0.3,,0.5,,,inspected tiles summed across disjoint batches
+site_linden_slate,site,Linden,Slate,20,19,0.95,,0.3,,,inspected tiles summed across disjoint batches
+site_linden_amber,site,Linden,Amber,120,108,0.9,,0.3,,,inspected tiles summed across disjoint batches
+site_quartz_slate,site,Quartz,Slate,20,14,0.7,,0.2,,,inspected tiles summed across disjoint batches
+site_quartz_amber,site,Quartz,Amber,,,,,,,,absent cell: no observations (protocol C)
+pooled_slate,all_sites_pooled,All observed,Slate,160,81,0.50625,,,,,pooled over observed sites only; site mix is not the target mix
+pooled_amber,all_sites_pooled,All observed,Amber,140,114,0.814285714286,,,,,pooled over observed sites only; site mix is not the target mix
+mix_slate_basalt,site_mix,Basalt,Slate,,,,0.75,,,,share of Slate inspected tiles at Basalt
+mix_amber_basalt,site_mix,Basalt,Amber,,,,0.142857142857,,,,share of Amber inspected tiles at Basalt
+mix_slate_linden,site_mix,Linden,Slate,,,,0.125,,,,share of Slate inspected tiles at Linden
+mix_amber_linden,site_mix,Linden,Amber,,,,0.857142857143,,,,share of Amber inspected tiles at Linden
+mix_slate_quartz,site_mix,Quartz,Slate,,,,0.125,,,,share of Slate inspected tiles at Quartz
+covered_weight_basalt,covered_site_weight,Basalt,,,,,,0.625,,,target weight renormalized over covered sites
+covered_weight_linden,covered_site_weight,Linden,,,,,,0.375,,,target weight renormalized over covered sites
+covered_weighted_slate,covered_target_weighted,Covered sites,Slate,,,0.60625,,,,,target weights renormalized over Basalt and Linden
+covered_weighted_amber,covered_target_weighted,Covered sites,Amber,,,0.525,,,,,target weights renormalized over Basalt and Linden
+covered_contrast,covered_target_weighted,Covered sites,Slate minus Amber,,,0.08125,,,,,renormalized target-weighted descriptive contrast
+full_slate,full_target_weighted,All target sites,Slate,,,0.625,,,0.625,0.625,all Quartz Slate observed
+full_amber,full_target_weighted,All target sites,Amber,,,,,,0.42,0.62,"Quartz Amber unobserved; bound uses rate in [0, 1] only"
+full_contrast,full_target_weighted,All target sites,Slate minus Amber,,,,,,0.005,0.205,tightest bounds allowed by protocol paragraphs B and C
+parity_quartz_amber_rate,threshold,Quartz,Amber,,,1.025,,,,,Quartz Amber rate needed for full-target parity
+quartz_amber_permitted,permitted_range,Quartz,Amber,,,,,,0,1,"protocol C supplies no external rate; rate must lie in [0, 1]"

@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "command": "python3 /mnt/analysis.py",
+  "outputs": [
+    "research/results.csv",
+    "research/tests.csv"
+  ],
+  "plan_sha256": "cc438922fa8e0bb2f28dc97b0f265fec030b9d99fd94a4e8422ab44c48cfd36c",
+  "sha256": {
+    "research/results.csv": "85c654b267a828362f6630673afa9094bf87195a931406d27a72eba8eeca92ba",
+    "research/tests.csv": "a39f1c75b15fb04de43e5c3cae35199bee4f920bedb3cb422af5132ea3c7646f"
+  },
+  "inputs": {
+    "scans.csv": "7001ac990be4724aaf2d0d5be8e002a558fe95131686a65296794d8eaf166c60",
+    "field-note.md": "f4bfad1672a29cced05ca41ccebcbb442f13e471748276a1feee4aeb6238fce0"
+  },
+  "environment": {
+    "python": "3.13.5",
+    "dependencies": "Python standard library only",
+    "platform": "linux"
+  },
+  "notes": "Deterministic single analysis of all four supplied rows. No network, installs or external services. Completed panel: 200 checks, 10 flags."
+}

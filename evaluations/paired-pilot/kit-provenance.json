@@ -1,0 +1,115 @@
+{
+  "head_at_comparison": "0a52a31204d05548d6cb2708944ad01eb7178f2a",
+  "files": {
+    "AGENTS.md": {
+      "snapshot_sha256": "c6d94997490d15f241be2664cfd2d515bbe5e198bd4c97173f4e6e2e8825b8c6",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "LICENSE": {
+      "snapshot_sha256": "0cc2bb6b6686f3ff9bf23ee129ab71d453a918db5a7dd1f70a5fa5eb603358eb",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "ai4sci.py": {
+      "snapshot_sha256": "9b1381c4d88cc05bfaf1af8b2aa9b7e65b421bcdab7e52f9feddc15be06ba6b1",
+      "matches_head": false,
+      "matches_worktree_at_check": true
+    },
+    "checks/audit.py": {
+      "snapshot_sha256": "843b922e34facaf4c993d8ced56621d315617fc169c847bc32a4badfbc7abb0a",
+      "matches_head": false,
+      "matches_worktree_at_check": true
+    },
+    "checks/common.py": {
+      "snapshot_sha256": "460daff45446440ad521de77b2a2f4a608d2b433a1c0b0bd95c0f51fbe698ee9",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "checks/compare.py": {
+      "snapshot_sha256": "3b326f8fcd071b9013032c72907d038fba3532cd9ea9cabc7023ddcea642b088",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "checks/contract.md": {
+      "snapshot_sha256": "79b3a2969e2475cb6f3757297de7891a1e6825c4b5cc029431156d64e9fa8ecf",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "opencode.jsonc": {
+      "snapshot_sha256": "1756f9a5d1d2733ad99aea903a836339562b07daa83be6ac27e57f82a56e043b",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci/SKILL.md": {
+      "snapshot_sha256": "5ed8734104a6a647e4947de199b13a5673c40bae39c3c674281b6266222d8f84",
+      "matches_head": false,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-experiment/SKILL.md": {
+      "snapshot_sha256": "e862bdaefa6f1edd25a0336b9f77e5a792c28c6786d4f5a0ece66dfdff2ab2c1",
+      "matches_head": false,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-experiment/references/autoscirub/LICENSE": {
+      "snapshot_sha256": "cdbb983e9d93819040f5b5454d0877b9fcab6110863f9abddafb0129293b6981",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-experiment/references/autoscirub/criterion-level-verification.md": {
+      "snapshot_sha256": "271d1eaa73d434c20d53c9b92197f80ac94a3b2215bdb47e01c74a9f541b52f2",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-experiment/references/autoscirub/targeted-revision.md": {
+      "snapshot_sha256": "a544d0e5929e9da3070b24eba366a9b52408d0cce7784c57d217d1ae6a48b6c5",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-figures/SKILL.md": {
+      "snapshot_sha256": "690256be6f3c7b7f851d91be773546aadfef3dcfb1e08b82e70c770591349828",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-idea/SKILL.md": {
+      "snapshot_sha256": "3ab624e342b33b0ba3256384be67bb1211188c2cfc38d1c61c6416160fdf5a69",
+      "matches_head": false,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-paper/SKILL.md": {
+      "snapshot_sha256": "5dcac7a2b2326e09000b32bc870c868e935af3cd02e267a470d68f6a48020aab",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "skills/ai4sci-review/SKILL.md": {
+      "snapshot_sha256": "c5027c94780c91b0dda3638a5ebb9b60a1d265c094eb55a17df325d73db9ad0a",
+      "matches_head": false,
+      "matches_worktree_at_check": true
+    },
+    "templates/handoff.md": {
+      "snapshot_sha256": "db34a7c1b0ceaf017c129adae2db4e3b7a9e0c54cf15217e69fcfc712c939dd0",
+      "matches_head": false,
+      "matches_worktree_at_check": true
+    },
+    "templates/plan.json": {
+      "snapshot_sha256": "432e1949cb59abc537af5b4fead633bff7854e3508d4912bdf9a8ce72daf9fb9",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "vendor/ai4s-desktop/LICENSE": {
+      "snapshot_sha256": "8f844b63f71cc8acb08d844081425183bc28fbb7312e1576651d2cf4cc013738",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "vendor/ai4s-desktop/runtime/skills/core/stats-integrity/stats_integrity_check.py": {
+      "snapshot_sha256": "42537c57b945f75b30e1393381c5d1f30ce4d126fc85b905dd417d24021f75a7",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    },
+    "vendor/ai4s-desktop/scripts/dev/test_stats_integrity.py": {
+      "snapshot_sha256": "11de84dff202377b3fcaf0ea767398dfdb33a55b9a591e27ba7edfb0a00256c3",
+      "matches_head": true,
+      "matches_worktree_at_check": true
+    }
+  }
+}

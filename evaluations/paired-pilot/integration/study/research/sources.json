@@ -1,0 +1,13 @@
+{
+  "sources": [
+    {
+      "id": "S1",
+      "title": "Print inspection — signed store log (synthetic primary record)",
+      "origin": "Provided local study file",
+      "locator": "field-note.md",
+      "access": "provided",
+      "path": "field-note.md",
+      "sha256": "f4bfad1672a29cced05ca41ccebcbb442f13e471748276a1feee4aeb6238fce0"
+    }
+  ]
+}

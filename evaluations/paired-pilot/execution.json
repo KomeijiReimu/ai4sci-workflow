@@ -1,0 +1,541 @@
+{
+  "client": "OpenCode 2.4.1",
+  "model": "deepseek/deepseek-flash",
+  "agent": "build",
+  "cap_seconds": 360,
+  "cwd": "/mnt",
+  "PWD": "/mnt",
+  "session_isolation": "distinct archived standalone sessions with private ephemeral stores",
+  "freeze_manifest_sha256": "410af0ada03b9d9725bc9340cec6c5eb1abfe27b4a31cf2d562930fe4bf04939",
+  "resolver_amendment_manifest_sha256": "7a9791a10d1fc9a2b89fd7c12bbfdcc683a8a0c9d9f6fa10de793e92e3010865",
+  "kit_digest_definition": "SHA-256 of UTF-8 lines sorted by relative path, each file hexdigest + two spaces + relative path + LF",
+  "counts_pair_kit": "partial",
+  "reading_pair_kit": "partial",
+  "attempts": [
+    {
+      "task": "counts",
+      "attempt": "backup",
+      "arm": "plain",
+      "cli_exit": 0,
+      "elapsed_s": 60.485,
+      "utc_start": "2026-11-23T16:50:55.249949+00:00",
+      "utc_end": "2026-11-23T16:51:55.734920+00:00",
+      "text_events": 4,
+      "tool_calls": {
+        "read": 6,
+        "shell": 3,
+        "write": 2,
+        "edit": 1
+      },
+      "status": "material model attempt",
+      "score": "10/10",
+      "input_bytes_unchanged": true
+    },
+    {
+      "task": "counts",
+      "attempt": "backup",
+      "arm": "workflow",
+      "cli_exit": 0,
+      "elapsed_s": 245.17,
+      "utc_start": "2026-11-23T16:50:55.248665+00:00",
+      "utc_end": "2026-11-23T16:55:00.418229+00:00",
+      "text_events": 2,
+      "tool_calls": {
+        "read": 17,
+        "grep": 1,
+        "shell": 20,
+        "write": 7,
+        "edit": 5
+      },
+      "status": "material model attempt",
+      "score": "10/10",
+      "input_bytes_unchanged": true
+    },
+    {
+      "task": "counts",
+      "attempt": "primary",
+      "arm": "plain",
+      "cli_exit": 143,
+      "elapsed_s": 94.759,
+      "utc_start": "2026-11-23T16:48:47.968703+00:00",
+      "utc_end": "2026-11-23T16:50:22.727397+00:00",
+      "text_events": 0,
+      "tool_calls": {},
+      "status": "unscored transport preflight, no model response or tools",
+      "score": null
+    },
+    {
+      "task": "counts",
+      "attempt": "primary",
+      "arm": "workflow",
+      "cli_exit": 143,
+      "elapsed_s": 94.754,
+      "utc_start": "2026-11-23T16:48:47.970411+00:00",
+      "utc_end": "2026-11-23T16:50:22.724653+00:00",
+      "text_events": 0,
+      "tool_calls": {},
+      "status": "unscored transport preflight, no model response or tools",
+      "score": null
+    },
+    {
+      "task": "reading",
+      "attempt": "primary",
+      "arm": "plain",
+      "cli_exit": 0,
+      "elapsed_s": 175.989,
+      "utc_start": "2026-11-23T16:51:22.856374+00:00",
+      "utc_end": "2026-11-23T16:54:18.845141+00:00",
+      "text_events": 2,
+      "tool_calls": {
+        "read": 6,
+        "write": 1,
+        "edit": 6,
+        "shell": 1
+      },
+      "status": "material model attempt",
+      "score": "8/8",
+      "input_bytes_unchanged": true
+    },
+    {
+      "task": "reading",
+      "attempt": "primary",
+      "arm": "workflow",
+      "cli_exit": 0,
+      "elapsed_s": 69.997,
+      "utc_start": "2026-11-23T16:51:22.853695+00:00",
+      "utc_end": "2026-11-23T16:52:32.851161+00:00",
+      "text_events": 2,
+      "tool_calls": {
+        "read": 13,
+        "write": 1,
+        "edit": 1
+      },
+      "status": "material model attempt",
+      "score": "7/8",
+      "input_bytes_unchanged": true
+    }
+  ],
+  "evaluator_replays": {
+    "counts-plain-computation": {
+      "cmd": "cd /mnt/research && python3 compute.py",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "external_kit": "partial",
+      "exit": 0,
+      "prior_sha256": {
+        "research/results.csv": "57edd922946bc1bdc4d3d655bd7783ce3df9d3dc88ff8199f0e6710fba56b063",
+        "research/results.json": "76c41c8c82a7f38a992406681fa91fe7f1151d8e353aa79d88f460a1c09466bc"
+      },
+      "rerun_sha256": {
+        "research/results.csv": "57edd922946bc1bdc4d3d655bd7783ce3df9d3dc88ff8199f0e6710fba56b063",
+        "research/results.json": "76c41c8c82a7f38a992406681fa91fe7f1151d8e353aa79d88f460a1c09466bc"
+      },
+      "byte_identical": true
+    },
+    "counts-workflow-complete-kit-audit": {
+      "cmd": "python3 /media/ai4sci.py audit .",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "external_kit": "complete",
+      "exit": 0,
+      "prior_sha256": {},
+      "rerun_sha256": {},
+      "byte_identical": null,
+      "audit_json": {
+        "claims": {
+          "C1": "supported",
+          "C10": "supported",
+          "C11": "supported",
+          "C2": "supported",
+          "C3": "supported",
+          "C4": "supported",
+          "C5": "supported",
+          "C6": "supported",
+          "C7": "supported",
+          "C8": "supported",
+          "C9": "supported"
+        },
+        "criterion_coverage": {
+          "K1": {
+            "required_observations": 5,
+            "verified_observations": 5
+          },
+          "K2": {
+            "required_observations": 2,
+            "verified_observations": 2
+          },
+          "K3": {
+            "required_observations": 3,
+            "verified_observations": 3
+          },
+          "K4": {
+            "required_observations": 4,
+            "verified_observations": 4
+          },
+          "K5": {
+            "required_observations": 0,
+            "verified_observations": 0
+          },
+          "K6": {
+            "required_observations": 0,
+            "verified_observations": 0
+          }
+        },
+        "deliverability": "ready",
+        "error_count": 0,
+        "errors": [],
+        "incomplete": [],
+        "incomplete_count": 0,
+        "run": "complete",
+        "scientific_run": "completed",
+        "source_records": null
+      }
+    },
+    "counts-workflow-computation": {
+      "cmd": "python3 research/analyze.py",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "external_kit": "partial",
+      "exit": 0,
+      "prior_sha256": {
+        "research/results.csv": "d0bd3cb55e2f49ecb62aa3b04dd41e8f8d0161bbd01457bbc3b18077f6c21e49"
+      },
+      "rerun_sha256": {
+        "research/results.csv": "d0bd3cb55e2f49ecb62aa3b04dd41e8f8d0161bbd01457bbc3b18077f6c21e49"
+      },
+      "byte_identical": true
+    },
+    "counts-workflow-original-audit": {
+      "cmd": "python3 /media/ai4sci.py audit .",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "external_kit": "partial",
+      "exit": 1,
+      "prior_sha256": {},
+      "rerun_sha256": {},
+      "byte_identical": null,
+      "audit_json": null,
+      "failure": "ModuleNotFoundError: No module named 'sources'"
+    },
+    "external-complete-kit-audit": {
+      "cmd": "python3 /media/ai4sci.py audit .",
+      "cwd": "/mnt",
+      "PWD": "/mnt",
+      "external_kit": "complete",
+      "exit": 0,
+      "prior_sha256": {},
+      "rerun_sha256": {},
+      "byte_identical": null,
+      "audit_json": {
+        "claims": {
+          "C1": "supported",
+          "C2": "supported",
+          "C3": "supported",
+          "C4": "supported"
+        },
+        "criterion_coverage": {
+          "K1": {
+            "required_observations": 2,
+            "verified_observations": 2
+          },
+          "K2": {
+            "required_observations": 2,
+            "verified_observations": 2
+          },
+          "K3": {
+            "required_observations": 2,
+            "verified_observations": 2
+          },
+          "K4": {
+            "required_observations": 0,
+            "verified_observations": 0
+          }
+        },
+        "deliverability": "ready",
+        "error_count": 0,
+        "errors": [],
+        "incomplete": [],
+        "incomplete_count": 0,
+        "run": "complete",
+        "scientific_run": "completed",
+        "source_records": 1
+      }
+    }
+  },
+  "separate_integration": {
+    "score": null,
+    "kit": "complete",
+    "different_question": true,
+    "client_exit": 0,
+    "elapsed_s": 228.089,
+    "utc_start": "2026-11-23T16:54:40.336046+00:00",
+    "utc_end": "2026-11-23T16:58:28.425393+00:00",
+    "original_input_manifest_sha256": "ffcf9b6bd9a3c478303e4bb5e4a056bc73ab0b69c5b057ee3bbca89186f9785b",
+    "cmd_template": "/srv/bin/opencode --standalone --log-level error run --archived --model deepseek/deepseek-flash --agent build --format json --auto --title 'Unscored independent external study' \"$message\"",
+    "checks": [
+      {
+        "event_order": 34,
+        "command": "python3 /media/ai4sci.py freeze /mnt",
+        "exit": 0
+      },
+      {
+        "event_order": 44,
+        "command": "python3 /mnt/analysis.py",
+        "exit": 0
+      },
+      {
+        "event_order": 64,
+        "command": "python3 /media/ai4sci.py audit /mnt",
+        "exit": 2,
+        "audit_json": {
+          "claims": {
+            "C1": "supported",
+            "C2": "supported",
+            "C3": "invalid",
+            "C4": "supported"
+          },
+          "criterion_coverage": {
+            "K1": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K2": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K3": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K4": {
+              "required_observations": 0,
+              "verified_observations": 0
+            }
+          },
+          "deliverability": "blocked",
+          "error_count": 1,
+          "errors": [
+            "C3: expected one manuscript line: statement [ID]"
+          ],
+          "incomplete": [],
+          "incomplete_count": 0,
+          "run": "invalid",
+          "scientific_run": "completed",
+          "source_records": null
+        }
+      },
+      {
+        "event_order": 73,
+        "command": "python3 /media/ai4sci.py audit /mnt",
+        "exit": 0,
+        "audit_json": {
+          "claims": {
+            "C1": "supported",
+            "C2": "supported",
+            "C3": "supported",
+            "C4": "supported"
+          },
+          "criterion_coverage": {
+            "K1": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K2": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K3": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K4": {
+              "required_observations": 0,
+              "verified_observations": 0
+            }
+          },
+          "deliverability": "ready",
+          "error_count": 0,
+          "errors": [],
+          "incomplete": [],
+          "incomplete_count": 0,
+          "run": "complete",
+          "scientific_run": "completed",
+          "source_records": null
+        }
+      },
+      {
+        "event_order": 83,
+        "command": "python3 /media/ai4sci.py stats /mnt/research/paper.md /mnt/analysis.py /mnt/research/plan.json",
+        "exit": 1,
+        "coverage_or_failure": "plan.json not recognized by optional stats scanner"
+      },
+      {
+        "event_order": 92,
+        "command": "python3 /media/ai4sci.py stats /mnt/research/paper.md /mnt/analysis.py",
+        "exit": 0,
+        "coverage_or_failure": "code and report inspected; plan adherence not checked"
+      },
+      {
+        "event_order": 102,
+        "command": "python3 /mnt/analysis.py",
+        "exit": 0
+      },
+      {
+        "event_order": 105,
+        "command": "python3 /media/ai4sci.py audit /mnt",
+        "exit": 0,
+        "audit_json": {
+          "claims": {
+            "C1": "supported",
+            "C2": "supported",
+            "C3": "supported",
+            "C4": "supported"
+          },
+          "criterion_coverage": {
+            "K1": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K2": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K3": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K4": {
+              "required_observations": 0,
+              "verified_observations": 0
+            }
+          },
+          "deliverability": "ready",
+          "error_count": 0,
+          "errors": [],
+          "incomplete": [],
+          "incomplete_count": 0,
+          "run": "complete",
+          "scientific_run": "completed",
+          "source_records": null
+        }
+      },
+      {
+        "event_order": 115,
+        "command": "python3 /media/ai4sci.py audit /mnt",
+        "exit": 0,
+        "audit_json": {
+          "claims": {
+            "C1": "supported",
+            "C2": "supported",
+            "C3": "supported",
+            "C4": "supported"
+          },
+          "criterion_coverage": {
+            "K1": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K2": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K3": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K4": {
+              "required_observations": 0,
+              "verified_observations": 0
+            }
+          },
+          "deliverability": "ready",
+          "error_count": 0,
+          "errors": [],
+          "incomplete": [],
+          "incomplete_count": 0,
+          "run": "complete",
+          "scientific_run": "completed",
+          "source_records": null
+        }
+      },
+      {
+        "event_order": 122,
+        "command": "python3 /media/ai4sci.py audit /mnt",
+        "exit": 0,
+        "audit_json": {
+          "claims": {
+            "C1": "supported",
+            "C2": "supported",
+            "C3": "supported",
+            "C4": "supported"
+          },
+          "criterion_coverage": {
+            "K1": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K2": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K3": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K4": {
+              "required_observations": 0,
+              "verified_observations": 0
+            }
+          },
+          "deliverability": "ready",
+          "error_count": 0,
+          "errors": [],
+          "incomplete": [],
+          "incomplete_count": 0,
+          "run": "complete",
+          "scientific_run": "completed",
+          "source_records": 1
+        }
+      },
+      {
+        "event_order": 137,
+        "command": "python3 /media/ai4sci.py audit /mnt",
+        "exit": 0,
+        "audit_json": {
+          "claims": {
+            "C1": "supported",
+            "C2": "supported",
+            "C3": "supported",
+            "C4": "supported"
+          },
+          "criterion_coverage": {
+            "K1": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K2": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K3": {
+              "required_observations": 2,
+              "verified_observations": 2
+            },
+            "K4": {
+              "required_observations": 0,
+              "verified_observations": 0
+            }
+          },
+          "deliverability": "ready",
+          "error_count": 0,
+          "errors": [],
+          "incomplete": [],
+          "incomplete_count": 0,
+          "run": "complete",
+          "scientific_run": "completed",
+          "source_records": 1
+        }
+      }
+    ]
+  }
+}
