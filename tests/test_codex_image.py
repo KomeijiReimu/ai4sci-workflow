@@ -121,6 +121,15 @@ sys.stdin.readline()
         fake.chmod(0o700)
         return fake
 
+    def test_native_generation_refuses_unsupported_python_before_dispatch(self):
+        with mock.patch.object(MODULE, 'find_codex_bin', return_value='fixture'), \
+             mock.patch.object(sys, 'version_info', (3, 10)), mock.patch.object(MODULE, 'request_image') as dispatch:
+            payload, err = MODULE.run_codex_image('Test', cwd=self.project, output_path=self.out)
+        self.assertIsNone(payload)
+        self.assertEqual(err, 'Python 3.11+ is required. No turn submitted.')
+        dispatch.assert_not_called()
+
+    @unittest.skipUnless(sys.version_info >= (3, 11), 'native Codex image transport requires Python 3.11+')
     def test_native_stdio_protocol_offline(self):
         fake = self.make_app_server_fixture()
         with mock.patch.object(MODULE, 'find_codex_bin', return_value=str(fake)):
@@ -137,6 +146,7 @@ sys.stdin.readline()
                         self.assertEqual(payload['eventId'], 'ig')
                         self.assertEqual(self.out.read_bytes(), base64.b64decode(PNG))
 
+    @unittest.skipUnless(sys.version_info >= (3, 11), 'native Codex image transport requires Python 3.11+')
     def test_uncertain_vs_rejected_turns_through_cli(self):
         fake = self.make_app_server_fixture()
         for kind, expected in [('eof', 'unknown'), ('timeout', 'unknown'), ('commandExecution', 'unknown'), ('401', 'failed'), ('retry-lost', 'unknown'), ('retry-failed', 'failed')]:
