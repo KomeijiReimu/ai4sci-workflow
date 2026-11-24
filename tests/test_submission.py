@@ -8,6 +8,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from typing import TypedDict
 import unittest
 from zipfile import ZipFile
 
@@ -19,6 +20,12 @@ DOCX = R + 'final.docx'
 PDF = R + 'final.pdf'
 TEX = R + 'main.tex'
 REVIEW = R + 'review.json'
+
+
+class SubmissionSpec(TypedDict):
+    format: str
+    artifacts: dict[str, dict[str, str]]
+    review: dict[str, str]
 
 
 def make_docx(path, body, declaration=''):
@@ -77,8 +84,11 @@ class Submission(unittest.TestCase):
                            visual_inspection='Fixture: read page one in a viewer.', open_revisions=[],
                            sha256={n: self.digest(n) for n in [R+'paper.md', R+'claims.json', *self.artifacts.values()]})
         self.put(REVIEW, {**self.review, **overrides})
-        self.spec = dict(format=self.fmt, artifacts={k: {'path': n, 'sha256': self.digest(n)} for k, n in self.artifacts.items()},
-                         review={'path': REVIEW, 'sha256': self.digest(REVIEW)})
+        self.spec: SubmissionSpec = {
+            'format': self.fmt,
+            'artifacts': {k: {'path': n, 'sha256': self.digest(n)} for k, n in self.artifacts.items()},
+            'review': {'path': REVIEW, 'sha256': self.digest(REVIEW)},
+        }
         self.put(R+'submission.json', self.spec)
 
     def cli(self, code, **env):
