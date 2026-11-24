@@ -30,6 +30,8 @@ jobs:
           python ai4sci.py audit examples/climate-sources
           (cd examples/penguins-revision && python replay.py && sha256sum --check original.sha256 && sha256sum --check artifacts.sha256)
           python ai4sci.py audit --submission examples/penguins-revision
+          python ai4sci.py audit examples/penguins-revision/original
+          (cd examples/penguins-revision && sha256sum --check archive-completion.sha256)
           python ai4sci.py audit examples/power-forecast
           python ai4sci.py audit examples/branch-decision
           python checks/rounds.py examples/review-rounds

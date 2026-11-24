@@ -1,0 +1,52 @@
+{
+  "claims": [
+    {
+      "id": "C1", "criterion": "source", "status": "supported",
+      "statement": "The source data describe adult foraging penguins near Palmer Station, Antarctica.",
+      "evidence": [
+        {"kind": "quote", "path": "data/dictionary-excerpt.txt", "quote": "Size measurements for adult foraging penguins near Palmer Station, Antarctica"}
+      ]
+    },
+    {
+      "id": "C2", "criterion": "source", "status": "supported",
+      "statement": "Horst and colleagues plotted flipper length against body mass with separate lines by species.",
+      "evidence": [
+        {"kind": "quote", "path": "data/caption-excerpts.txt", "quote": "Representative linear relationships for (A): penguin flipper length (mm) and body mass (g)"},
+        {"kind": "quote", "path": "data/caption-excerpts.txt", "quote": "Within-species linear model is visualized for each penguin or iris species."}
+      ]
+    },
+    {
+      "id": "C3", "criterion": "cohort", "status": "supported",
+      "statement": "Of 224 training rows, 223 had both measurements and 1 was excluded.",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "train_total", "value": 224, "display": "224", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "train_used", "value": 223, "display": "223", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "train_excluded", "value": 1, "display": "1", "atol": 0}
+      ]
+    },
+    {
+      "id": "C4", "criterion": "cohort", "status": "supported",
+      "statement": "Of 120 held-out rows, 119 had both measurements and 1 was excluded.",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "test_total", "value": 120, "display": "120", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "test_used", "value": 119, "display": "119", "atol": 0},
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "test_excluded", "value": 1, "display": "1", "atol": 0}
+      ]
+    },
+    {
+      "id": "C5", "criterion": "paired_mae", "status": "supported",
+      "statement": "On the same held-out birds, mean absolute error was 710.455 g for the training mean and 325.748 g for the flipper-length model.",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "mean_mae_g", "value": 710.455, "display": "710.455", "atol": 0.0005},
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "linear_mae_g", "value": 325.748, "display": "325.748", "atol": 0.0005}
+      ]
+    },
+    {
+      "id": "C6", "criterion": "paired_mae", "status": "supported",
+      "statement": "Using measured flipper length reduced mean absolute error by 384.707 g on this test set.",
+      "evidence": [
+        {"kind": "number", "path": "research/results.csv", "key": {"test_year": "2009"}, "column": "reduction_g", "value": 384.707, "display": "384.707", "atol": 0.0005}
+      ]
+    }
+  ]
+}
