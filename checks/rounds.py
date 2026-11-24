@@ -19,6 +19,8 @@ SPEC = 'research/rounds.json'
 PAPER = 'research/paper.md'
 REPLY = 'research/reply.md'
 PACKAGE = 'research/submission.json'
+REPLY_PREFIX = re.compile(r'^\[(I[1-9][0-9]*)\](?=[ \t]|$)((?:[ \t]+\[[A-Za-z][A-Za-z0-9_-]*\](?!\())*)')
+CLAIM_SUFFIX = re.compile(r'(?:[ \t]+\[C[1-9][0-9]*\])+[ \t]*$')
 
 
 def rounds(root: Path):
@@ -98,12 +100,26 @@ def rounds(root: Path):
                     states[issue] = 'reopened'
                     del passages[issue]
 
+            for line in response:
+                prefix = REPLY_PREFIX.match(line)
+                if prefix:
+                    issue, labels = prefix.groups()
+                    if issue not in states:
+                        raise ValueError(f'round {n}: reply names unregistered issue {issue}')
+                    for cid in re.findall(r'\[([^\]]+)\]', labels):
+                        if comments.get(cid) != issue:
+                            raise ValueError(f'round {n}: reply comment {cid} is not registered for {issue}')
+
+            previous_text = {CLAIM_SUFFIX.sub('', line).strip() for line in previous}
             for item in decisions:
                 issue, status, line = (text(item, k) for k in ('issue', 'status', 'response'))
                 if states.get(issue) not in ('open', 'reopened') or issue in answered:
                     raise ValueError(f'round {n}: duplicate decision or no active concern for {issue}')
                 answered.add(issue)
-                refs = [issue, *(cid for cid, owner in comments.items() if owner == issue)]
+                if status == 'open' and any(c['issue'] == issue for c in incoming):
+                    refs = [issue, *(c['id'] for c in incoming if c['issue'] == issue)]
+                else:
+                    refs = [issue, *(cid for cid, owner in comments.items() if owner == issue)]
                 if (response[line] != 1 or any(f'[{ref}]' not in line for ref in refs) or
                         not re.sub(r'\[[^\]]+\]', '', line).strip()):
                     raise ValueError(f'{issue}: actual reply needs the response line and its issue/comment references')
@@ -112,7 +128,8 @@ def rounds(root: Path):
                 if status not in ('revised', 'no-change'):
                     raise ValueError(f'{issue}: expected open, revised or no-change')
                 passage = text(item, 'passage')
-                if paper[passage] != 1 or (passage in previous) != (status == 'no-change'):
+                unchanged = CLAIM_SUFFIX.sub('', passage).strip() in previous_text
+                if paper[passage] != 1 or unchanged != (status == 'no-change'):
                     raise ValueError(f'{issue}: {status} passage inconsistent with this or the previous manuscript')
                 evidence = records(item, 'evidence')
                 if not evidence:

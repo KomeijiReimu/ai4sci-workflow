@@ -70,6 +70,42 @@ class ReviewRounds(unittest.TestCase):
         self.last['decisions'][0] = {'issue':'I1', 'status':'open', 'response':line}
         self.assertEqual(self.check(1)['issues']['I1'], 'reopened')
 
+    def test_oracle_unregistered_followup_then_registered_reopening(self):
+        line = "[I2] [B4] We have not resolved the reviewer's renewed objection about the threshold."
+        text = (self.root / REPLY).read_text()
+        self.update_final('reply', text, text + '\n' + line + '\n')
+        self.assertIn('B4', self.check(2)['errors'][0])
+        self.last['comments'].append({'id':'B4', 'issue':'I2', 'reviewer':'B', 'location':'## Interpretation',
+                                      'comment':'What distinction does the annual threshold make?'})
+        self.last['decisions'].append({'issue':'I2', 'status':'open', 'response':line})
+        self.assertEqual(self.check(1)['issues']['I2'], 'reopened')
+
+    def test_oracle_deleted_issue_and_misassigned_comment_remain_visible(self):
+        self.last['comments'] = [c for c in self.last['comments'] if c['issue'] != 'I3']
+        self.last['decisions'] = [d for d in self.last['decisions'] if d['issue'] != 'I3']
+        self.assertIn('I3', self.check(2)['errors'][0])
+        self.update_final('reply', '[I3] [B3]', '[I2] [A1]')
+        self.assertIn('A1', self.check(2)['errors'][0])
+
+    def test_oracle_citations_unmarked_prose_and_carried_issue(self):
+        text = (self.root / REPLY).read_text()
+        note = ('\n[C77] is a bibliography label, not a new issue.\n'
+                'An editor can mention [B77] or [I99] in ordinary prose.\n'
+                '[I2] [B1] The first round addressed the threshold question. See [C77].\n')
+        self.update_final('reply', text, text + note)
+        self.check(0)
+
+    def test_oracle_marker_only_edit_is_not_a_revision(self):
+        d = self.last['decisions'][1]
+        old = d['passage']
+        d.update(status='revised', passage=old + ' [C7]')
+        self.update_final('manuscript', old, d['passage'])
+        self.assertIn('I3', self.check(2)['errors'][0])
+        d['status'] = 'no-change'
+        self.check(0)
+        self.update_final('manuscript', d['passage'], old + ' [C8]')
+        self.assertIn('I3', self.check(2)['errors'][0])
+
     def test_older_reply_or_manuscript_handed_over(self):
         for role, name in [('manuscript', PAPER), ('reply', REPLY)]:
             with self.subTest(role=role):
