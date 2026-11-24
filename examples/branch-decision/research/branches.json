@@ -1,0 +1,93 @@
+{
+  "root": {
+    "id": "raw",
+    "result": {
+      "path": "research/bytes.csv",
+      "key": {
+        "node": "raw"
+      },
+      "column": "bytes"
+    }
+  },
+  "direction": "min",
+  "population": {
+    "path": "trace_file",
+    "sha256": "trace_sha256"
+  },
+  "matched": [
+    "samples"
+  ],
+  "settings": [
+    "lag",
+    "packing"
+  ],
+  "rounds": [
+    {
+      "parent": "raw",
+      "observation": "Without prediction the trace occupies 396 payload bytes.",
+      "predictions": [
+        "If neighboring samples track each other, the previous sample will shorten the payload.",
+        "If only the two component streams change slowly, predicting two places back will help but the previous sample will not."
+      ],
+      "vary": "lag",
+      "budget": 2,
+      "children": [
+        {
+          "id": "adjacent",
+          "value": "1",
+          "result": {
+            "path": "research/bytes.csv",
+            "key": {
+              "node": "adjacent"
+            },
+            "column": "bytes"
+          }
+        },
+        {
+          "id": "paired",
+          "value": "2",
+          "result": {
+            "path": "research/bytes.csv",
+            "key": {
+              "node": "paired"
+            },
+            "column": "bytes"
+          }
+        }
+      ],
+      "decision": {
+        "kind": "best",
+        "selected": "paired",
+        "reason": "Only the two-place predictor reduced the byte count."
+      }
+    },
+    {
+      "parent": "paired",
+      "observation": "Two-place prediction used 257 bytes for 256 residuals. Small residuals need not repeat.",
+      "predictions": [
+        "If small codes recur in long runs, storing their counts will reduce the payload.",
+        "If small codes mostly alternate, count fields will add bytes without much repetition to remove."
+      ],
+      "vary": "packing",
+      "budget": 1,
+      "children": [
+        {
+          "id": "runs",
+          "value": "runs",
+          "result": {
+            "path": "research/bytes.csv",
+            "key": {
+              "node": "runs"
+            },
+            "column": "bytes"
+          }
+        }
+      ],
+      "decision": {
+        "kind": "best",
+        "selected": "runs",
+        "reason": "Run counts reduced the payload on this trace."
+      }
+    }
+  ]
+}

@@ -6,7 +6,7 @@ For final delivery, require both the [evidence audit](contract.md) and the packa
 python3 ai4sci.py audit --submission studies/my-study
 ```
 
-The ordinary `python3 ai4sci.py audit studies/my-study` command also checks the package when it finds `research/submission.json`. Without the manifest, it checks only the evidence. Add `--submission` to require the manifest. For isolated **package diagnostics**, use `python3 checks/submission.py studies/my-study`. That command does not rerun the evidence audit and cannot clear a study for delivery by itself.
+The ordinary `python3 ai4sci.py audit studies/my-study` command also checks the package when it finds `research/submission.json`. Add `--submission` to require the manifest at delivery, or list `submission` in the plan's `required_checks` before freezing if the venue package is an agreed output. For isolated **package diagnostics**, use `python3 checks/submission.py studies/my-study`. That command does not rerun the evidence audit and cannot clear a study for delivery by itself.
 
 The package check is read-only. It does not edit, render or compile files, install anything, fetch sources or run the experiment. It compares current package bytes with a dated review record and looks for **each audited claim statement in the final document text**. Passing both checks does not establish scientific validity.
 

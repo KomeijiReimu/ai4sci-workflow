@@ -71,6 +71,51 @@ class Workflow(unittest.TestCase):
                 self.assertEqual(json.loads(result.stdout)['claims']['C1'], 'invalid')
                 self.assertEqual(set(study.rglob('*')), before | {research / 'plan.sha256'})
 
+    def test_frozen_optional_records_cannot_disappear_from_a_formal_audit(self):
+        r = self.project / 'research'
+        shutil.copytree(ROOT / 'examples/quadrature/research', r, ignore=shutil.ignore_patterns('plan.sha256'))
+        plan = json.loads((r / 'plan.json').read_bytes())
+        plan['required_checks'] = ['branches', 'rounds', 'submission']
+        (r / 'plan.json').write_text(json.dumps(plan), encoding='utf-8')
+        frozen = self.cmd('freeze', self.project)
+        self.assertEqual(frozen.returncode, 0, frozen.stderr)
+        result = self.cmd('audit', self.project)
+        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        self.assertEqual(report['required_checks'], plan['required_checks'])
+        self.assertEqual(report['manuscript_deliverability'], 'ready')
+        self.assertEqual(report['scientific_run'], 'completed')
+        for name in plan['required_checks']:
+            self.assertTrue(report[name]['errors'], name)
+            self.assertTrue(any(m.startswith(name + ':') for m in report['errors']), name)
+
+    def test_nonexistent_or_duplicate_required_check_fails_before_freeze(self):
+        r = self.project / 'research'
+        r.mkdir()
+        for invalid in ('branches', ['unknown'], ['rounds', 'rounds'], [{}]):
+            with self.subTest(invalid=invalid):
+                plan = {'question':'Q', 'criteria':[{'id':'c', 'description':'check'}], 'required_checks':invalid}
+                (r / 'plan.json').write_text(json.dumps(plan), encoding='utf-8')
+                result = self.cmd('freeze', self.project)
+                self.assertNotEqual(result.returncode, 0)
+                self.assertIn('required_checks', result.stderr)
+                self.assertFalse((r / 'plan.sha256').exists())
+
+    def test_report_separates_completed_measurement_from_pending_branch_decision(self):
+        shutil.copytree(ROOT / 'examples/branch-decision', self.project, dirs_exist_ok=True)
+        branch_file = self.project / 'research/branches.json'
+        tree = json.loads(branch_file.read_bytes())
+        tree['rounds'][-1]['decision'] = {'kind':'pending', 'reason':'selection deferred for review'}
+        branch_file.write_text(json.dumps(tree), encoding='utf-8')
+        result = self.cmd('audit', self.project)
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        self.assertEqual(report['deliverability'], 'incomplete')
+        self.assertEqual(report['manuscript_deliverability'], 'ready')
+        self.assertEqual(report['scientific_run'], 'completed')
+        self.assertTrue(report['branches']['incomplete'])
+        self.assertFalse(report['errors'])
+
     def test_live_launcher_retains_evidence_and_audits_empty_model_output(self):
         launcher = ROOT / 'scripts/live_study.py'
         attempt = self.project / 'new attempt'

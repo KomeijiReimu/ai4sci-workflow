@@ -146,6 +146,11 @@ def parse_plan(raw: bytes) -> dict:
             raise ValueError("matched_conditions must contain distinct nonblank names")
     if "require_source_manifest" in plan and type(plan["require_source_manifest"]) is not bool:
         raise ValueError("require_source_manifest must be Boolean")
+    if "required_checks" in plan:
+        names = records(plan, "required_checks")
+        if (any(name not in ("branches", "rounds", "submission") for name in names)
+                or len(names) != len(set(names))):
+            raise ValueError("required_checks must list distinct names from branches, rounds, submission")
     return plan
 
 
@@ -170,6 +175,7 @@ def audit(root):
     coverage = {}
     observation_outcomes = {}
     source_records = None
+    required_checks = []
     try:
         root = root.resolve(strict=True)
         controls = {name: local_file(root, "research/" + name) for name in
@@ -180,6 +186,7 @@ def audit(root):
         if controls["plan.sha256"].read_bytes() != expected:
             raise ValueError("research/plan.sha256: digest differs from frozen plan")
         plan = parse_plan(raw)
+        required_checks = plan.get("required_checks", [])
         coverage = {row["id"]: {"required_observations": len(row.get("required_observations", [])),
                                 "verified_observations": 0} for row in plan["criteria"]}
         observations = []
@@ -433,7 +440,7 @@ def audit(root):
     code = 2 if errors.count else 1 if pending.count else 0
     return code, {"run": "invalid" if errors.count else "complete", "scientific_run": scientific_run, "claims": states,
                   "criterion_coverage": coverage, "observation_outcomes": observation_outcomes,
-                  "source_records": source_records,
+                  "source_records": source_records, "required_checks": required_checks,
                   "deliverability": ("ready", "incomplete", "blocked")[code],
                   "error_count": errors.count, "errors": errors.messages,
                   "incomplete_count": pending.count, "incomplete": pending.messages}

@@ -1,0 +1,5 @@
+node,trace_file,trace_sha256,samples,lag,packing,bytes
+raw,research/trace.txt,8709927c7f84aa1492c415461032105398ff5349e1ef205e12f280a84ff81c2f,256,0,literal,396
+adjacent,research/trace.txt,8709927c7f84aa1492c415461032105398ff5349e1ef205e12f280a84ff81c2f,256,1,literal,512
+paired,research/trace.txt,8709927c7f84aa1492c415461032105398ff5349e1ef205e12f280a84ff81c2f,256,2,literal,257
+runs,research/trace.txt,8709927c7f84aa1492c415461032105398ff5349e1ef205e12f280a84ff81c2f,256,2,runs,19

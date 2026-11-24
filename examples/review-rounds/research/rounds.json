@@ -1,0 +1,53 @@
+{
+  "original": {"path":"versions/temperature-v0.md", "sha256":"44c3f6ca4db0b108f30cf1b3f46b0ddc6e6c61ef3cbeb9a97880613811d8adb5"},
+  "rounds": [
+    {
+      "manuscript": {"path":"versions/temperature-v1.md", "sha256":"68aae7bd47fdc8dd85c2215b92ee169f15ddb6fb707dd85b55d21f35cba91e8d"},
+      "reply": {"path":"versions/temperature-reply-v1.md", "sha256":"e6c1122638e39d9bb2274aff165b3bfbeec0d9d98902c8d3c69075e03e0b5d19"},
+      "comments": [
+        {"id":"A1", "issue":"I1", "reviewer":"A", "location":"## Estimate", "comment":"Where does 1.60°C come from? Name the data product and baseline so the reader can interpret the number."},
+        {"id":"B1", "issue":"I2", "reviewer":"B", "location":"## Interpretation", "comment":"You use one calendar year to declare a long-term threshold crossed. Does the WMO's definition support that inference?"}
+      ],
+      "decisions": [
+        {
+          "issue":"I1", "status":"revised",
+          "response":"[I1] [A1] In Estimate we now identify the source of the 1.60°C value as the Copernicus analysis of ERA5 and name its baseline.",
+          "passage":"The Copernicus Climate Change Service reported warming of 1.60°C for 2024 using ERA5.",
+          "evidence":[{"path":"inputs/c3s.txt", "sha256":"c6b5f9878f044a2a41b364b8ddd153d14ed0b3e96e81f2f2263f5c27d1927c1d", "quote":"According to ERA5"}]
+        },
+        {
+          "issue":"I2", "status":"revised",
+          "response":"[I2] [B1] We removed the claim that 2024 settled the Paris Agreement threshold. Interpretation now distinguishes an annual anomaly from warming assessed over decades, as the WMO does in its bulletin.",
+          "passage":"The WMO distinguishes long-term warming, measured over decades rather than an individual year, from this annual anomaly.",
+          "evidence":[{"path":"inputs/wmo.txt", "sha256":"ed94e07a2c31517ce62751118793ddce08bb8776c2306971050e7bec1fc1141f", "quote":"measured over decades rather than an individual year"}]
+        }
+      ]
+    },
+    {
+      "manuscript": {"path":"versions/temperature-v2.md", "sha256":"f550e56040d283165cb9cbd329226ede3461f6fde6dc6be372d74ae9b2c4f9cc"},
+      "reply": {"path":"versions/temperature-reply-v2.md", "sha256":"0af97ca01e5826d15f1b2e269717ed6b9e0a387ada696f91120ecee4e0dfc555"},
+      "comments": [
+        {"id":"B2", "issue":"I1", "reviewer":"B", "location":"## Estimate", "comment":"Attribution helps, but readers of the WMO bulletin will expect its consolidated 1.55 °C estimate. Replace the single-product value with that estimate and give the uncertainty."},
+        {"id":"A2", "issue":"I1", "reviewer":"A", "location":"## Estimate", "comment":"Keep the ERA5 result. Removing it would leave the Copernicus bulletin unexplained."},
+        {"id":"B3", "issue":"I3", "reviewer":"B", "location":"Copernicus used 1850-1900 as its estimate of the pre-industrial baseline.", "comment":"Shouldn't the reference period for the Copernicus anomaly be 1991–2020 instead?"}
+      ],
+      "decisions": [
+        {
+          "issue":"I1", "status":"revised",
+          "response":"[I1] [A1] [B2] [A2] The first reply correctly attributed 1.60°C but left the WMO figure out. Rather than replace one with the other, Estimate now gives the ERA5 result alongside the WMO's 1.55 °C estimate and its ± 0.13 °C uncertainty. Interpretation explains why the two values need not coincide.",
+          "passage":"For 2024, Copernicus reported 1.60°C of warming using ERA5, while the WMO consolidated six datasets and reported 1.55 °C (with a margin of uncertainty of ± 0.13 °C).",
+          "evidence":[
+            {"path":"inputs/c3s.txt", "sha256":"c6b5f9878f044a2a41b364b8ddd153d14ed0b3e96e81f2f2263f5c27d1927c1d", "quote":"1.60°C", "verbatim":true},
+            {"path":"inputs/wmo.txt", "sha256":"ed94e07a2c31517ce62751118793ddce08bb8776c2306971050e7bec1fc1141f", "quote":"1.55 °C (with a margin of uncertainty of ± 0.13 °C)", "verbatim":true}
+          ]
+        },
+        {
+          "issue":"I3", "status":"no-change",
+          "response":"[I3] [B3] We retained the 1850-1900 baseline in Estimate. This is the baseline Copernicus explicitly used for its 1.60°C anomaly. Substituting 1991–2020 without changing the value would mislabel the estimate.",
+          "passage":"Copernicus used 1850-1900 as its estimate of the pre-industrial baseline.",
+          "evidence":[{"path":"inputs/c3s.txt", "sha256":"c6b5f9878f044a2a41b364b8ddd153d14ed0b3e96e81f2f2263f5c27d1927c1d", "quote":"1850-1900"}]
+        }
+      ]
+    }
+  ]
+}

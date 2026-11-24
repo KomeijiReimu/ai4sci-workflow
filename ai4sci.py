@@ -9,7 +9,7 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parent
-VERSION = '0.2.0'
+VERSION = '0.3.0'
 
 
 def main():
@@ -17,7 +17,7 @@ def main():
     cli.add_argument('--version', action='version', version=VERSION)
     sub = cli.add_subparsers(dest='cmd', required=True)
     sub.add_parser('freeze', help='Record the current plan digest before inspecting formal results').add_argument('project', nargs='?', default='.')
-    check = sub.add_parser('audit', help='Check the manuscript and any declared submission package')
+    check = sub.add_parser('audit', help='Check manuscript evidence, requested packages and declared decision records')
     check.add_argument('project', nargs='?', default='.')
     check.add_argument('--submission', action='store_true', help='Require a reviewed final-format package even if its manifest is missing')
     stats = sub.add_parser('stats', help='Run the upstream statistical risk scanner on named text/code files')
@@ -42,20 +42,30 @@ def main():
         from checks.audit import audit
         root = Path(args.project)
         code, report = audit(root)
-        package = root / 'research/submission.json'
-        if args.submission or package.exists() or package.is_symlink():
-            from checks.submission import submission
-            package_code, detail = submission(root)
-            report['submission'] = detail
-            report['manuscript_deliverability'] = report['deliverability']
-            code = max(code, package_code)
-            report['deliverability'] = ('ready', 'incomplete', 'blocked')[code]
-            if package_code:
-                report['run'] = 'invalid' if code == 2 else report['run']
-                for key in ('errors', 'incomplete'):
-                    messages = detail.get(key, [])
-                    report[key].extend(f'submission: {message}' for message in messages)
-                    report['error_count' if key == 'errors' else 'incomplete_count'] += len(messages)
+        required = set(report['required_checks'])
+        if args.submission:
+            required.add('submission')
+        for name in ('branches', 'rounds', 'submission'):
+            path = root / 'research' / (name + '.json')
+            if name not in required and not path.exists() and not path.is_symlink():
+                continue
+            if name == 'branches':
+                from checks.branches import branches as evaluate
+            elif name == 'rounds':
+                from checks.rounds import rounds as evaluate
+            else:
+                from checks.submission import submission as evaluate
+            status, detail = evaluate(root)
+            report.setdefault('manuscript_deliverability', report['deliverability'])
+            report[name] = detail
+            code = max(code, status)
+            for key, count in (('errors', 'error_count'), ('incomplete', 'incomplete_count')):
+                messages = detail[key]
+                report[key].extend(f'{name}: {message}' for message in messages)
+                report[count] += len(messages)
+        report['deliverability'] = ('ready', 'incomplete', 'blocked')[code]
+        if code == 2:
+            report['run'] = 'invalid'
         print(json.dumps(report, sort_keys=True))
         return code
     scanner = ROOT / 'vendor/ai4s-desktop/runtime/skills/core/stats-integrity/stats_integrity_check.py'

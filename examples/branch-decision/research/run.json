@@ -1,0 +1,13 @@
+{
+  "status": "completed",
+  "command": "python3 run.py",
+  "plan_sha256": "dc84b2247714d67ea0097ef52d4d52481a48ee3f659edc4b3b6ad595fdfd4e5c",
+  "outputs": [
+    "research/bytes.csv",
+    "research/trace.txt"
+  ],
+  "sha256": {
+    "research/bytes.csv": "59c557a2523c797d4f24431337ab3126cdfb75a26d35896e4e9eb6eb399af792",
+    "research/trace.txt": "8709927c7f84aa1492c415461032105398ff5349e1ef205e12f280a84ff81c2f"
+  }
+}

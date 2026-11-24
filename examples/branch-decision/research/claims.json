@@ -1,0 +1,76 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "payload",
+      "status": "supported",
+      "statement": "The raw encoding used 396 bytes.",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/bytes.csv",
+          "key": {
+            "node": "raw"
+          },
+          "column": "bytes",
+          "atol": 0,
+          "value": 396
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "payload",
+      "status": "supported",
+      "statement": "The adjacent encoding used 512 bytes.",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/bytes.csv",
+          "key": {
+            "node": "adjacent"
+          },
+          "column": "bytes",
+          "atol": 0,
+          "value": 512
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "payload",
+      "status": "supported",
+      "statement": "The paired encoding used 257 bytes.",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/bytes.csv",
+          "key": {
+            "node": "paired"
+          },
+          "column": "bytes",
+          "atol": 0,
+          "value": 257
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "payload",
+      "status": "supported",
+      "statement": "The runs encoding used 19 bytes.",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/bytes.csv",
+          "key": {
+            "node": "runs"
+          },
+          "column": "bytes",
+          "atol": 0,
+          "value": 19
+        }
+      ]
+    }
+  ]
+}

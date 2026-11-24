@@ -52,6 +52,8 @@ The estimate is the sample mean. [C2]
 
 `research/plan.sha256` contains the SHA-256 digest of the **raw plan bytes**, as 64 lowercase hexadecimal characters followed by a single LF. Freezing an unchanged plan again preserves the digest. `freeze` refuses to replace a different digest. The digest detects changes, including whitespace. To establish *when* the plan was frozen, keep a separately dated record.
 
+If a study promises a [branch comparison](branches.md), a [record of review rounds](rounds.md), or a [final submission package](submission.md), name them in the plan before freezing. For example, `"required_checks": ["branches", "rounds"]` makes either missing record block the checkout's `ai4sci.py audit` command. The allowed names are `branches`, `rounds` and `submission`. The same command checks any of those records it finds, even if not required in advance. An ordinary one-run study does not need them. For a review that arrives after the original study, keep the frozen plan and give the response and new records to the reviewer rather than retroactively adding a requirement.
+
 | `research/run.json` status | What to record |
 |---|---|
 | `completed` | A nonblank `command` and a nonempty `outputs` array of distinct project files. List every CSV used for numeric evidence or required observations. A negative experimental result still belongs here. |
