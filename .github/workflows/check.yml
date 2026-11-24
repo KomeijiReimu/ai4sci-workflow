@@ -28,3 +28,6 @@ jobs:
           python examples/penguins/research/verify_independent.py
           python ai4sci.py audit examples/penguins
           python ai4sci.py audit examples/climate-sources
+          (cd examples/penguins-revision && python replay.py && sha256sum --check original.sha256 && sha256sum --check artifacts.sha256)
+          python ai4sci.py audit --submission examples/penguins-revision
+          python ai4sci.py audit examples/power-forecast
