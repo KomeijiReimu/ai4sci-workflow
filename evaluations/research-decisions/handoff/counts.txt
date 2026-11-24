@@ -1,0 +1,7 @@
+trace sha256=8709927c7f84aa1492c415461032105398ff5349e1ef205e12f280a84ff81c2f samples=256
+raw: 1-byte symbols=116 2-byte symbols=140 payload bytes=396
+adjacent: 1-byte symbols=0 2-byte symbols=256 payload bytes=512
+paired: 1-byte symbols=255 2-byte symbols=1 payload bytes=257
+runs (length, code point): [(1, 161), (1, 100), (62, 2), (2, 61), (62, 2), (2, 61), (62, 2), (2, 61), (62, 2)]
+runs: count bytes=9 code bytes=10 payload bytes=19
+same unpacked symbols: lag 2 recovers all 256 samples; lag 0 recovers 256 values but first differs at index 2 (zero-based): 1 instead of -80
