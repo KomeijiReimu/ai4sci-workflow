@@ -1,0 +1,6 @@
+{
+  "sources": [
+    {"id":"measurements","title":"palmerpenguins v0.1.0: penguins.csv","origin":"https://raw.githubusercontent.com/allisonhorst/palmerpenguins/e5bfd5f2c7da95b0823e9501b9013eb2ef124fa7/inst/extdata/penguins.csv","locator":"Complete release CSV; year, flipper_length_mm and body_mass_g","access":"provided","path":"original/data/penguins.csv","sha256":"f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93"},
+    {"id":"review","title":"Independent review: 2009 Palmer penguin holdout","origin":"Supplied original study archive, examples/penguins/research/review.md","locator":"Interpretation and verification, first paragraph","access":"provided","path":"original/research/review.md","sha256":"97e7f924f40fbee5004abc1eee9c5b1e69a212b1d281e234bc5197a53a927833"}
+  ]
+}

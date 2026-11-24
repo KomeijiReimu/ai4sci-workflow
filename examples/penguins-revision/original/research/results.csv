@@ -1,0 +1,2 @@
+test_year,train_total,train_used,train_excluded,test_total,test_used,test_excluded,train_mean_g,intercept_g,slope_g_per_mm,mean_mae_g,linear_mae_g,reduction_g
+2009,224,223,1,120,119,1,4197.197309417,-5477.164604778,48.394596264,710.455213476,325.748479323,384.706734152

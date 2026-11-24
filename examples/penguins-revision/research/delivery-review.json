@@ -1,0 +1,12 @@
+{
+  "reviewer": "Ninja, independent AI reviewer (nonblind; not the study author)",
+  "date": "2026-11-24",
+  "status": "approved",
+  "visual_inspection": "Opened a byte-identical copy of paper/final.docx in isolated LibreOffice Writer 25.2.3.2 and inspected both 128-dpi page images from Writer's PDF export. Page 1 visibly states the original control issue, the split and sample sizes, the 4050 g median, three MAEs (710.455, 698.109, 325.748 g) and both reductions (384.707 and 372.361 g). It calls this retrospective sensitivity analysis, not fresh confirmation. The three continuation lines on page 2 preserve the complete-case, pooled-species, causal and future-year qualifications. All text is legible without overlap or clipping. No tables, figures, equations or captions. All 16 main-body XML paragraphs agree with the canonical manuscript; all eight claim statements are visible on page 1. Writer pagination, not a claim of Microsoft Word layout equivalence. Independent verification and exact page digests: research/independent-review.md.",
+  "open_revisions": [],
+  "sha256": {
+    "research/paper.md": "63b226d7ccc6cafe2527f66a85ed25b3d072d75463ccafee5e94d0cac947c0bb",
+    "research/claims.json": "b281873f73e32052a046edbcf81ccf3d76aca23c4cd791555ebe785e23853fc6",
+    "paper/final.docx": "fae0abd6f8c6376771aec693bb109eb558adedb03878893ab5518b881be4377c"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "claims": [
+    {"id":"C1","criterion":"cohort","statement":"The training set contained 223 eligible records.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"train_used","value":223,"display":"223","atol":0}]},
+    {"id":"C2","criterion":"cohort","statement":"The holdout contained 119 eligible records.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"test_used","value":119,"display":"119","atol":0}]},
+    {"id":"C3","criterion":"control","statement":"The training median was 4050 g.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"train_median_g","value":4050,"display":"4050","atol":0}]},
+    {"id":"C4","criterion":"control","statement":"The training mean had an MAE of 710.455 g.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"mean_mae_g","value":710.455,"display":"710.455","atol":0.0005}]},
+    {"id":"C5","criterion":"control","statement":"The training median had an MAE of 698.109 g.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"median_mae_g","value":698.109,"display":"698.109","atol":0.0005}]},
+    {"id":"C6","criterion":"control","statement":"The flipper-length line had an MAE of 325.748 g.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"linear_mae_g","value":325.748,"display":"325.748","atol":0.0005}]},
+    {"id":"C7","criterion":"contrasts","statement":"Relative to the training mean, the line reduced MAE by 384.707 g.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"mean_minus_linear_g","value":384.707,"display":"384.707","atol":0.0005}]},
+    {"id":"C8","criterion":"contrasts","statement":"Relative to the training median, the line reduced MAE by 372.361 g.","status":"supported","evidence":[{"kind":"number","path":"research/results.csv","key":{"test_year":"2009"},"column":"median_minus_linear_g","value":372.361,"display":"372.361","atol":0.0005}]}
+  ]
+}

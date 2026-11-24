@@ -1,0 +1,8 @@
+Replay workspace (retained on failure): .scratch/replay-pp4w8_xk
+test_year,train_used,test_used,train_median_g,mean_mae_g,median_mae_g,linear_mae_g,mean_minus_linear_g,median_minus_linear_g
+2009,223,119,4050.000000000,710.455213476,698.109243697,325.748479323,384.706734152,372.360764374
+Byte match research/predictions.csv: 279c9acf4feadca8de7aed21bb428d3b03e6037a82d9f10bfd8d54986da60bd3
+Byte match research/results.csv: b140285f73dd0c0d36d778aea1eb1d8d64f5c72f04c5d3c2c9e58793d8a5b0ee
+Byte match research/run.json: e607427c397aaa0b232bbddafe130e6726f164fab816c4db983864b668d91419
+Archive match: all 119 ordered IDs, measurements and both original predictions;
+year, cohort sizes, both original MAEs and mean-minus-line contrast match at stored precision.

@@ -1,0 +1,13 @@
+{
+  "format": "docx",
+  "artifacts": {
+    "docx": {
+      "path": "paper/final.docx",
+      "sha256": "fae0abd6f8c6376771aec693bb109eb558adedb03878893ab5518b881be4377c"
+    }
+  },
+  "review": {
+    "path": "research/delivery-review.json",
+    "sha256": "9413bbfa22994b0202b57e9077a127d47cf6cc63b3bcdcddfab0895cdda3d6dc"
+  }
+}

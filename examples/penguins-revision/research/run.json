@@ -1,0 +1,43 @@
+{
+  "status": "completed",
+  "command": "python3 run.py",
+  "plan_sha256": "4a76f82e2c0401ef446a5e92303a854e6e472a0d89cea60138134fde273c8391",
+  "run_py_sha256": "b4b95e821a4b727630ab6d4204768bd09419c80c5b1c13e19454185cf8cd4c8b",
+  "outputs": [
+    "research/predictions.csv",
+    "research/results.csv"
+  ],
+  "sha256": {
+    "research/predictions.csv": "279c9acf4feadca8de7aed21bb428d3b03e6037a82d9f10bfd8d54986da60bd3",
+    "research/results.csv": "b140285f73dd0c0d36d778aea1eb1d8d64f5c72f04c5d3c2c9e58793d8a5b0ee"
+  },
+  "arms": [
+    {
+      "id": "training_mean",
+      "conditions": {
+        "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "metric": "MAE (g)",
+        "train_row_ids_sha256": "82f714d5aaae74ec01ed91979e20934e6eb493f62ad51051019a1db3cccd201d",
+        "test_row_ids_sha256": "3516cd05e3df99b0fa6363a513dae027f5bd015a010cc83adc6be801ca80647b"
+      }
+    },
+    {
+      "id": "training_median",
+      "conditions": {
+        "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "metric": "MAE (g)",
+        "train_row_ids_sha256": "82f714d5aaae74ec01ed91979e20934e6eb493f62ad51051019a1db3cccd201d",
+        "test_row_ids_sha256": "3516cd05e3df99b0fa6363a513dae027f5bd015a010cc83adc6be801ca80647b"
+      }
+    },
+    {
+      "id": "flipper_ols",
+      "conditions": {
+        "input_sha256": "f204db2c753b0937caac3cb35258562c14f073e4bbc76be24b4c51ce22767a93",
+        "metric": "MAE (g)",
+        "train_row_ids_sha256": "82f714d5aaae74ec01ed91979e20934e6eb493f62ad51051019a1db3cccd201d",
+        "test_row_ids_sha256": "3516cd05e3df99b0fa6363a513dae027f5bd015a010cc83adc6be801ca80647b"
+      }
+    }
+  ]
+}
