@@ -1,0 +1,72 @@
+# What can be recovered from the selected research archives?
+
+Independent calculations from the supplied data recover the astronomy report's **simplified distance comparison** and the physics report's **fits to simulated stiffness**. Neither calculation uses the agents' programs. The two reports came from different AutoSciRub configurations. They are not consecutive stages of a single investigation.
+
+The [draw receipt](selection.json) identifies all ten selections. Three had research products available for inspection: the two runs below and a Qiushi manuscript. The other seven leaderboard records had no published study exports on the board. A targeted search for their exact run IDs did not locate matching research products. The missing records leave the corresponding research outcomes unknown.
+
+The draw records retain their original Git IDs. In the rewritten history, `002b3ad` corresponds to `4c62bf71b8f5` (identical protocol bytes) and `655353d` to `549bee739700` (identical inventory and beacon commitment).
+
+## Astronomy: does early dark energy improve the distance fit?
+
+Before opening the outcome, the reviewer read the [assigned brief](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/INSTRUCTIONS.md). The task specified the acoustic-tension question, three cosmologies and the expected qualitative direction. The scientific choice left to the analyst was how to compare models using published parameter summaries and digitized distance points without mistaking those inputs for a new joint fit. The [run metadata](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/_meta.json) identify Codex CLI with RCBench Skills 0626 and `glm-5.2`, run `Astronomy_001_20260712_173540`, exit 0.
+
+In [sections 3 and 4 of the report](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/report/report.md), the analyst compares distances relative to a fiducial cosmology using a simplified sound horizon. Starting from the published parameter inputs and the 21 digitized points with their quoted errors, the reviewer integrated the expansion history by composite Simpson quadrature. For each model the calculation used fractional residuals for the two BAO observables and differences in distance modulus for supernovae. Each table entry sums the squared differences between model and observation divided by the individual variances. The calculation uses no covariance between points.
+
+| Model | BAO distance, 7 points | Alcock–Paczyński ratio, 7 points | Supernovae, 7 points | Total |
+|---|---:|---:|---:|---:|
+| ΛCDM | 3.44087 | 6.17580 | 4.68559 | 14.30226 |
+| Early dark energy (EDE) proxy | 41.68198 | 7.09099 | 7.29363 | 56.06660 |
+| Evolving late-time dark energy | 2.27490 | 14.94986 | 10.19875 | 27.42351 |
+
+The EDE proxy was **41.76434 higher** than ΛCDM in total chi-squared, hence worse on this comparison. All nine component values agree with the archived numerical output to within $10^{-6}$. The [analysis plan](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/outputs/goals/G4/experiment_plan.md) expected an improved BAO fit. The report retained the adverse result and distinguished its approximation from the source paper's full joint fit. The reported joint-fit improvement of $\Delta\chi^2=-7.0$ came from source tables. Neither the agent's calculation nor this check recovered it from CMB spectra.
+
+The [2019 background paper](https://arxiv.org/abs/1811.04083) supports the physical explanation that reducing the sound horizon can raise the CMB-inferred Hubble constant. It does not establish a detection in this run. The report's §3.3 assumes Gaussian marginals and a correlation of −0.3. These choices can illustrate a distribution, but cannot measure the joint posterior or its correlation. The headline claims a roughly three-sigma Bayesian detection while §5.2 identifies a Bayesian upper limit for the combination without the local calibration. The supplied means and errors do not resolve that conflict.
+
+## Physics: what explains the simulated stiffness curves?
+
+The [assigned brief](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_001_20260627_214228/INSTRUCTIONS.md) prescribed the question, the density, temperature and current sweeps, and the proposed superconducting mechanisms. Before opening the outcome, the reviewer identified model discrimination and the treatment of unmatched axes as the scientific demands. The input contains simulated stiffness values, not raw detector readings, voltages or resonance frequencies. The [run metadata](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_001_20260627_214228/_meta.json) identify `Codex Final` and `gpt-5.4`, run `Physics_001_20260627_214228`, exit 0.
+
+| Independent check on the input arrays | Result and scope |
+|---|---|
+| Divide simulated stiffness by the conventional reference at each of 50 densities, then average the ratios separately for each branch. | Hole-doped: **55.26802**. Electron-doped: **52.50462**. After fitting one scale factor per reference, the geometric reference has the lower RMSE for both branches. These results compare supplied curves, not measured contributions to superconductivity. |
+| Fit $D_s(T)=D_0-aT^n$ below 0.6 K by solving for the intercept and amplitude at each trial exponent. | **$n=0.7948364$**, RMSE 0.09707 on 55 values. The source provides 100 temperature coordinates but 110 simulated responses. This result assumes, as the report does, that the 110 responses lie on an equally spaced 0–1.2 K grid. That grid was reconstructed, not observed. The supplied BCS and $n=2$ reference arrays are identical point for point, so comparing those two arrays cannot distinguish the mechanisms. |
+| Regress stiffness on squared microwave current, with an intercept, on 50 explicitly paired points. Compare with a linear-current fit on the same points. | Squared current: slope **−0.0309843** in supplied stiffness units per nA² and $R^2=0.9941624$. Linear current: $R^2=0.9082563$. The first fit recovers the [report's Figure 6 result](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_001_20260627_214228/report/report.md). The second is the independent reviewer's check, not a newly attributed result of the agent. |
+
+The cited [theory of topology-bounded superfluid weight](https://arxiv.org/abs/1906.02213) derives a geometric contribution under a uniform-pairing assumption. It supplies a reason to compare curves, not evidence that the simulated fit identifies a unique pairing mechanism in a device. The report discloses the simulation and the mismatch of axes. Its stronger mechanistic interpretation is conditional on those inputs and modeling choices.
+
+## Attribution across the six research dimensions
+
+| Dimension | Astronomy run | Physics run |
+|---|---|---|
+| Question selection | The task writer supplied the question, rival models and expected interpretation. | The task writer supplied the question, physical mechanisms and expected signatures. |
+| Grounded reading | The analyst distinguishes digitized data from literature tables. The background source supports the mechanism. The Bayesian conclusion is inconsistent across sections. | The analyst relates the simulation to a geometric theory and explicitly distinguishes the input from device measurements. The theory does not identify the mechanism in this sample. |
+| Design and adaptation | The analyst reports the proxy comparison even though it goes against the plan's expectation. | The analyst compares two density references, constructs an axis for mismatched arrays and restricts the temperature fit after observing the full-range mismatch. The archive documents the rationale, not an independently dated choice of fit window. |
+| Execution and replication | The reviewer recovered the simplified distance statistic from the point-level input. The source-reported joint-fit result and claimed posterior remain separate. | The reviewer independently refitted the density, low-temperature and microwave results from the numeric input. No instrument measurement was reproduced. |
+| Manuscript and revision | The [figure-generation pass](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/code/generate_figures.py) specifies one panel for the breakdown. The [repair script](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/code/fix_figures.py) specifies two. The [delivered figure](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/report/images/fig_chi2_breakdown.png) and its caption show the two-panel layout. This supports an internal figure correction. The [final self-assessment](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/outputs/report_rubric_check.json) lists no required iteration. No referee objection and corresponding manuscript revision were identified. | The final manuscript and [self-assessment](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_001_20260627_214228/outputs/report_rubric_check.json) exist. The self-assessment records no fixes or required iteration. It is not a before-and-after manuscript. |
+| Handoff | The archive identifies the input filename, model prescription and outputs. Input bytes had to be retrieved separately. | The [output inventory](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/blob/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_001_20260627_214228/outputs/analysis_run_metadata.json) and report identify the data and fit windows. The summary CSV contains series-level summaries, not the samples needed to refit. |
+
+The independent reviewer recovered these results using the public input release. Neither selected run exported its `data/` directory. The inspected records identify the input filenames but give no digest for comparison with the historical copies. No upstream program was executed. Continued investigation through the original research environments was not tested.
+
+## Qiushi manuscript
+
+The [preface (lines 278–283)](https://github.com/Oxelra-AI/Topological-Photonics/blob/62c82a637c73005f5d70b9f35fe4658d3d2b4b1c/main.tex#L278-L283) attributes the initial draft to Qiushi Engine, not each research decision. [Chapter 4](https://github.com/Oxelra-AI/Topological-Photonics/blob/62c82a637c73005f5d70b9f35fe4658d3d2b4b1c/chapters/chap04_photonic_chern_insulator_restructured.tex#L204-L255) defines TE with $H_z$ at lines 204–208 and uses that convention at lines 247–255. [Appendix C (lines 39–45)](https://github.com/Oxelra-AI/Topological-Photonics/blob/62c82a637c73005f5d70b9f35fe4658d3d2b4b1c/appendices/appC_numerical_algorithms.tex#L39-L45) instead calls its $H_z$ equation TM. Two investigators checked a separate algebraic statement at Chapter 4, lines 213–246: with $\mu_\perp=2$ and $\kappa=0.5$, the displayed permeability matrix times its stated inverse is the identity, and the permeability matrix has eigenvalues 1.5 and 2.5. This checks one property of an initial manuscript, not an experiment or a reviewer-led revision.
+
+## Repeat the numerical checks offline
+
+Place these three files under one data directory using the paths shown. The two task inputs are from the benchmark publisher, not a target answer or another submitted analysis. The JSON is an output of the selected astronomy run and is used only for comparison after independent calculation. The links identify the exact bytes used for inspection, not permission to redistribute a third party's materials.
+
+| Local path and pinned source | SHA-256 |
+|---|---|
+| [`astro/DESI_EDE_Repro_Data.txt`](https://huggingface.co/datasets/InternScience/ResearchClawBench/resolve/fa82414b2ead64ea3a4df2c0688512198c42ba59/tasks/Astronomy_001/data/DESI_EDE_Repro_Data.txt) | `6a72c1d974b8d5c332f81c4c6f20b3976da6de762122a88c25ae59adc4fde620` |
+| [`phys/MATBG Superfluid Stiffness Core Dataset.txt`](https://huggingface.co/datasets/InternScience/ResearchClawBench/resolve/fa82414b2ead64ea3a4df2c0688512198c42ba59/tasks/Physics_001/data/MATBG%20Superfluid%20Stiffness%20Core%20Dataset.txt) | `25b06e1ade20e5f15b0f4aa96eae63f2f297c2e8e73dca4f52ce3e2f65b88858` |
+| [`astro/outputs/distance_chi2.json`](https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/resolve/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540/outputs/distance_chi2.json) | `6897a17bb9e3b208b4579ffb913e56623a57f536b91fb97a5c18d9b97184bcc3` |
+
+From the repository root, run the [verifier](recheck_autoscirub.py) with Python 3.10 or later:
+
+```sh
+python3 -I -B evaluations/maturity/product-studies/recheck_autoscirub.py --data-root /path/to/data
+```
+
+The verifier checks the input digests, recomputes the statistics and compares them with the recorded values. The review run exited 0. The verifier uses the Python standard library and does not download anything.
+
+After selection, public search snippets exposed parts of the ResearchClawBench target checklists for `Astronomy_001`, `Physics_001` and `Energy_000` to the evaluation coordinator. The coordinator is not a blind grader on those board tasks. The independent numerical reviewer used no target text, grading key or other same-task submission in the calculations above. The [comparison protocol](../product-level-protocol.md) reserves comparative judgments until the evidence on both sides has been assessed.
