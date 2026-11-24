@@ -1,0 +1,16 @@
+{
+  "sources": [
+    {
+      "id": "palmer-v010-dictionary", "title": "Size measurements for adult foraging penguins near Palmer Station, Antarctica",
+      "origin": "https://raw.githubusercontent.com/allisonhorst/palmerpenguins/e5bfd5f2c7da95b0823e9501b9013eb2ef124fa7/man/penguins.Rd",
+      "locator": "palmerpenguins v0.1.0, man/penguins.Rd, title field", "access": "full-text",
+      "path": "data/dictionary-excerpt.txt", "sha256": "5076c2273e3b4ef230423daacd5cb0cb5f64141e429dc3bfb62b98ae25553357"
+    },
+    {
+      "id": "horst-2022-fig4", "title": "Palmer Archipelago Penguins Data in the palmerpenguins R Package - An Alternative to Anderson's Irises",
+      "origin": "https://doi.org/10.32614/RJ-2022-020",
+      "locator": "Figure 4 caption, opening phrase of first sentence and complete final sentence", "access": "full-text",
+      "path": "data/caption-excerpts.txt", "sha256": "9f3d0f5d0444c64e9afb595ba1148a9619177861adf5ef6ba233078afc4b3ff0"
+    }
+  ]
+}
