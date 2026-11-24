@@ -30,7 +30,7 @@ diff -ru examples/branch-decision/research "$study/research"
 python3 ai4sci.py audit "$study"
 ```
 
-The program reports `raw=396, adjacent=512, paired=257, runs=19 bytes`. The diff is empty and the audit exits `0`. The program writes each round's observation, competing predictions and attempt allowance before measuring its children. It refuses to replace earlier results. The [plan](research/plan.json) covers the baseline and total allowance. The later choices are exploratory.
+The program reports `raw=396, adjacent=512, paired=257, runs=19 bytes`. The diff is empty and the audit exits `0`. The [plan](research/plan.json) fixes the baseline and total allowance and requires the branch ledger. Removing `research/branches.json` from a replay makes its audit exit `2` even when all four payload sizes remain correct. The program writes each round's observation, competing predictions and attempt allowance before measuring its children. Those later choices are exploratory. Regenerate this synthetic example in a fresh study as shown above. The program refuses to replace earlier results.
 
 Now change only the first decision **in the replay copy**. The losing sibling still has a valid measurement and the manuscript still cites the correct numbers:
 

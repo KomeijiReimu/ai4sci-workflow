@@ -1,5 +1,6 @@
 {
   "question": "How many bytes does a literal encoding need for the specified pair of synthetic counter streams, and which controlled follow-ups explain the payload size?",
+  "required_checks": ["branches"],
   "criteria": [{
     "id": "payload",
     "description": "Report the literal payload size and any exploratory changes on this trace. Count only bytes that decode exactly to the original signed integers. Stop after at most four encodings including the baseline.",

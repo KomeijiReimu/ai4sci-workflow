@@ -182,6 +182,19 @@ class BranchDecisions(unittest.TestCase):
                 self.check(2)
                 self.stage[prop] = saved
 
+    def test_showcase_blocks_deletion_of_required_branch_ledger(self):
+        study = self.root / 'archived'
+        shutil.copytree(EXAMPLE / 'research', study / 'research')
+        command = [sys.executable, ROOT / 'ai4sci.py', 'audit', study]
+        intact = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(intact.returncode, 0, intact.stdout + intact.stderr)
+        (study / 'research/branches.json').unlink()
+        result = subprocess.run(command, capture_output=True, text=True)
+        self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+        report = json.loads(result.stdout)
+        self.assertEqual(report['deliverability'], 'blocked')
+        self.assertTrue(any('branches.json' in error for error in report['branches']['errors']))
+
     def test_showcase_clean_replay_and_adverse_promotion(self):
         fresh = self.root / 'replay'
         research = fresh / 'research'
