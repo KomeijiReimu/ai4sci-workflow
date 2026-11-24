@@ -1,0 +1,164 @@
+{
+  "commitment_commit": "655353d",
+  "inventory_sha256": "eaacb9396c1430c1623e57f5d83bd8cf7d8b4d8caffd76bfe588a40232be6b68",
+  "beacon_sources": [
+    "https://api.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971/public/34236135",
+    "https://api2.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971/public/34236135"
+  ],
+  "beacon": {
+    "round": 34236135,
+    "signature": "b13e1ecc6c0558c47b589670bb261eba3a9186b5de7d2b6ef40b4bf0b9086e4ea85d2183bbb1e54d7a97699950e72f8f",
+    "randomness": "1ab06deebbc24256dba46604ea29b61e6bc4ec98303ce2cd9835fa6c2db36cb6"
+  },
+  "crosscheck": "Round, signature and SHA-256(signature) match on two HTTPS mirrors.",
+  "matched_records": 167,
+  "stratum_counts": {
+    "AutoSciRub:unknown-opportunity": 93,
+    "EvoLab:unknown-opportunity": 13,
+    "InnoClaw:unknown-opportunity": 26,
+    "Ligase:unknown-opportunity": 13,
+    "Qiushi Engine:unknown-opportunity": 22
+  },
+  "selected": [
+    {
+      "order_digest": "017c87338ec115246e59a8218b1abc3b89ed23dabf241ef31a178237aef71c73",
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_20260712_173540",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "order_digest": "021d964036163b3fc7a8ffc3b99913250aa55853c38ef73456f716237620c59d",
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_20260627_214228",
+      "instance": "workspaces-codex+",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_001_20260627_214228"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "order_digest": "13e021aa49c83bafcd21dda5bae80df9e3fd969283c684481ac1649c57deaf91",
+      "product": "EvoLab",
+      "id": "EvoLab:Physics_002_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_002_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "order_digest": "1451a75bbe87f9557ebf7b7beacb404176d7661dde2c6de2c93bede7860b29a3",
+      "product": "EvoLab",
+      "id": "EvoLab:Physics_001_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_001_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "order_digest": "036793787f02ba9fdb6114c05f9944ec0d9bf3ae7a89ab7178f79e12a3981ab1",
+      "product": "InnoClaw",
+      "id": "InnoClaw:Physics_001_20260804_111234",
+      "instance": "InnoClaw",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_001_20260804_111234"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "order_digest": "231036abbc6633327d70c9682a54cdf66964b453a7e3821e92c30835f998d455",
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Astronomy_001_20260725_153429_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_001_20260725_153429_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "order_digest": "10269525229a58ee8b1ac7bc61122d77f44025eb2b62b787136d739e90337877",
+      "product": "Ligase",
+      "id": "Ligase:cli_Physics_003_20260831_022939_347d0cf8",
+      "instance": "Ligase",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Physics_003_20260831_022939_347d0cf8"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "order_digest": "140963de69b28fa1e41bcae2163c393d277ffd0d454f11ce55747c5b73ac4bc3",
+      "product": "Ligase",
+      "id": "Ligase:cli_Earth_000_20260831_022939_4fbf7aeb",
+      "instance": "Ligase",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Earth_000_20260831_022939_4fbf7aeb"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "order_digest": "005d76f11d0a92c6eca402a2acce40d73e25bee0b4b00cbcbe34ec14b9fb0fec",
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Energy_000_imported",
+      "instance": "Qiushi Engine",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_000_imported"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "order_digest": "09040e2e22a3cf2eae2bab904b24dec1dc79696d03dce60661aa086c5dfcd4fc",
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Topological-Photonics@62c82a637c73005f5d70b9f35fe4658d3d2b4b1c",
+      "task": "Topological-Photonics",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Topological-Photonics/tree/62c82a637c73005f5d70b9f35fe4658d3d2b4b1c"
+      ],
+      "archive_available": true,
+      "exposure": "Only index metadata exposed."
+    }
+  ]
+}
