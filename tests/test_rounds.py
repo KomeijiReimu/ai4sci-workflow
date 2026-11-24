@@ -106,6 +106,25 @@ class ReviewRounds(unittest.TestCase):
         self.update_final('manuscript', d['passage'], old + ' [C8]')
         self.assertIn('I3', self.check(2)['errors'][0])
 
+    def test_bound_response_cannot_be_borrowed_from_another_issue(self):
+        first, second = self.last['decisions']
+        self.update_final('reply', second['response'] + '\n', '')
+        borrowed = first['response'] + ' The separate baseline question [I3] [B3] remains unanswered.'
+        self.update_final('reply', first['response'], borrowed)
+        first['response'] = second['response'] = borrowed
+        self.assertIn('I3', self.check(2)['errors'][0])
+
+    def test_bound_response_requires_leading_comment_labels_not_prose(self):
+        decision = self.last['decisions'][0]
+        answer = decision['response'] + ' See claim [C9] for context.'
+        self.update_final('reply', decision['response'], answer)
+        decision['response'] = answer
+        self.check(0)
+        misplaced = answer.replace('[A2] ', '') + ' This also concerns [A2].'
+        self.update_final('reply', answer, misplaced)
+        decision['response'] = misplaced
+        self.assertIn('I1', self.check(2)['errors'][0])
+
     def test_older_reply_or_manuscript_handed_over(self):
         for role, name in [('manuscript', PAPER), ('reply', REPLY)]:
             with self.subTest(role=role):

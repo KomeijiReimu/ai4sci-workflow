@@ -26,7 +26,7 @@ To work in the workflow checkout, run `opencode` from the repository root and de
 
 > Use ai4sci to look for studies of short-term electricity demand forecasts with gaps in the input series. Find the closest comparison and a usable dataset. Recommend a small first experiment, but don't run it yet.
 
-When a new study needs files, OpenCode creates a directory under `studies/`. To resume an existing study, give its directory (for example, `studies/my-study/`) and say what you want to do next. Git ignores your study files by default.
+When a new study needs files, OpenCode creates a directory under `studies/`. To resume an existing study, give its directory (for example, `studies/my-study/`) and say what you want to do next. This repository ignores study files under `studies/` by default.
 
 To work in your own study directory, run `opencode` there. Replace the path in this prompt with the checkout path printed by `pwd`:
 

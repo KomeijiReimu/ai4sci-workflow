@@ -1,6 +1,6 @@
 # Check the requested final manuscript package
 
-For final delivery, require both the [evidence audit](contract.md) and the package check in one run:
+For a **formal Word/PDF submission from a study conducted with this kit**, require both the [evidence audit](contract.md) and the package check in one run:
 
 ```sh
 python3 ai4sci.py audit --submission studies/my-study
@@ -8,7 +8,9 @@ python3 ai4sci.py audit --submission studies/my-study
 
 The ordinary `python3 ai4sci.py audit studies/my-study` command also checks the package when it finds `research/submission.json`. Add `--submission` to require the manifest at delivery, or list `submission` in the plan's `required_checks` before freezing if the venue package is an agreed output. For isolated **package diagnostics**, use `python3 checks/submission.py studies/my-study`. That command does not rerun the evidence audit and cannot clear a study for delivery by itself.
 
-The package check is read-only. It does not edit, render or compile files, install anything, fetch sources or run the experiment. It compares current package bytes with a dated review record and looks for **each audited claim statement in the final document text**. Passing both checks does not establish scientific validity.
+For an **author-supplied manuscript**, keep the originals and review the actual revised DOCX or PDF, its rendered pages, the reply and the cited materials. Note any missing historical records. No native plan or run is needed for this revision. If the current canonical Markdown, claim ledger, manifest and bound review are available, `python3 checks/submission.py STUDY` can additionally diagnose the current package. Do not use that result as an evidence audit of the outside study. If new formal work was needed, audit its separate supplement and still review the actual outside file. See the [revision route](../skills/ai4sci-paper/references/submission.md).
+
+The package check is read-only. It does not edit, render or compile files, install anything, fetch sources or run the experiment. It compares current package bytes with a dated review record and looks for **each registered claim statement in the final document text**. Passing both native checks does not establish scientific validity.
 
 ## Declare the files
 
@@ -45,7 +47,7 @@ Review the rendered pages of the actual final DOCX/PDF. The reviewer can be a hu
   "reviewer": "Reviewer name or accountable role",
   "date": "2025-03-12",
   "status": "approved",
-  "visual_inspection": "Opened the final DOCX in Word. On p. 2, compared the estimate and its units to C1 and Table 1; Table 1 fits on the page. Read the remaining pages for contradictory or unmarked conclusions.",
+  "visual_inspection": "Opened the final DOCX in Word. On p. 2, compared the estimate and its units to C1 and Table 1. Table 1 fits on the page. Read the remaining pages for contradictory or unmarked conclusions.",
   "open_revisions": [],
   "sha256": {
     "research/paper.md": "<canonical paper digest>",

@@ -117,12 +117,14 @@ def rounds(root: Path):
                     raise ValueError(f'round {n}: duplicate decision or no active concern for {issue}')
                 answered.add(issue)
                 if status == 'open' and any(c['issue'] == issue for c in incoming):
-                    refs = [issue, *(c['id'] for c in incoming if c['issue'] == issue)]
+                    refs = [c['id'] for c in incoming if c['issue'] == issue]
                 else:
-                    refs = [issue, *(cid for cid, owner in comments.items() if owner == issue)]
-                if (response[line] != 1 or any(f'[{ref}]' not in line for ref in refs) or
+                    refs = [cid for cid, owner in comments.items() if owner == issue]
+                prefix = REPLY_PREFIX.match(line)
+                if (response[line] != 1 or not prefix or prefix[1] != issue or
+                        any(f'[{ref}]' not in prefix[2] for ref in refs) or
                         not re.sub(r'\[[^\]]+\]', '', line).strip()):
-                    raise ValueError(f'{issue}: actual reply needs the response line and its issue/comment references')
+                    raise ValueError(f'{issue}: response line needs its own leading issue and comment references')
                 if status == 'open':
                     continue
                 if status not in ('revised', 'no-change'):
