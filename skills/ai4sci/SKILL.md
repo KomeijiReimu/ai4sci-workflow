@@ -16,6 +16,10 @@ For a full or multi-session study, maintain one short `$STUDY/research/handoff.m
 3. Use `ai4sci-paper` for drafting and `ai4sci-figures` for figures. Do not fill result placeholders with predictions. Build `research/claims.json` while drafting, not after losing the source locations.
 4. Use `ai4sci-review` before delivering a formal draft. Run the evidence check yourself. Report any disagreement between text and source to the author for correction, then recheck the affected claims. Tell the user where the manuscript is and which findings hold or remain unresolved. Give the rerun command on request or in the handoff, not as an outstanding task for the user.
 
+For a submission, a resubmission or reviewer comments on an existing manuscript, start from the actual author files and read [the submission and revision route](../ai4sci-paper/references/submission.md). A user who asks for a draft does not need a submission package. A user who asks only for advice on an editorial decision does not need a rewrite.
+
+Choose tools from the current session. A scholarly search connector such as `paper-search` can search multiple indexes, follow references and resolve identifiers. Use a paper-reading tool for long original articles when available. For a supplied Word template or tracked edits, use an available DOCX skill. Use a spreadsheet skill for an actual Excel supplement and a PDF tool to inspect the final pagination, captions and figures. Keep the author's existing library, bibliography and experiment environment. Missing optional tools block only the task that needs them. Never call a Markdown preview a reviewed Word or PDF file.
+
 ## Delegate by responsibility (omo-slim)
 
 - Check the current session's actual roles and permissions. For substantive work, send one read-only task to locate the closest studies and counterevidence, another to inspect the available data, evaluation and resources. Each brief names inputs, scope, output, budget and validation owner. Do not assign fixed agent names.

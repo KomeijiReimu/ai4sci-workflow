@@ -6,7 +6,6 @@ import hashlib
 import json
 import importlib.util
 from pathlib import Path
-import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parent
@@ -18,7 +17,9 @@ def main():
     cli.add_argument('--version', action='version', version=VERSION)
     sub = cli.add_subparsers(dest='cmd', required=True)
     sub.add_parser('freeze', help='Record the current plan digest before inspecting formal results').add_argument('project', nargs='?', default='.')
-    sub.add_parser('audit', help='Check the manuscript against its evidence').add_argument('project', nargs='?', default='.')
+    check = sub.add_parser('audit', help='Check the manuscript and any declared submission package')
+    check.add_argument('project', nargs='?', default='.')
+    check.add_argument('--submission', action='store_true', help='Require a reviewed final-format package even if its manifest is missing')
     stats = sub.add_parser('stats', help='Run the upstream statistical risk scanner on named text/code files')
     stats.add_argument('files', nargs='+', type=Path)
     args = cli.parse_args()
@@ -38,7 +39,25 @@ def main():
         print(f'{out}: {digest.strip()}')
         return 0
     if args.cmd == 'audit':
-        return subprocess.call([sys.executable, str(ROOT / 'checks/audit.py'), args.project])
+        from checks.audit import audit
+        root = Path(args.project)
+        code, report = audit(root)
+        package = root / 'research/submission.json'
+        if args.submission or package.exists() or package.is_symlink():
+            from checks.submission import submission
+            package_code, detail = submission(root)
+            report['submission'] = detail
+            report['manuscript_deliverability'] = report['deliverability']
+            code = max(code, package_code)
+            report['deliverability'] = ('ready', 'incomplete', 'blocked')[code]
+            if package_code:
+                report['run'] = 'invalid' if code == 2 else report['run']
+                for key in ('errors', 'incomplete'):
+                    messages = detail.get(key, [])
+                    report[key].extend(f'submission: {message}' for message in messages)
+                    report['error_count' if key == 'errors' else 'incomplete_count'] += len(messages)
+        print(json.dumps(report, sort_keys=True))
+        return code
     scanner = ROOT / 'vendor/ai4s-desktop/runtime/skills/core/stats-integrity/stats_integrity_check.py'
     spec = importlib.util.spec_from_file_location('ai4sci_stats_scanner', scanner)
     if spec is None or spec.loader is None:

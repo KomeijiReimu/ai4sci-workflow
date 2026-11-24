@@ -8,3 +8,5 @@
 - Negative outcomes, untested criteria and blocked dependencies:
 - Review mode (separate reviewer or self-check), review file and unresolved findings:
 - To reproduce or resume (next action and owner; do not repeat completed work):
+
+For a submission or revision, also link the original sent version, reviewer concern, supplemental decision and results, response, and exact final file that was opened and checked. Identify anything still promised rather than completed.

@@ -170,3 +170,6 @@ Select numeric columns with `--column NAME` (repeat for more columns), a cluster
 Here the allowed absolute difference is $a + r\lvert x\rvert$, where $x$ is the expected value, $a$ is `--atol` and $r$ is `--rtol`. Equality at the threshold passes. Both tolerances default to zero. For cluster labels, the comparator uses the adjusted Rand index (ARI), so renaming clusters preserves the score. Labels must be nonblank. `--min-ari` defaults to 1 and accepts values from −1 to 1. Identical degenerate partitions, including a one-sample partition, score 1.
 
 The JSON report gives `result`, `aligned_ids` (`null` if alignment did not complete), `ari` (`null` unless computed), `diagnostic_count` and a bounded `diagnostics` list. Exit `0` means match, `1` means different ID sets or results outside the requested thresholds, and `2` means invalid input or usage. CLI usage errors go to stderr.
+## Final-format delivery
+
+For a requested Word, PDF or LaTeX/PDF package, see [the submission check](submission.md). `python3 ai4sci.py audit --submission STUDY` requires the canonical evidence and the registered package to pass. Ordinary `audit STUDY` also checks a present `research/submission.json`. A study delivering only its Markdown draft needs no package manifest.

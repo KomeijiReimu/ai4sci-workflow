@@ -28,6 +28,24 @@ class Workflow(unittest.TestCase):
         self.assertEqual(self.cmd('init', self.project).returncode, 2)
         self.assertEqual(list(self.project.iterdir()), [])
 
+    def test_submission_is_required_by_request_or_declaration_not_by_a_plain_draft(self):
+        shutil.copytree(ROOT / 'examples/quadrature/research', self.project / 'research')
+        result = self.cmd('audit', self.project)
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertNotIn('submission', json.loads(result.stdout))
+        for requested in (True, False):
+            with self.subTest(requested=requested):
+                if not requested:
+                    (self.project / 'research/submission.json').write_text('{}', encoding='utf-8')
+                args = ['--submission'] if requested else []
+                result = self.cmd('audit', *args, self.project)
+                self.assertEqual(result.returncode, 2, result.stdout + result.stderr)
+                report = json.loads(result.stdout)
+                self.assertEqual(report['manuscript_deliverability'], 'ready')
+                self.assertEqual(report['deliverability'], 'blocked')
+                self.assertEqual(report['submission']['deliverability'], 'blocked')
+                self.assertTrue(any(e.startswith('submission:') for e in report['errors']))
+
     def test_checkout_cli_checks_two_studies_without_setup(self):
         # Keep the external case outside the repo (and off memory-backed /tmp).
         external = tempfile.TemporaryDirectory(prefix='ai4sci study ', dir=Path.home())
