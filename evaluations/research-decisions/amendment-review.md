@@ -1,0 +1,12 @@
+# Independent recheck of the amended questions
+
+These [protocol](protocol.md) grades apply to each amendment together with its earlier documentary evidence. The [original review and grades](review.md) stand. No new observations were examined.
+
+| Amended question | Prior result | Data for the comparison | Discriminating observation | Stakes, alternative, origin |
+|---|---|---|---|---|
+| [Cycling](cycling/amendment.md) | supported | partial | supported | supported |
+| [Stars](stars/amendment.md) | supported | supported | supported | supported |
+
+**Cycling — viable subject to the coverage gate.** Roll (§3.5.1, Table 3.17) tested recovery of observed daily totals, not two calibration years on identical earlier Williamsburg days. The [amendment](cycling/amendment.md) fixes the [original proposal’s](cycling/recommendation.md) sign problem: subtracting the two signed errors cancels the recorded total. A positive difference can mean less undercounting. Reporting daytime, overnight and remaining passages separately distinguishes a larger night numerator from a smaller daytime denominator. The [counter evidence](cycling/evidence.md) supports timestamp availability; the new comparison requires three dry, usable days from distinct weeks in **every** month–weekday cell in all four summers. Some cells have only three candidate dates before exclusions: losing one stops the comparison. Week deletion tests sensitivity, not confidence. The decision concerns retaining a conversion for comparable summer counts, not attributing new trips.
+
+**Stars — viable as a per-target estimator test.** Murphy (§3, Fig. 3) tested the flight grid, not the shifted-grid contrast. The [amendment](stars/amendment.md) resolves the [original proposal’s](stars/02-recommendation.md) ambiguity: 60 seconds is the semi-amplitude of the reversing component in the *half-difference of primary and secondary timings*, not either eclipse’s amplitude. Equal shifts cancel. The [six product headers](stars/03-evidence.md) establish contemporaneous inputs with room for three beat cycles per month, not three *usable* cycles or recoverable one-minute shifts. Stop separately for either target if coverage, slope localization or calibration fails; the flat-bottomed eclipse particularly matters. A reversing component warrants an estimator flag; a surviving one warrants photometric follow-up, not a spot identification. This within-star contrast retains its advantage over the unverified seismic comparison.
