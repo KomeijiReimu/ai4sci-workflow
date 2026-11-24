@@ -1,0 +1,8 @@
+# Study handoff
+
+**Complete:** [manuscript](paper.md), [figure](mae.svg), [primary comparison](primary.csv), [diagnostic](followup.csv), [evidence review](review.md). The day-ahead series had lower MAE overall, but last week's value had lower MAE in the busiest hours under both retrospective definitions.
+
+- **Primary design:** [plan](plan.json), [digest](plan.sha256). Freeze succeeded at 07:57 UTC on 2026-11-24, before viewing hourly errors. First results were read at 08:02 UTC; the [separate follow-up decision](followup-decision.md) preceded the 08:03 UTC diagnostic. No primary criterion was amended. These are local workflow records, not externally certified timestamps.
+- **Inputs:** version 2020-10-06 of OPSD *Time series*, official hourly artifact; [run receipt](run.json) for input SHA-256, code hashes and commands, [sources](sources.json) for release metadata and the verified academic comparator. The first raw transfer timed out; resuming byte ranges on the same official URL produced the manifest's exact digest.
+- **Replay:** from repository root `python3 -B examples/power-forecast/check_repro.py --download` (Python 3.10+, `Europe/Berlin` zone). CPU only; no external forecast model. Only aggregated outputs and short source excerpts are distributed. The [coverage report](coverage.json) identifies which exclusions occurred. For the figure alone, from the study directory: `python3 -B figure.py research/primary.csv research/mae.svg`.
+- **Scope:** a descriptive 2019 benchmark; no untouched confirmation series or exact issuance history. The [review](review.md) reports the SQLite recalculation and the audit. No additional experimental branch is pending.

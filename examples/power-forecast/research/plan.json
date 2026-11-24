@@ -1,0 +1,31 @@
+{
+  "question": "For German national hourly load in the 2019 local calendar year, how do the archived day-ahead forecast and the actual load at the same wall-clock hour one week before compare in absolute error, overall and when realized demand is high?",
+  "design": "Finite-period census, not a fitted model. Use the OPSD Time series 2020-10-06 hourly single-index file; select DE national actual and forecast ENTSO-E Transparency columns, not DE_LU or control areas. Use 2019 as the last complete calendar year in this release before pandemic disruptions; 2018-12-25 through 2018-12-31 are lag inputs only. Compare on the identical set of target hours. No training, tuning, weather, or calendar correction. The lag precedes the target by seven local dates. The archive does not establish publication/revision timestamps for either series.",
+  "time_and_missingness": "Enumerate physical UTC hours between Europe/Berlin midnights 2019-01-01 (inclusive) and 2020-01-01 (exclusive). Derive civil date/hour for each target and look up the same clock time seven local days earlier, not 168 rows back. Include weekends, public holidays and their lag dates unchanged. Omit both occurrences of a repeated target wall time, and omit targets with no unique physical lag hour (spring gap or autumn repeat). On remaining hours require finite current actual, day-ahead forecast, and previous-week actual; missing source timestamps or values are missing observations. No imputation or outlier trimming. Report exclusions in that order and the resulting denominator. If fewer than 95% of the scheduled hours pair, report a coverage failure, do not substitute another year.",
+  "evaluation": "Primary: hourly-weighted mean absolute error (MAE, MW; lower is better) and paired advantage = weekly MAE minus day-ahead MAE. A nonpositive advantage counts against the expectation that the day-ahead series is more accurate. Secondary: high = realized actual at or above the pooled paired-sample nearest-rank 90th percentile (sorted value at ceil(0.90*n), one-based; include ties). Compare both MAEs and advantage in that group and the strictly lower complement; report cutoff and group sizes. Membership is retrospective, same for both arms, defined without examining errors; not an issue-time trigger or an ex ante predictor. Interpret ranking and magnitude. No hypothesis test or interval: summarize this entire specified set of archive hours, with no claim of independent hours or future skill. Recompute means/differences to within 0.000001 MW; manuscript rounds to nearest MW.",
+  "data_already_inspected": "Read only release metadata, license/citation text and published literature; requested the official file without inspecting hourly values, errors or subgroup outcomes. The 2019 scope was chosen by calendar before performance measurement.",
+  "budget": "One versioned hourly file (130339665 bytes), one two-arm primary comparison, one motivated same-data exploratory follow-up defined after reading the primary output but before calculating that follow-up. Retain original result regardless of sign. Up to 10 CPU-minutes for scientific calculations, one CPU process at a time, no model calls, GPU, paid services, or uploads. Read-only replay and independent arithmetic checks allowed. Stop after this follow-up; no search across years, baselines or cutoffs.",
+  "require_source_manifest": true,
+  "matched_conditions": ["target_ids_sha256", "metric", "zone"],
+  "criteria": [
+    {"id": "source", "description": "Identify the published German actual and day-ahead series and verify the closest European load-forecasting precedent for the weekly baseline."},
+    {"id": "overall", "description": "Report paired count and MAEs on all scored hours, retaining a loss or tie for either forecast.", "required_observations": [
+      {"path":"research/primary.csv","key":{"group":"all"},"column":"hours","bounds":{"min":8322,"max":8760}},
+      {"path":"research/primary.csv","key":{"group":"all"},"column":"day_ahead_mae_mw"},
+      {"path":"research/primary.csv","key":{"group":"all"},"column":"weekly_mae_mw"},
+      {"path":"research/primary.csv","key":{"group":"all"},"column":"advantage_mw"}
+    ]},
+    {"id": "demand", "description": "Report realized high-load versus remaining hours on the same metric, including threshold, both group sizes, each arm's MAE and its paired contrast.", "required_observations": [
+      {"path":"research/primary.csv","key":{"group":"high"},"column":"cutoff_mw"},
+      {"path":"research/primary.csv","key":{"group":"high"},"column":"hours"},
+      {"path":"research/primary.csv","key":{"group":"high"},"column":"day_ahead_mae_mw"},
+      {"path":"research/primary.csv","key":{"group":"high"},"column":"weekly_mae_mw"},
+      {"path":"research/primary.csv","key":{"group":"high"},"column":"advantage_mw"},
+      {"path":"research/primary.csv","key":{"group":"other"},"column":"hours"},
+      {"path":"research/primary.csv","key":{"group":"other"},"column":"day_ahead_mae_mw"},
+      {"path":"research/primary.csv","key":{"group":"other"},"column":"weekly_mae_mw"},
+      {"path":"research/primary.csv","key":{"group":"other"},"column":"advantage_mw"}
+    ]},
+    {"id":"followup","description":"Preserve the initial result and document the next bounded diagnostic and why that result motivated it; identify the diagnostic as exploratory."}
+  ]
+}

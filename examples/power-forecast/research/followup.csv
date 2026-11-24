@@ -1,0 +1,3 @@
+group,hours,midpoint_cutoff_mw,realized_high_hours,day_ahead_mae_mw,weekly_mae_mw,advantage_mw
+midpoint_high,876,67818.0,670,2127.996575342,1967.117579909,-160.878995434
+midpoint_other,7880,67818.0,206,1973.838324873,2591.727157360,617.888832487

@@ -1,0 +1,11 @@
+Open Power System Data. 2020. Data Package Time series. Version 2020-10-06.
+https://doi.org/10.25832/time_series/2020-10-06
+Hourly resource in datapackage.json, schema.fields (selected descriptions):
+
+DE_load_actual_entsoe_transparency
+Total load in Germany in MW as published on ENTSO-E Transparency Platform
+
+DE_load_forecast_entsoe_transparency
+Day-ahead load forecast in Germany in MW as published on ENTSO-E Transparency Platform
+
+Both fields list the source as: own calculation based on ENTSO-E Transparency

@@ -1,0 +1,13 @@
+{
+  "scheduled": 8760,
+  "paired": 8756,
+  "excluded": {
+    "ambiguous_target": 2,
+    "absent_lag_hour": 1,
+    "ambiguous_lag_hour": 1,
+    "missing_actual": 0,
+    "missing_forecast": 0,
+    "missing_lag_actual": 0
+  },
+  "target_ids_sha256": "f6dd44d52a024a4f4aad123b9f4dba759d153fb2da44e9cdfb74c981a437c06d"
+}

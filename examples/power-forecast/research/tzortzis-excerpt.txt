@@ -1,0 +1,4 @@
+Tzortzis et al., Transfer Learning for Day-Ahead Load Forecasting: A Case Study on European National Electricity Demand Time Series. Mathematics 12(1), 19. DOI: 10.3390/math12010019.
+Section 2.5, Transfer Learning Setup (short excerpt; © 2023 by the authors, CC BY 4.0):
+
+For the purpose of completeness and objective assessment, we also introduce a seasonally naive model of weekly seasonality, namely, seasonally naive with a look-back window of 168 values, namely sNaive(168).

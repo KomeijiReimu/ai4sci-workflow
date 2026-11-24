@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "command": "python3 -B study.py ../../.local/power-forecast/time_series_60min_singleindex.csv research && python3 -B followup.py ../../.local/power-forecast/time_series_60min_singleindex.csv research && python3 -B figure.py research/primary.csv research/mae.svg",
+  "working_directory": "examples/power-forecast",
+  "steps": "Primary executed first (08:02 UTC); followup-decision.md written before follow-up execution (08:03 UTC); the figure reads primary.csv only. The commands above replay these stages.",
+  "plan_sha256": "580de2e9468df3a813b1e59008e620ab5f7db0b268ae7c4a450007811575b818",
+  "outputs": [
+    "research/primary.csv",
+    "research/coverage.json",
+    "research/followup.csv",
+    "research/mae.svg"
+  ],
+  "sha256": {
+    "research/primary.csv": "abc010c2e75a9b9a2338119fc4a40d586b436a93b4ca53a6f3fca069f3e28eca",
+    "research/coverage.json": "0239f17489030c085c28ca323a5f02dd5adcc14abefa4dadcac351d14710457e",
+    "research/followup.csv": "b2107fb31c835dc1145d7a741dd3c9302c0105934699ef4717b3bdda282571cd",
+    "research/mae.svg": "cd49e2787a9556f1494372d1601e3c88f6f3609e6776ec5e1972ee2fe1f1a89c"
+  },
+  "code_sha256": {
+    "study.py": "5d2a9e55b86b9e9af1b1f5a6a159d614c90596b0dca32db0564c176fddbdf0e4",
+    "followup.py": "89628976ca8a99166cb1265eaea42574f11c5483ec718e8b2e534c5af0f39b93",
+    "figure.py": "bb3cf095a16ac3daf18a4f12025c38978b83bf877ed7741e3368fd9d111b508f"
+  },
+  "followup_decision_sha256": "452302057ce6297c34c064a31f0d2d1fe33e841e1e0db783831c3a26f67a0af3",
+  "archive": {
+    "version": "2020-10-06",
+    "file": "time_series_60min_singleindex.csv",
+    "bytes": 130339665,
+    "sha256": "6a7f2bc571314cbf9c321cc03437691cd4be95c3a6f075e60ff99e8035c704c8"
+  },
+  "environment": {
+    "python": "3.11.14",
+    "system_zoneinfo": "2025b",
+    "external_packages": [],
+    "threads": 1
+  },
+  "arms": [
+    {
+      "id": "archived_day_ahead",
+      "conditions": {
+        "metric": "mean absolute hourly error, MW",
+        "zone": "Europe/Berlin",
+        "target_ids_sha256": "f6dd44d52a024a4f4aad123b9f4dba759d153fb2da44e9cdfb74c981a437c06d"
+      }
+    },
+    {
+      "id": "same_hour_last_week",
+      "conditions": {
+        "metric": "mean absolute hourly error, MW",
+        "zone": "Europe/Berlin",
+        "target_ids_sha256": "f6dd44d52a024a4f4aad123b9f4dba759d153fb2da44e9cdfb74c981a437c06d"
+      }
+    }
+  ]
+}

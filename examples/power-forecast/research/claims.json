@@ -1,0 +1,292 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "overall",
+      "statement": "Across 8756 paired hours, the archived day-ahead forecast missed German national demand by 1989 MW on average, against 2529 MW for the same hour a week earlier.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "all"
+          },
+          "column": "hours",
+          "value": 8756,
+          "display": "8756",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "all"
+          },
+          "column": "day_ahead_mae_mw",
+          "value": 1989,
+          "display": "1989",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "all"
+          },
+          "column": "weekly_mae_mw",
+          "value": 2529,
+          "display": "2529",
+          "atol": 0.5
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "demand",
+      "statement": "The ranking reversed in the 876 hours with realized load at or above 69058 MW: mean absolute error was 2894 MW for day-ahead and 2734 MW for last week.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "high"
+          },
+          "column": "hours",
+          "value": 876,
+          "display": "876",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "high"
+          },
+          "column": "cutoff_mw",
+          "value": 69058,
+          "display": "69058",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "high"
+          },
+          "column": "day_ahead_mae_mw",
+          "value": 2894,
+          "display": "2894",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "high"
+          },
+          "column": "weekly_mae_mw",
+          "value": 2734,
+          "display": "2734",
+          "atol": 0.5
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "source",
+      "statement": "Open Power System Data (OPSD) identifies the two German national series as total load and day-ahead load forecast, both in MW and based on the ENTSO-E Transparency Platform.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "quote",
+          "path": "research/opsd-excerpt.txt",
+          "quote": "Total load in Germany in MW as published on ENTSO-E Transparency Platform"
+        },
+        {
+          "kind": "quote",
+          "path": "research/opsd-excerpt.txt",
+          "quote": "Day-ahead load forecast in Germany in MW as published on ENTSO-E Transparency Platform"
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "source",
+      "statement": "Tzortzis and colleagues used a weekly seasonal-naive benchmark in their study of day-ahead forecasts for European national electricity demand.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "quote",
+          "path": "research/tzortzis-excerpt.txt",
+          "quote": "For the purpose of completeness and objective assessment, we also introduce a seasonally naive model of weekly seasonality, namely, seasonally naive with a look-back window of 168 values, namely sNaive(168)."
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "criterion": "demand",
+      "statement": "In the remaining 7880 hours, MAE was 1889 MW for day-ahead and 2506 MW for last week.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "other"
+          },
+          "column": "hours",
+          "value": 7880,
+          "display": "7880",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "other"
+          },
+          "column": "day_ahead_mae_mw",
+          "value": 1889,
+          "display": "1889",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "other"
+          },
+          "column": "weekly_mae_mw",
+          "value": 2506,
+          "display": "2506",
+          "atol": 0.5
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "criterion": "demand",
+      "statement": "The weekly-minus-day-ahead MAE difference was 540 MW overall, −159 MW at high demand and 618 MW in the remaining hours.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "all"
+          },
+          "column": "advantage_mw",
+          "value": 540,
+          "display": "540",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "high"
+          },
+          "column": "advantage_mw",
+          "value": -159,
+          "display": "-159",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/primary.csv",
+          "key": {
+            "group": "other"
+          },
+          "column": "advantage_mw",
+          "value": 618,
+          "display": "618",
+          "atol": 0.5
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "criterion": "followup",
+      "statement": "The midpoint threshold was 67818 MW; 670 of its 876 high-demand hours also qualified by realized demand.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/followup.csv",
+          "key": {
+            "group": "midpoint_high"
+          },
+          "column": "midpoint_cutoff_mw",
+          "value": 67818,
+          "display": "67818",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/followup.csv",
+          "key": {
+            "group": "midpoint_high"
+          },
+          "column": "realized_high_hours",
+          "value": 670,
+          "display": "670",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/followup.csv",
+          "key": {
+            "group": "midpoint_high"
+          },
+          "column": "hours",
+          "value": 876,
+          "display": "876",
+          "atol": 0
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "criterion": "followup",
+      "statement": "Within the midpoint-selected group, day-ahead MAE was 2128 MW and last-week MAE was 1967 MW, a weekly-minus-day-ahead difference of −161 MW.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/followup.csv",
+          "key": {
+            "group": "midpoint_high"
+          },
+          "column": "day_ahead_mae_mw",
+          "value": 2128,
+          "display": "2128",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/followup.csv",
+          "key": {
+            "group": "midpoint_high"
+          },
+          "column": "weekly_mae_mw",
+          "value": 1967,
+          "display": "1967",
+          "atol": 0.5
+        },
+        {
+          "kind": "number",
+          "path": "research/followup.csv",
+          "key": {
+            "group": "midpoint_high"
+          },
+          "column": "advantage_mw",
+          "value": -161,
+          "display": "-161",
+          "atol": 0.5
+        }
+      ]
+    }
+  ]
+}

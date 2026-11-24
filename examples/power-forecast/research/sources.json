@@ -1,0 +1,22 @@
+{
+  "sources": [
+    {
+      "id": "opsd",
+      "title": "Open Power System Data: Data Package Time series (2020-10-06)",
+      "origin": "https://data.open-power-system-data.org/time_series/2020-10-06/datapackage.json",
+      "locator": "resources[path=time_series_60min_singleindex.csv].schema.fields: DE_load_actual_entsoe_transparency and DE_load_forecast_entsoe_transparency; DOI 10.25832/time_series/2020-10-06",
+      "access": "full-text",
+      "path": "research/opsd-excerpt.txt",
+      "sha256": "aa41f1a35448946d2ce7d8c1d985eabac8df3aa029901e18918ff19e3af499e8"
+    },
+    {
+      "id": "tzortzis",
+      "title": "Transfer Learning for Day-Ahead Load Forecasting: A Case Study on European National Electricity Demand Time Series",
+      "origin": "https://mdpi-res.com/d_attachment/mathematics/mathematics-12-00019/article_deploy/mathematics-12-00019.xml",
+      "locator": "Publisher XML, section 2.5 Transfer Learning Setup, paragraph beginning 'For the purpose of completeness'; Crossref DOI 10.3390/math12010019",
+      "access": "full-text",
+      "path": "research/tzortzis-excerpt.txt",
+      "sha256": "7ca65ad226ef4018f165a231d70397663127a6ede64997bdf0a9d63d3b195969"
+    }
+  ]
+}

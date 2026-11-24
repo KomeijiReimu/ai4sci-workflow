@@ -1,0 +1,7 @@
+# Decision after the first comparison
+
+The frozen comparison ran on 2026-11-24 at 08:02 UTC. Its `primary.csv` SHA-256 was `abc010c2e75a9b9a2338119fc4a40d586b436a93b4ca53a6f3fca069f3e28eca`. Day-ahead had **540 MW less** mean absolute error overall but **159 MW more** among hours of high realized demand. This sign reversal, not just an increase in errors, motivates checking what happens when neither forecaster knows the eventual outcome that defines the subgroup.
+
+**Decision before measuring this diagnostic:** keep all original pairs and forecasts. For subgroup identification only, assign each target the midpoint of its two predictions in MW. This score treats the two arms symmetrically and never uses the target actual. Apply exactly the original nearest-rank 90th percentile and inclusive tie rule to the score; do not tune its weights or percentile. Tabulate group sizes, overlap with the original high-demand hours, each MAE and weekly-minus-day-ahead MAE. A negative contrast in the new high group means the reversal survives this change; a zero or positive contrast means it does not. No further partitions or searches.
+
+The cutoffs use the entire archive year. The midpoint is not a third forecast being evaluated, nor does its top decile constitute a demonstrated live alert. A difference can reflect selection of different hours; it cannot attribute the original reversal causally to selection. This is a sensitivity analysis on the same hours, not independent confirmation. The original outputs stay unchanged.
