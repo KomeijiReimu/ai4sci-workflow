@@ -35,13 +35,16 @@ To work in your own study directory, run `opencode` there. Replace the path in t
 ---
 ## Literature search and document tools
 
-For literature searches and citation trails, we recommend [paper-search MCP](https://github.com/openags/paper-search-mcp). Check your existing connections with `opencode mcp list`. If the server is not configured, install [uv](https://docs.astral.sh/uv/) for its `uvx` command, then register the server globally in OpenCode 2:
+For literature searches and citation trails, we recommend paper-search MCP. Check your existing connections with `opencode mcp list`. If the server is not configured, use [uv](https://docs.astral.sh/uv/) to install the [upstream revision used here](https://github.com/openags/paper-search-mcp/tree/cab1b5cc276a0cd004a0044003926a6440088049), then register it globally in OpenCode 2:
 ```sh
-opencode mcp add paper-search --global -- uvx paper-search-mcp
+uv tool install git+https://github.com/openags/paper-search-mcp.git@cab1b5cc276a0cd004a0044003926a6440088049
+opencode mcp add paper-search --global -- "$(uv tool dir --bin)/paper-search-mcp"
 opencode mcp list
 ```
 
-Once connected, try looking up a citation in OpenCode:
+Look for `paper-search connected`, and if the list is empty on startup, wait a few seconds and run `opencode mcp list` again in the same project directory.
+
+To look up a citation in OpenCode, ask:
 
 > Use paper-search to look up DOI `10.3390/math12010019` in Crossref. Check the title, authors and journal of this paper on day-ahead load forecasting in Europe.
 

@@ -35,13 +35,16 @@ pwd
 ---
 ## 文献检索与文档工具
 
-查论文、追查引文时，建议使用 [paper-search MCP](https://github.com/openags/paper-search-mcp)。先用 `opencode mcp list` 查看已有连接。尚未配置时，安装 [uv](https://docs.astral.sh/uv/) 以取得 `uvx`，再为 OpenCode 2 添加全局连接：
+查论文、追查引文时，建议使用 paper-search MCP。先用 `opencode mcp list` 查看已有连接。如果尚未配置，用 [uv](https://docs.astral.sh/uv/) 安装[本项目使用的上游版本](https://github.com/openags/paper-search-mcp/tree/cab1b5cc276a0cd004a0044003926a6440088049)，再将它注册为 OpenCode 2 的全局工具：
 ```sh
-opencode mcp add paper-search --global -- uvx paper-search-mcp
+uv tool install git+https://github.com/openags/paper-search-mcp.git@cab1b5cc276a0cd004a0044003926a6440088049
+opencode mcp add paper-search --global -- "$(uv tool dir --bin)/paper-search-mcp"
 opencode mcp list
 ```
 
-连接后，可以在 OpenCode 中核对一条具体引文：
+列表中出现 `paper-search connected` 表示已连接，如果刚启动时列表为空，等几秒后在同一课题目录再运行一次 `opencode mcp list`。
+
+在 OpenCode 中可以这样核对一条引文：
 
 > 用 paper-search 在 Crossref 查 DOI `10.3390/math12010019`，核对这篇欧洲日前负荷预测论文的题名、作者和期刊。
 
