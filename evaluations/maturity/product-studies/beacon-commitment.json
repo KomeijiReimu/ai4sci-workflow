@@ -1,0 +1,10 @@
+{
+  "inventory_sha256": "eaacb9396c1430c1623e57f5d83bd8cf7d8b4d8caffd76bfe588a40232be6b68",
+  "rule_version": "002b3ad",
+  "chain_hash": "52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971",
+  "source": "https://api.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971/public/34236135",
+  "round": 34236135,
+  "randomness_field": "randomness",
+  "utc_scheduled": "2026-11-24T09:16:09+00:00",
+  "declared_after_observed_round": 34236085
+}

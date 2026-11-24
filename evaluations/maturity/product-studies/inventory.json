@@ -1,0 +1,2262 @@
+{
+  "cutoff": "2026-11-23T23:59:59Z",
+  "protocol_commit": "002b3ad",
+  "identity_order": [
+    "Qiushi Engine",
+    "InnoClaw",
+    "Ligase",
+    "AutoSciRub",
+    "EvoLab"
+  ],
+  "sources": [
+    "https://api.github.com/orgs/Oxelra-AI/repos?per_page=100&sort=created",
+    "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json",
+    "https://huggingface.co/api/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09",
+    "https://api.github.com/repos/InternScience/ResearchClawBench/git/trees/c19a320d3d3d40e370e59001cc219794c4261055?recursive=1"
+  ],
+  "task_manifest_exclusions": {
+    "Astronomy_003": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Chemistry_000": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Chemistry_001": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Chemistry_002": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Chemistry_003": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Earth_003": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Energy_001": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Energy_002": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Information_000": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Information_001": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Information_002": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Information_003": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Life_000": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Life_001": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Life_002": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Life_003": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Material_000": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Material_001": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Material_002": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Material_003": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Math_000": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Math_001": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Neuroscience_000": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Neuroscience_001": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Neuroscience_002": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Neuroscience_003": "Domain or purpose not cleared from input manifest in this inventory.",
+    "Physics_000": "Domain or purpose not cleared from input manifest in this inventory."
+  },
+  "task_manifest_clearances": {
+    "Astronomy_000": "Named stellar and galactic source sample tables",
+    "Astronomy_001": "DESI early dark energy reproduction dataset",
+    "Astronomy_002": "Hubble constant cosmology dataset",
+    "Earth_000": "GlaMBIE glacier mass balance data",
+    "Earth_001": "Geographic inventory of reported weather modification projects, descriptive analysis only",
+    "Earth_002": "Climate sea-level scenario series and coastal geography",
+    "Energy_000": "Battery performance measurements in CS2 and NASA battery series",
+    "Energy_003": "Building energy meter measurements",
+    "Math_002": "Optimization with synthetic empty and obstacle grid maps",
+    "Math_003": "Olympiad geometry rule and problem files",
+    "Physics_001": "Condensed matter superfluid stiffness dataset",
+    "Physics_002": "Quantum circuit benchmarking amplitudes",
+    "Physics_003": "Condensed matter time-resolved photoemission and band data"
+  },
+  "archive_series_counts_before_clearance": {
+    "workspaces-cc+": 40,
+    "workspaces-codex+": 40,
+    "workspaces-codex+-glm52": 40,
+    "workspaces-codex-minimax-m3-skills+": 42,
+    "workspaces-leaderboard0903": 40,
+    "workspaces-openclaw+": 40,
+    "workspaces-openscience+": 43
+  },
+  "coverage_limits": [
+    "Search of official public repositories, research links and deposits is not an exhaustive search of private or unpublished work. No official free judge was established.",
+    "Named competitions, prescribed questions and unsolved conjectures are not reviewer criticisms. All known candidates lack an unequivocal opportunity designation from the inspected metadata.",
+    "No case is replaced because an author did not publish study files. Archived reports, author statements and source code cannot by themselves certify agent attribution.",
+    "The previously identified Qiushi optical deposit belongs to the same optical study, not a second candidate. The additional Non-Hermitian repository is included with unknown attribution. Repeated run identifiers linking the same AutoSciRub folders/products are counted once."
+  ],
+  "cases": [
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_000_20260627_225737",
+      "instance": "workspaces-codex+",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Astronomy_000_20260627_225737"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_000_20260630_163902",
+      "instance": "workspaces-cc+",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Astronomy_000_20260630_163902"
+      ],
+      "archive_available": true,
+      "exposure": "Prior task-level study inspection."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_000_20260712_173540",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_000_20260712_173540"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_000_20260712_180641",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Astronomy_000_20260712_180641"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_000_20260713_170628",
+      "instance": "workspaces-openscience+",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Astronomy_000_20260713_170628"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_000_20260831_130422",
+      "instance": "AutoSciRub",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_000_20260831_130422",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Astronomy_000_20260831_130422"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_000_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Astronomy_000_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_20260628_120847",
+      "instance": "workspaces-codex+",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Astronomy_001_20260628_120847"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_20260701_183758",
+      "instance": "workspaces-cc+",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Astronomy_001_20260701_183758"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_20260712_173540",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_001_20260712_173540"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_20260712_180641",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Astronomy_001_20260712_180641"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_20260713_170628",
+      "instance": "workspaces-openscience+",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Astronomy_001_20260713_170628"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_20260830_232802",
+      "instance": "AutoSciRub",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_001_20260830_232802",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Astronomy_001_20260830_232802"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_001_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Astronomy_001_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_002_20260627_002025",
+      "instance": "workspaces-codex+",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Astronomy_002_20260627_002025"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_002_20260701_165041",
+      "instance": "workspaces-cc+",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Astronomy_002_20260701_165041"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_002_20260712_173541",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Astronomy_002_20260712_173541"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_002_20260712_180641",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Astronomy_002_20260712_180641"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_002_20260713_170628",
+      "instance": "workspaces-openscience+",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Astronomy_002_20260713_170628"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_002_20260831_130422",
+      "instance": "AutoSciRub",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_002_20260831_130422",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Astronomy_002_20260831_130422"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Astronomy_002_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Astronomy_002_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_000_20260627_014426",
+      "instance": "workspaces-codex+",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Earth_000_20260627_014426"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_000_20260630_175103",
+      "instance": "workspaces-cc+",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Earth_000_20260630_175103"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_000_20260712_190826",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Earth_000_20260712_190826"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_000_20260713_174448",
+      "instance": "workspaces-openscience+",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Earth_000_20260713_174448"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_000_20260714_062404",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Earth_000_20260714_062404"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_000_20260831_140022",
+      "instance": "AutoSciRub",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_000_20260831_140022",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Earth_000_20260831_140022"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_000_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Earth_000_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_001_20260627_015626",
+      "instance": "workspaces-codex+",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Earth_001_20260627_015626"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_001_20260630_175903",
+      "instance": "workspaces-cc+",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Earth_001_20260630_175903"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_001_20260712_193326",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Earth_001_20260712_193326"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_001_20260712_224630",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Earth_001_20260712_224630"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_001_20260713_175849",
+      "instance": "workspaces-openscience+",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Earth_001_20260713_175849"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_001_20260831_143622",
+      "instance": "AutoSciRub",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_001_20260831_143622",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Earth_001_20260831_143622"
+      ],
+      "archive_available": true,
+      "exposure": "Prior task-level study inspection."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_001_checkpoint_3",
+      "instance": "workspaces-openclaw+",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Earth_001_checkpoint_3"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_002_20260627_021727",
+      "instance": "workspaces-codex+",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Earth_002_20260627_021727"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_002_20260630_181603",
+      "instance": "workspaces-cc+",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Earth_002_20260630_181603"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_002_20260712_193709",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Earth_002_20260712_193709"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_002_20260712_230530",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Earth_002_20260712_230530"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_002_20260713_180659",
+      "instance": "workspaces-openscience+",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Earth_002_20260713_180659"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_002_20260831_230434",
+      "instance": "AutoSciRub",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_002_20260831_230434",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Earth_002_20260831_230434"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Earth_002_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Earth_002_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_000_20260627_022628",
+      "instance": "workspaces-codex+",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Energy_000_20260627_022628"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_000_20260630_185603",
+      "instance": "workspaces-cc+",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Energy_000_20260630_185603"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_000_20260712_200541",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Energy_000_20260712_200541"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_000_20260713_050704",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Energy_000_20260713_050704"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_000_20260713_183639",
+      "instance": "workspaces-openscience+",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Energy_000_20260713_183639"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_000_20260830_225502",
+      "instance": "AutoSciRub",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_000_20260830_225502",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Energy_000_20260830_225502"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_000_checkpoint_3",
+      "instance": "workspaces-openclaw+",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Energy_000_checkpoint_3"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_003_20260627_032329",
+      "instance": "workspaces-codex+",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Energy_003_20260627_032329"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_003_20260701_185142",
+      "instance": "workspaces-cc+",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Energy_003_20260701_185142"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_003_20260712_203535",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Energy_003_20260712_203535"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_003_20260713_033527",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Energy_003_20260713_033527"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_003_20260713_192210",
+      "instance": "workspaces-openscience+",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Energy_003_20260713_192210"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_003_20260831_154123",
+      "instance": "AutoSciRub",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_003_20260831_154123",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Energy_003_20260831_154123"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Energy_003_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Energy_003_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_20260627_152745",
+      "instance": "workspaces-codex+",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Math_002_20260627_152745"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_20260701_184127",
+      "instance": "workspaces-cc+",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Math_002_20260701_184127"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_20260713_110159",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Math_002_20260713_110159"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_20260713_134426",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Math_002_20260713_134426"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_20260714_140632",
+      "instance": "workspaces-openscience+",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Math_002_20260714_140632"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_20260714_142549",
+      "instance": "workspaces-openscience+",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Math_002_20260714_142549"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_20260831_001503",
+      "instance": "AutoSciRub",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_002_20260831_001503",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Math_002_20260831_001503"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_002_checkpoint_3",
+      "instance": "workspaces-openclaw+",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Math_002_checkpoint_3"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_003_20260627_203617",
+      "instance": "workspaces-codex+",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Math_003_20260627_203617"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_003_20260701_202758",
+      "instance": "workspaces-cc+",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Math_003_20260701_202758"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_003_20260713_004019",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Math_003_20260713_004019"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_003_20260713_122514",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Math_003_20260713_122514"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_003_20260714_112535",
+      "instance": "workspaces-openscience+",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Math_003_20260714_112535"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_003_20260831_230435",
+      "instance": "AutoSciRub",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_003_20260831_230435",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Math_003_20260831_230435"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Math_003_checkpoint_2",
+      "instance": "workspaces-openclaw+",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Math_003_checkpoint_2"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_20260627_214228",
+      "instance": "workspaces-codex+",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_001_20260627_214228"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_20260701_163857",
+      "instance": "workspaces-cc+",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Physics_001_20260701_163857"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_20260713_142252",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Physics_001_20260713_142252"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_20260713_182241",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Physics_001_20260713_182241"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_20260714_123346",
+      "instance": "workspaces-openscience+",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Physics_001_20260714_123346"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_20260901_120956",
+      "instance": "AutoSciRub",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_001_20260901_120956",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Physics_001_20260901_120956"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_001_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Physics_001_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_002_20260627_222206",
+      "instance": "workspaces-codex+",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_002_20260627_222206"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_002_20260701_163858",
+      "instance": "workspaces-cc+",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Physics_002_20260701_163858"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_002_20260713_143343",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Physics_002_20260713_143343"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_002_20260713_182524",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Physics_002_20260713_182524"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_002_20260714_124447",
+      "instance": "workspaces-openscience+",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Physics_002_20260714_124447"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_002_20260831_211625",
+      "instance": "AutoSciRub",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_002_20260831_211625",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Physics_002_20260831_211625"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_002_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Physics_002_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_20260627_222209",
+      "instance": "workspaces-codex+",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B/Physics_003_20260627_222209"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_20260701_163900",
+      "instance": "workspaces-cc+",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-cc%2B/Physics_003_20260701_163900"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_20260713_143927",
+      "instance": "workspaces-codex-minimax-m3-skills+",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex-minimax-m3-skills%2B/Physics_003_20260713_143927"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_20260713_185414",
+      "instance": "workspaces-codex+-glm52",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-codex%2B-glm52/Physics_003_20260713_185414"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_20260714_140632",
+      "instance": "workspaces-openscience+",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Physics_003_20260714_140632"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_20260714_155400",
+      "instance": "workspaces-openscience+",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openscience%2B/Physics_003_20260714_155400"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_20260831_214925",
+      "instance": "AutoSciRub",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_003_20260831_214925",
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-leaderboard0903/Physics_003_20260831_214925"
+      ],
+      "archive_available": true,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "AutoSciRub",
+      "id": "AutoSciRub:Physics_003_checkpoint_1",
+      "instance": "workspaces-openclaw+",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Prescribed benchmark question. No material criticism established by folder name.",
+      "references": [
+        "https://huggingface.co/datasets/huminclu/autoscirub-rcb-main-exp/tree/6a412f394d44b021d26d548d943a4106ff5e1c09/workspaces-openclaw%2B/Physics_003_checkpoint_1"
+      ],
+      "archive_available": true,
+      "exposure": "Archive metadata/aggregate exposure. No task-level findings inspected here."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Astronomy_000_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_000_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Astronomy_001_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_001_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Astronomy_002_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_002_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Earth_000_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_000_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Earth_001_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_001_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Earth_002_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_002_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Energy_000_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_000_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Energy_003_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_003_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Math_002_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_002_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Math_003_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_003_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Physics_001_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_001_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Physics_002_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_002_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "EvoLab",
+      "id": "EvoLab:Physics_003_20260817_164021",
+      "instance": "EvoLab",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_003_20260817_164021"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Astronomy_000_20260724_032304_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_000_20260724_032304_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Astronomy_001_20260725_153429_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_001_20260725_153429_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Astronomy_002_20260727_200918_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_002_20260727_200918_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Earth_000_20260724_032302_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_000_20260724_032302_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Earth_001_20260727_200916_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_001_20260727_200916_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Earth_002_20260726_191912_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_002_20260726_191912_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Energy_000_20260724_041119_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_000_20260724_041119_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Energy_003_20260727_063154_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_003_20260727_063154_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Math_002_20260905_180142_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_002_20260905_180142_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Math_003_20260905_180142_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_003_20260905_180142_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Physics_001_20260804_111234_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_001_20260804_111234_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Physics_002_20260726_232225_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_002_20260726_232225_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw (2.0):Physics_003_20260805_151715_innoclaw2",
+      "instance": "InnoClaw (2.0)",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_003_20260805_151715_innoclaw2"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Astronomy_000_20260724_032304",
+      "instance": "InnoClaw",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_000_20260724_032304"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Astronomy_001_20260725_153429",
+      "instance": "InnoClaw",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_001_20260725_153429"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Astronomy_002_20260727_200918",
+      "instance": "InnoClaw",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_002_20260727_200918"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Earth_000_20260724_032302",
+      "instance": "InnoClaw",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_000_20260724_032302"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Earth_001_20260727_200916",
+      "instance": "InnoClaw",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_001_20260727_200916"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Earth_002_20260726_191912",
+      "instance": "InnoClaw",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_002_20260726_191912"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Energy_000_20260724_041119",
+      "instance": "InnoClaw",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_000_20260724_041119"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Energy_003_20260727_063154",
+      "instance": "InnoClaw",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_003_20260727_063154"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Math_002_20260726_223602",
+      "instance": "InnoClaw",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_002_20260726_223602"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Math_003_20260727_144635",
+      "instance": "InnoClaw",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_003_20260727_144635"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Physics_001_20260804_111234",
+      "instance": "InnoClaw",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_001_20260804_111234"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Physics_002_20260726_232225",
+      "instance": "InnoClaw",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_002_20260726_232225"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "InnoClaw",
+      "id": "InnoClaw:Physics_003_20260805_151715",
+      "instance": "InnoClaw",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_003_20260805_151715"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Astronomy_000_20260831_022939_ee9573fd",
+      "instance": "Ligase",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Astronomy_000_20260831_022939_ee9573fd"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Astronomy_001_20260831_022939_cd8ac22d",
+      "instance": "Ligase",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Astronomy_001_20260831_022939_cd8ac22d"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Astronomy_002_20260831_022939_79491e49",
+      "instance": "Ligase",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Astronomy_002_20260831_022939_79491e49"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Earth_000_20260831_022939_4fbf7aeb",
+      "instance": "Ligase",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Earth_000_20260831_022939_4fbf7aeb"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Earth_001_20260831_022939_669d52d6",
+      "instance": "Ligase",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Earth_001_20260831_022939_669d52d6"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Earth_002_20260831_022939_b5d6a42f",
+      "instance": "Ligase",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Earth_002_20260831_022939_b5d6a42f"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Energy_000_20260831_022939_c0751b5d",
+      "instance": "Ligase",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Energy_000_20260831_022939_c0751b5d"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Energy_003_20260831_022939_82ab9cda",
+      "instance": "Ligase",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Energy_003_20260831_022939_82ab9cda"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Math_002_20260831_022939_bda2abee",
+      "instance": "Ligase",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Math_002_20260831_022939_bda2abee"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Math_003_20260831_022939_0099b1b6",
+      "instance": "Ligase",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Math_003_20260831_022939_0099b1b6"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Physics_001_20260831_022939_64c10709",
+      "instance": "Ligase",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Physics_001_20260831_022939_64c10709"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Physics_002_20260831_022939_d768a17c",
+      "instance": "Ligase",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Physics_002_20260831_022939_d768a17c"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Ligase",
+      "id": "Ligase:cli_Physics_003_20260831_022939_347d0cf8",
+      "instance": "Ligase",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#cli_Physics_003_20260831_022939_347d0cf8"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Bandeira-0.2a-open-source@c41373447abfadabc30afeebc3c4de74e1ccf8dc",
+      "task": "Bandeira-0.2a-open-source",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Bandeira-0.2a-open-source/tree/c41373447abfadabc30afeebc3c4de74e1ccf8dc"
+      ],
+      "archive_available": true,
+      "exposure": "Prior outcome or abstract fragment exposure to inventory compiler. Not blind."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/End-to-end-autonomous-scientific-discovery-on-a-real-optical-platform@424709415d8ecc7577ffc74bd28241dd2400e383",
+      "task": "End-to-end-autonomous-scientific-discovery-on-a-real-optical-platform",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/End-to-end-autonomous-scientific-discovery-on-a-real-optical-platform/tree/424709415d8ecc7577ffc74bd28241dd2400e383"
+      ],
+      "archive_available": true,
+      "exposure": "Prior outcome or abstract fragment exposure to inventory compiler. Not blind."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Non-Hermitian@13ae78cbd7b305dbb88c7ea6de2b26e2695d54d7",
+      "task": "Non-Hermitian",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Non-Hermitian/tree/13ae78cbd7b305dbb88c7ea6de2b26e2695d54d7"
+      ],
+      "archive_available": true,
+      "exposure": "Only repository and file metadata inspected."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Qiushi-Engine-Babylm-Research@d36f1766079bd68699f8fa0e5ed701acfabdf4f7",
+      "task": "Qiushi-Engine-Babylm-Research",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Qiushi-Engine-Babylm-Research/tree/d36f1766079bd68699f8fa0e5ed701acfabdf4f7"
+      ],
+      "archive_available": true,
+      "exposure": "Prior outcome or abstract fragment exposure to inventory compiler. Not blind."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Qiushi-Engine-Kissing-Number-Research@174122363feef9a0ae65737b232edc0753eccb33",
+      "task": "Qiushi-Engine-Kissing-Number-Research",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Qiushi-Engine-Kissing-Number-Research/releases/tag/structural-study-2026-09-28.1"
+      ],
+      "archive_available": true,
+      "exposure": "Prior outcome or abstract fragment exposure to inventory compiler. Not blind."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Qiushi-Engine-Matmul-Research@4649c03201e1974ee2f97b7de53c5f96e17cf3a8",
+      "task": "Qiushi-Engine-Matmul-Research",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Qiushi-Engine-Matmul-Research/tree/4649c03201e1974ee2f97b7de53c5f96e17cf3a8"
+      ],
+      "archive_available": true,
+      "exposure": "Prior outcome or abstract fragment exposure to inventory compiler. Not blind."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Randomstrasse_101_19a@0ee8cfa541e669d36cff26892bb139e3fec4c173",
+      "task": "Randomstrasse_101_19a",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Randomstrasse_101_19a/tree/0ee8cfa541e669d36cff26892bb139e3fec4c173"
+      ],
+      "archive_available": true,
+      "exposure": "Prior outcome or abstract fragment exposure to inventory compiler. Not blind."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/Topological-Photonics@62c82a637c73005f5d70b9f35fe4658d3d2b4b1c",
+      "task": "Topological-Photonics",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/Topological-Photonics/tree/62c82a637c73005f5d70b9f35fe4658d3d2b4b1c"
+      ],
+      "archive_available": true,
+      "exposure": "Only index metadata exposed."
+    },
+    {
+      "product": "Qiushi Engine",
+      "instance": "Producer research archive, engine build unverified",
+      "id": "Oxelra-AI/causality-sum-rules@5fef04208bb38cc0c4b8d6d2a724908de7ca5d9b",
+      "task": "causality-sum-rules",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research package, title alone does not establish original choice or response to a substantive critique.",
+      "references": [
+        "https://github.com/Oxelra-AI/causality-sum-rules/tree/5fef04208bb38cc0c4b8d6d2a724908de7ca5d9b"
+      ],
+      "archive_available": true,
+      "exposure": "Prior outcome or abstract fragment exposure to inventory compiler. Not blind."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Astronomy_000_imported_20260904",
+      "instance": "Qiushi Engine",
+      "task": "Astronomy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_000_imported_20260904"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Astronomy_001_imported_20260904",
+      "instance": "Qiushi Engine",
+      "task": "Astronomy_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_001_imported_20260904"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Astronomy_002_imported_20260904",
+      "instance": "Qiushi Engine",
+      "task": "Astronomy_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Astronomy_002_imported_20260904"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Earth_000_imported",
+      "instance": "Qiushi Engine",
+      "task": "Earth_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_000_imported"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Earth_001_imported",
+      "instance": "Qiushi Engine",
+      "task": "Earth_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_001_imported"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Earth_002_imported",
+      "instance": "Qiushi Engine",
+      "task": "Earth_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Earth_002_imported"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Energy_000_imported",
+      "instance": "Qiushi Engine",
+      "task": "Energy_000",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_000_imported"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Energy_003_imported",
+      "instance": "Qiushi Engine",
+      "task": "Energy_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Energy_003_imported"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Math_002_imported_20260908",
+      "instance": "Qiushi Engine",
+      "task": "Math_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_002_imported_20260908"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Math_003_imported_20260907",
+      "instance": "Qiushi Engine",
+      "task": "Math_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Math_003_imported_20260907"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Physics_001_imported_20260907",
+      "instance": "Qiushi Engine",
+      "task": "Physics_001",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_001_imported_20260907"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Physics_002_imported_20260907",
+      "instance": "Qiushi Engine",
+      "task": "Physics_002",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_002_imported_20260907"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    },
+    {
+      "product": "Qiushi Engine",
+      "id": "Qiushi Engine:Physics_003_imported_20260907",
+      "instance": "Qiushi Engine",
+      "task": "Physics_003",
+      "stratum": "unknown-opportunity",
+      "opportunity": "Research question assigned. No material criticism established by metadata.",
+      "references": [
+        "https://raw.githubusercontent.com/InternScience/ResearchClawBench-Home/6be2ab8ca379bd3ad0c1e83d86c985e11af972af/data/leaderboard_only_runs.json#Physics_003_imported_20260907"
+      ],
+      "archive_available": false,
+      "exposure": "Board scores exposed to coordinator; individual study not inspected unless noted."
+    }
+  ]
+}
