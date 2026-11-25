@@ -1,0 +1,5 @@
+# Independent review of the period comparison
+
+All four archived fits give a higher mean rate of Dutch coastal sea-level rise in 1960–2019 than in 1900–1959. I recovered the rates from centered differences of the original fitted sea levels and checked the period contrasts by keeping each bootstrap trajectory intact. The fitted increases range from 0.38 to 0.57 mm/yr; excluding the 1960s from the later period preserves their direction.
+
+The distinction in [Table 3](revised.md) matters. For the zonal-wind model, the fitted increase is 0.57 mm/yr, but the median increase across the unshifted trajectories is 1.13 mm/yr. Transferring their scatter to the fitted rates gives a central 95% range of 0.28–0.95 mm/yr **under that assumption**. The corresponding range narrowly excludes zero for the nodal-only model and includes it for the trend-only and pressure-gradient models. The [manuscript](revised.md) and [response](response.md) answer the referee’s period-choice question without treating these ranges as calibrated confidence limits or the 1960 split as an estimated onset date.

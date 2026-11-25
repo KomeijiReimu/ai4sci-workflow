@@ -1,0 +1,72 @@
+{
+  "source_sha256": "5401ebac51312305809143a47abb8952c112f8f1ea49c80b066f0ee2e803bc71",
+  "revised_sha256": "75684fc28b1cd5003def205041dea307c72fda40542b636cc614bdf2757a5e03",
+  "edits": [
+    {
+      "first": 1,
+      "last": 1,
+      "location": "Heading",
+      "replacement": "# Rates of sea-level rise along the Dutch coast before and after 1960\n"
+    },
+    {
+      "first": 3,
+      "last": 3,
+      "location": "Attribution and edition notice",
+      "replacement": "**Independent derivative, not approved by the original authors.** This edition adapts the original discussion preprint, *The acceleration of sea-level rise along the coast of the Netherlands started in the 1960s*, by Iris Keizer, Dewi Le Bars, Cees de Valk, André Jüling, Roderik van de Wal and Sybren Drijfhout (4 October 2022; [doi:10.5194/egusphere-2022-935](https://doi.org/10.5194/egusphere-2022-935); [original PDF](https://egusphere.copernicus.org/preprints/2022/egusphere-2022-935/egusphere-2022-935.pdf)). © 2022 the original authors, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).\n\n**Changes and responsibility.** The independent ai4sci revision analyst (2026) prepared the changed title, period analysis, Table 3 and related revisions under CC BY 4.0. The original authors produced the observations-based fits and bootstrap archive, not this reanalysis. The input was an editable text extraction, not a facsimile: original page labels, figure captions and references are retained; figures, layout and mathematical typography are not fully represented. Page labels below refer to the source, not to new pagination. See the [response](response.md) and [exact change locations](changes.md).\n"
+    },
+    {
+      "first": 14,
+      "last": 15,
+      "location": "Original PDF p. 1, article title",
+      "replacement": "     Rates of sea-level rise along the Dutch coast before and after 1960\n"
+    },
+    {
+      "first": 26,
+      "last": 40,
+      "location": "Original PDF p. 1, Abstract, opening through timing interpretation",
+      "replacement": "**Abstract.** Local wind and tidal variations can obscure changes in the rate of sea-level rise (SLR). The original analysis used annual observations from six Dutch tide gauges over 1890–2020, four generalised additive models (GAMs) and a parametric bootstrap to estimate the rate of change of the smooth sea-level trend. In the best-fitting model, which accounts for the nodal tide and zonal wind, the published short-window rates rose from 1.5 mm/yr in 1940–1959 to 3.0 mm/yr in 2000–2019. How much of this difference persists when the middle decades are included? In that model the mean fitted rate was 1.94 mm/yr over 1900–2019: 1.66 mm/yr in 1900–1959 and 2.23 mm/yr in 1960–2019. All four fits had higher later means. The archived bootstrap trajectories, however, are not centered on these fits. If their scatter represents fitted-rate error after removing a year-specific offset, the central 95% range for the zonal-wind model’s 0.57 mm/yr difference is 0.28 to 0.95. Under that assumption the nodal-only range also excludes zero, narrowly, whereas the trend-only and pressure-gradient ranges include it. The archive does not establish calibrated confidence limits or date the onset of acceleration.\n"
+    },
+    {
+      "first": 247,
+      "last": 247,
+      "location": "Original PDF p. 5, §3.2, after definition of background rate",
+      "replacement": "      include nodal effects while Tr includes all processes.\n\n**Period means.** For Table 3, the estimand is the mean of the archived annual rates of change of each model’s smooth background level, not a straight line through the tide-gauge observations. For a center year *t*, the archived rate (mm/yr) equals ten times the change in the smooth level (cm) from *t*−1 to *t*+1 divided by two years. Level years 1890–2020 thus give rate centers 1891–2019. The whole-period mean uses all 120 centers from 1900 through 2019; the earlier and later means use 60 each, 1900–1959 and 1960–2019, both inclusive. In particular, 1960 belongs to the later period and the 2019 rate uses the 2020 level. These are means of centered rates, not endpoint-to-endpoint level slopes: adjacent periods share information near the dividing year. We retained the four 20-year windows in Figure 4 and also checked the literal alternative “after the 1960s” by averaging 1970–2019 against the same early period. Neither boundary was estimated from a change-point fit.\n\nFor an observational scale check only, we regressed the annual mean of the six stations (verified against the archived `Average` column, in cm) on calendar year in each primary window, converting slopes to mm/yr. These unadjusted linear slopes and the mean rates of the smooth background component are different quantities.\n"
+    },
+    {
+      "first": 288,
+      "last": 288,
+      "location": "Original PDF p. 6, §3.3, end of uncertainty methods",
+      "replacement": "      frequencies, as some of the noise in this band is absorbed in the spline term.\n\n**Uncertainty for period contrasts.** The independent amendment reuses the 100 archived rate trajectories per model. For every period we averaged years within each trajectory; for a difference we subtracted the two means of the **same** trajectory before taking percentiles. Table 3c gives these unshifted summaries. Their location differs from the fitted rate and the discrepancy varies over time: for TrNcZw the raw median is 3.31 mm/yr versus an earlier fitted mean of 1.66, and 4.42 versus 2.23 in the later half. Subtracting the two periods does not remove the discrepancy. The unshifted percentiles describe the archive, not uncertainty limits for the fitted means.\n\nTables 3a–b give a sensitivity analysis. It assumes that the draw scatter and covariation across years represent fitted-rate error, even though their absolute locations differ. At each year we subtracted that model’s mean across draws from every draw and added the fitted rate, preserving spread, time pairing and physical units. The bracketed values are the linearly interpolated 2.5th and 97.5th percentiles of the resulting period summaries, not validated confidence intervals. With 100 draws the limits also depend on a few tail observations. The supplied files do not specify the generation or normalization needed to verify this mapping. No trajectories were paired across models; no GAM was refitted and neither the original bootstrap nor its null tests were rerun.\n"
+    },
+    {
+      "first": 425,
+      "last": 443,
+      "location": "Original PDF p. 9, §4.3, period results and new Table 3a–c",
+      "replacement": "The two wind-adjusted curves turn upward around the 1960s in Figure 4, but comparing selected 20-year means emphasizes the low mid-century and high recent rates. For TrNcZw the original reported rates [reported uncertainty limits] were 1.8 [1.4, 2.3], 1.7 [1.3, 2.0], 1.5 [1.1, 1.8] and 3.0 [2.4, 3.5] mm/yr for 1900–1919, 1920–1939, 1940–1959 and 2000–2019, respectively. The original test compared 2000–2019 with the three earlier windows (Table 2); for TrNcZw all three reported p-values were below 0.01. Table 3 places those windows beside a comparison that uses the intervening years as well.\n\n**Table 3a. Whole-period and half-period mean rates of Dutch coastal SLR.** Entries are fitted background rates or their differences [central 95% range under the year-specific recentering assumption, §3.3], all in mm/yr. The brackets are a sensitivity measure, not calibrated confidence limits. Years are inclusive. The last column is a paired difference of rates, not acceleration in mm/yr².\n\n| GAM | 1900–2019 | 1900–1959 | 1960–2019 | Later minus earlier |\n|---|---:|---:|---:|---:|\n| Tr | 2.04 [1.89, 2.22] | 1.82 [1.51, 2.13] | 2.26 [1.87, 2.65] | 0.44 [−0.26, 1.06] |\n| TrNc | 2.08 [1.94, 2.23] | 1.85 [1.64, 2.12] | 2.30 [1.98, 2.64] | 0.45 [0.03, 0.89] |\n| TrNcZw | 1.94 [1.78, 2.08] | 1.66 [1.43, 1.81] | 2.23 [2.00, 2.47] | 0.57 [0.28, 0.95] |\n| TrNcPd | 1.92 [1.70, 2.07] | 1.73 [1.44, 2.01] | 2.11 [1.72, 2.49] | 0.38 [−0.15, 1.00] |\n\n**Table 3b. Figure 4 windows on the same basis.** Entries are mean fitted rates [central 95% range under the same recentering assumption], in mm/yr. These are neither the original pointwise bands nor reproductions of the original null tests.\n\n| GAM | 1900–1919 | 1920–1939 | 1940–1959 | 2000–2019 |\n|---|---:|---:|---:|---:|\n| Tr | 2.15 [1.29, 3.06] | 1.69 [1.09, 2.35] | 1.63 [0.98, 2.21] | 2.69 [1.64, 3.65] |\n| TrNc | 2.27 [1.82, 2.92] | 1.67 [1.32, 1.99] | 1.62 [1.20, 1.95] | 2.80 [2.03, 3.58] |\n| TrNcZw | 1.82 [1.26, 2.25] | 1.68 [1.35, 2.05] | 1.47 [1.12, 1.75] | 2.97 [2.33, 3.56] |\n| TrNcPd | 1.86 [1.25, 2.51] | 1.78 [1.37, 2.20] | 1.54 [1.17, 1.95] | 2.74 [1.77, 3.53] |\n\n**Table 3c. Unshifted v1 trajectories.** Median [2.5th, 97.5th percentiles] across the 100 archived period means or paired differences (mm/yr). These describe the trajectories as stored; they are not the fitted rates or their confidence limits. Compare with the fitted values in Table 3a.\n\n| GAM | 1900–2019 | 1900–1959 | 1960–2019 | Later minus earlier |\n|---|---:|---:|---:|---:|\n| Tr | 4.02 [3.88, 4.22] | 3.62 [3.29, 3.92] | 4.47 [4.07, 4.85] | 0.86 [0.15, 1.47] |\n| TrNc | 4.13 [3.99, 4.27] | 3.70 [3.50, 3.97] | 4.55 [4.23, 4.89] | 0.85 [0.41, 1.28] |\n| TrNcZw | 3.87 [3.70, 4.00] | 3.31 [3.08, 3.45] | 4.42 [4.20, 4.67] | 1.13 [0.84, 1.51] |\n| TrNcPd | 3.82 [3.60, 3.97] | 3.45 [3.16, 3.74] | 4.19 [3.80, 4.57] | 0.70 [0.19, 1.35] |\n\nTr denotes trend only; TrNc removes the nodal tide; TrNcZw additionally removes the zonal-wind contribution and TrNcPd uses the pressure-gradient proxy for wind instead. The unadjusted slopes of the observed gauge average were 1.92, 1.82 and 2.18 mm/yr for the whole, earlier and later periods, respectively. They describe the observed levels, not the rates after accounting for wind or the nodal tide.\n\nAll four fitted rates were higher in the later half. Under the recentering assumption only TrNcZw and TrNc had paired 95% ranges wholly above zero; the TrNc lower limit was close to zero. Tr and TrNcPd were inconclusive even under this assumption. Excluding the 1960s from the later period increased each point difference: the Tr, TrNc, TrNcZw and TrNcPd estimates were 0.55, 0.57, 0.75 and 0.52 mm/yr, respectively. The centered ranges still crossed zero for Tr and TrNcPd (see the supplement for all bounds). Thus the direction seen in the short windows persists in all four fitted curves, but neither the robustness of that direction to sampling error nor a unique onset date follows from the fits alone.\n\n      Over all available rate centers (1891–2019), the lowest fitted annual rate occurred in 1954 for Tr, 1941 for TrNc, 1964 for TrNcZw and 1967 for TrNcPd. These model-dependent minima do not date the onset of acceleration. The earlier decrease could be due to the strong\n"
+    },
+    {
+      "first": 537,
+      "last": 541,
+      "location": "Original PDF p. 11, Table 2 caption",
+      "replacement": "      Table 2. Original p-values for short-window comparisons: probability, under an equal-rate null for a given model and period pair, of an estimated difference at least as large as that reported. For instance the Tr entry for 2000–2019 versus 1900–1919 is 0.23; TrNcZw entries are reported as <0.01. These are not tests of the half-period difference in Table 3a.\n"
+    },
+    {
+      "first": 643,
+      "last": 647,
+      "location": "Original PDF p. 12, Figure 4 caption",
+      "replacement": "Figure 4. (a–d) Rates of SLR for the four original statistical models. Rates use a three-year window: 1891–2019 are the available center years, while 1890 and 2020 supply levels only. Dashed lines mark the original pointwise 5th and 95th bootstrap percentiles; grey numbers are mean rates over 1900–1919, 1920–1939, 1940–1959 and 2000–2019. (e) Median sea-level rates. (f) Standard error for each model. Table 3 contrasts period means and gives both the unshifted draw distribution and the sensitivity to recentering, preserving dependence across years.\n"
+    },
+    {
+      "first": 674,
+      "last": 678,
+      "location": "Original PDF p. 13, §5, interpretation before extrapolation",
+      "replacement": "      The wind-adjusted curves rise between the 1960s and 2000s (Fig. 4). Both wind specifications have higher mean rates in the later sixty years, but the centered uncertainty range excludes zero for TrNcZw and includes it for TrNcPd. Testing how well these ranges cover the fitted contrasts would require verifying the original draw-generation and rate-normalization procedure or obtaining correctly centered joint rate trajectories with documented scale. The comparison does not distinguish a gradual transition from an abrupt change. From 2000 onward the standard error increases, so persistence of the rise in the rate is uncertain. Extrapolation into the near future has been used as an additional line of evidence by Sweet et al. (2022). Based on Fig. 4c, assuming a constant rate of 3 mm/yr from 2000 onwards gives a rise of 0.3 m between 2000 and 2100, slightly higher than the rise over the 20th century.\n"
+    },
+    {
+      "first": 722,
+      "last": 732,
+      "location": "Original PDF p. 14, §6, concluding paragraph on periods and timing",
+      "replacement": "The best-fitting zonal-wind model gives a mean fitted rate of 1.66 mm/yr over 1900–1959 and 2.23 mm/yr over 1960–2019, against 1.94 mm/yr over the full 1900–2019 period. Including the intervening decades preserves the direction seen in the original short-window comparisons: the fitted difference is 0.57 mm/yr. If the archived scatter can be transferred to the fitted rates by year-specific recentering, its central 95% range is 0.28 to 0.95 mm/yr. Under the same assumption the nodal-only range narrowly excludes zero; the trend-only and pressure-gradient ranges include it. Without a verified mapping from trajectories to fitted-rate uncertainty, these results are descriptive and the ranges conditional. The upturn around the 1960s in the wind-adjusted curves is a feature of those fitted histories; splitting the record at 1960 does not establish the year, or even the decade, when acceleration began.\n"
+    }
+  ]
+}

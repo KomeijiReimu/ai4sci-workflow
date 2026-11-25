@@ -1,0 +1,993 @@
+{
+  "question": "Does using all rate years in 1900–2019, rather than selected 20-year windows, preserve evidence of a faster later average rise at the six Dutch reference gauges under each of the four archived specifications?",
+  "design": "Fixed v1 archive only. Compare the smooth background component in Tr, TrNc, TrNcZw and TrNcPd, not four independent station estimates. For each model: point estimate = arithmetic mean of fitted rate_slr across inclusive annual rate labels; alternative summary = median across the 100 within-draw means. Primary windows: 1900–2019, 1900–1959, 1960–2019; fixed split rather than fitted breakpoint. Secondary descriptive windows: the four Figure 4 periods and 1970–2019 for an after-the-decade sensitivity. Same early baseline in both contrasts. Compare mean rates in mm/yr, not acceleration in mm/yr². Validate rate units against a centered level difference in cm and Figure 4; never scale by the appearance of a new contrast. Check finite annual coverage: 1890 and 2020 cannot be rate centers; do not impute. Confirm the observed six-station panel and Average coverage; descriptively compute whole/early/late unadjusted OLS slope of Average (cm) on integer year as a scale check, not another fitted background model, benchmark hypothesis test, or independent data.",
+  "evaluation": "For each draw retain its entire trajectory under one model; take mean rates over selected year labels, then subtract the early mean from the later mean within the same draw column. Report linear interpolated empirical 2.5 and 97.5 percentiles of these means/differences (primary 95% intervals); also 5 and 95 percentiles to match the nominal central coverage in Figure 4. Evaluate each model separately: a lower primary contrast bound strictly above zero supports faster later rise; a bound at or across zero is inconclusive, a negative upper bound supports slower rise. No familywide test, pooling, new null-model p-values, independent confirmation, effect threshold beyond sign, onset date, or breakpoint search. Compare the wider-interval implications with original short-window claims. Stop after all declared summaries and QC; no additional windows chosen in response to outcomes.",
+  "data_already_inspected": "Prior to freeze: original v1 text including methods, Figure 4 annotations and original Table 2; reviewer request, provenance and license; archive filenames, checksums, headers, dimensions, time coordinates and missing endpoint flags only. No new period estimate, draw values, contrast, or interval viewed. The authors already fit these observations; the reviewer motivated the cutoff. This is a prospective analysis plan for a retrospective sensitivity analysis, not preregistration of the original fits or a new holdout.",
+  "budget": "One deterministic archive aggregation on CPU, no training, no external access, no additional bootstrap generation. One technical repair allowed per diagnosed input-format or implementation issue without changing periods, uncertainty, or criteria. Recalculation for verification only; stop for missing or inconsistent input rather than defaulting to partial periods.",
+  "matched_conditions": [
+    "archive",
+    "primary_years",
+    "draws",
+    "interval"
+  ],
+  "criteria": [
+    {
+      "id": "halves",
+      "description": "Are the whole-period and two half-period mean fitted rates consistent with the recent-window inference? Compare paired late minus early intervals in every model.",
+      "required_observations": [
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "whole"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "whole"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "whole"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "whole"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "whole"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "whole"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "whole"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "whole"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "whole"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "whole"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "whole"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "whole"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "hi95"
+        }
+      ]
+    },
+    {
+      "id": "short",
+      "description": "Provide like-for-like summaries for the four original short windows as context (not a reproduction of original tests).",
+      "required_observations": [
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1900-1919"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1900-1919"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1900-1919"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1920-1939"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1920-1939"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1920-1939"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1940-1959"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1940-1959"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1940-1959"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "2000-2019"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "2000-2019"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "2000-2019"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1900-1919"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1900-1919"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1900-1919"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1920-1939"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1920-1939"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1920-1939"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1940-1959"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1940-1959"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1940-1959"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "2000-2019"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "2000-2019"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "2000-2019"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1900-1919"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1900-1919"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1900-1919"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1920-1939"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1920-1939"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1920-1939"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1940-1959"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1940-1959"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1940-1959"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "2000-2019"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "2000-2019"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "2000-2019"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1900-1919"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1900-1919"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1900-1919"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1920-1939"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1920-1939"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1920-1939"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1940-1959"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1940-1959"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1940-1959"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "2000-2019"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "2000-2019"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "2000-2019"
+          },
+          "column": "hi95"
+        }
+      ]
+    },
+    {
+      "id": "after_decade",
+      "description": "Sensitivity to the other literal reading of after the 1960s: omit the transition decade, keep the original early baseline and use late 1970-2019.",
+      "required_observations": [
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade"
+          },
+          "column": "hi95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95"
+        },
+        {
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95"
+        }
+      ]
+    }
+  ]
+}

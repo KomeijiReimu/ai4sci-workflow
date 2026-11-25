@@ -1,0 +1,4 @@
+period,first,last,n_years,stations,raw_OLS_mm_per_year
+whole,1900,2019,120,6,1.921046600458
+early,1900,1959,60,6,1.823719551727
+late,1960,2019,60,6,2.180809484116

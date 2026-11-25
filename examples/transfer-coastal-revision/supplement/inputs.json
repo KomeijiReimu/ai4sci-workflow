@@ -1,0 +1,72 @@
+{
+  "REUSE.txt": {
+    "sha256": "f7c2358bda2c10f2fb28652dd234c766f16fde928d5a18a598f26781a9803cf9",
+    "bytes": 1521,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/LICENSE"
+  },
+  "assignment.txt": {
+    "sha256": "fce0f71e4048edd55a5b4dd501e4791f4b10856af896d82fbc68ec38df350f12",
+    "bytes": 950,
+    "origin": "supplied assignment documentation"
+  },
+  "data-notes.txt": {
+    "sha256": "37b80770051e3faecca22d7da969938d0010338e38a33c5246358c1f10b02ed5",
+    "bytes": 2612,
+    "origin": "supplied assignment documentation"
+  },
+  "gauge-observations.csv": {
+    "sha256": "14859acfd82b91928a588ab7b585e750467b44ea3a5a78638b0c0c2b60a7a171",
+    "bytes": 17927,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/data_tide_gauges.csv"
+  },
+  "objection.txt": {
+    "sha256": "67ef1dcd9c0931575a9a9b4b52e502b604746ffa199d3751080ac71520fab2de",
+    "bytes": 694,
+    "origin": "https://doi.org/10.5194/egusphere-2022-935-RC1"
+  },
+  "original-curve-a.csv": {
+    "sha256": "6ecf45ce849e730097e127e55de8caa39ec57d3830f9d7d7d1f68537d13bab17",
+    "bytes": 10475,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/results_NoRegressor.csv"
+  },
+  "original-curve-b.csv": {
+    "sha256": "d6c5af8777b0a374a0e75e87b27231f288538c4295666e1193c4925cc09df1f2",
+    "bytes": 15708,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/results_NodalTide.csv"
+  },
+  "original-curve-c.csv": {
+    "sha256": "8dbc11815fd6c907140f43432505e655a4f8fdd0503d695907677ac43922ac54",
+    "bytes": 20560,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/results_NearestPointAverage.csv"
+  },
+  "original-curve-d.csv": {
+    "sha256": "50a70c3ba63b7fbc65a94bf7e8172bed6428d934711340aaf59b4e28216ed70a",
+    "bytes": 20877,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/results_PressureDifference.csv"
+  },
+  "original-rate-draws-a.csv": {
+    "sha256": "571088bd492cab765935f42721f75a1a27f5dcf9563cb6adb929d1f9c3fdddee",
+    "bytes": 236792,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/rates_NoRegressor.csv"
+  },
+  "original-rate-draws-b.csv": {
+    "sha256": "8e5079c6032c82d07d16fac2e006e333a27e8d35750a168ff7aa5f84c97a8db0",
+    "bytes": 236404,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/rates_NodalTide.csv"
+  },
+  "original-rate-draws-c.csv": {
+    "sha256": "53878e72d08530a14ee7d1aad34447c4332e0241662d294232e1414b9bfd13de",
+    "bytes": 237949,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/rates_NearestPointAverage.csv"
+  },
+  "original-rate-draws-d.csv": {
+    "sha256": "ed74589d5f4b8c2a79d6b592cd18566922e6a23120639004b981ebe2d09eb6a5",
+    "bytes": 237844,
+    "origin": "https://raw.githubusercontent.com/KNMI-sealevel/NetherlandsSeaLevelAcceleration/8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b/outputs/rates_PressureDifference.csv"
+  },
+  "original.md": {
+    "sha256": "5401ebac51312305809143a47abb8952c112f8f1ea49c80b066f0ee2e803bc71",
+    "bytes": 80122,
+    "origin": "https://doi.org/10.5194/egusphere-2022-935"
+  }
+}

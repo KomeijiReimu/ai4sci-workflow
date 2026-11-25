@@ -1,0 +1,65 @@
+{
+  "status": "completed",
+  "command": "python3 analyze.py \"$COASTAL_INPUTS\"",
+  "exit_code": 0,
+  "plan_sha256": "bbfc64cbee42f4e2fb1f2032853bf32f73f76da4d3c3b10fb4e1cbac530cba8c",
+  "python": "3.11.14",
+  "software": "Python standard library only",
+  "code_sha256": "b402a15b625ecb4a90fd1b56b08520b65e56ee7171dd916b2b4eabfd6f121abc",
+  "input_manifest_sha256": "f656deff85c3487f6543641bc7aea322aa1cc8edff34a4bb9c984f418817bba5",
+  "amendment_sha256": "341d7d3bbc5cc9ab96a6cdd44eb22e85fc4b442f799d4ab0b43c2ca0aa5179e8",
+  "outputs": [
+    "research/summary.csv",
+    "research/period-draws.csv",
+    "research/centered-sensitivity.csv",
+    "research/centered-period-draws.csv",
+    "research/gauge-check.csv",
+    "research/support.csv"
+  ],
+  "sha256": {
+    "research/summary.csv": "4a66e41cf01fc663d5162a33f8429070fad832e269304246f219ba0df26cce12",
+    "research/period-draws.csv": "1beee027429d6b6b3d6a459fcf020fa25c57af40884843796d9f510d0b61fb93",
+    "research/centered-sensitivity.csv": "300fb8829cb1e04491131ec83b391e576abac9254304468d5626eaaa3423ee61",
+    "research/centered-period-draws.csv": "3e76c14c499824a21e2f49a74e9b485f7e73ef507e6d55db49173fde74f76c49",
+    "research/gauge-check.csv": "0246dcd27069ee318cb393a7112312fb356f3f61e23fc11d95a83cb1dd72d408",
+    "research/support.csv": "ca9fd991b1bc91199687dbde09e632fb5e081a2aa3a1cc13210e7eb5035c8c1d"
+  },
+  "arms": [
+    {
+      "id": "Tr",
+      "conditions": {
+        "archive": "8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b",
+        "primary_years": "1900-2019 inclusive",
+        "draws": 100,
+        "interval": "linear empirical percentile"
+      }
+    },
+    {
+      "id": "TrNc",
+      "conditions": {
+        "archive": "8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b",
+        "primary_years": "1900-2019 inclusive",
+        "draws": 100,
+        "interval": "linear empirical percentile"
+      }
+    },
+    {
+      "id": "TrNcZw",
+      "conditions": {
+        "archive": "8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b",
+        "primary_years": "1900-2019 inclusive",
+        "draws": 100,
+        "interval": "linear empirical percentile"
+      }
+    },
+    {
+      "id": "TrNcPd",
+      "conditions": {
+        "archive": "8c4b55df2b88feb4ebaa191f6d3e8bb9a4b8c86b",
+        "primary_years": "1900-2019 inclusive",
+        "draws": 100,
+        "interval": "linear empirical percentile"
+      }
+    }
+  ]
+}

@@ -1,0 +1,989 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "halves",
+      "statement": "For Tr, the three fitted means are 2.04 / 1.82 / 2.26 mm/yr; later minus earlier is 0.44 [-0.26, 1.06] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "whole"
+          },
+          "column": "estimate",
+          "value": 2.04,
+          "display": "2.04",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "early"
+          },
+          "column": "estimate",
+          "value": 1.82,
+          "display": "1.82",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late"
+          },
+          "column": "estimate",
+          "value": 2.26,
+          "display": "2.26",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.44,
+          "display": "0.44",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": -0.26,
+          "display": "-0.26",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.06,
+          "display": "1.06",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "halves",
+      "statement": "The unshifted Tr trajectories give a median paired difference of 0.86 [0.15, 1.47] mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "draw_median",
+          "value": 0.86,
+          "display": "0.86",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.15,
+          "display": "0.15",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.47,
+          "display": "1.47",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "halves",
+      "statement": "For TrNc, the three fitted means are 2.08 / 1.85 / 2.30 mm/yr; later minus earlier is 0.45 [0.03, 0.89] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "whole"
+          },
+          "column": "estimate",
+          "value": 2.08,
+          "display": "2.08",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "early"
+          },
+          "column": "estimate",
+          "value": 1.85,
+          "display": "1.85",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late"
+          },
+          "column": "estimate",
+          "value": 2.3,
+          "display": "2.30",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.45,
+          "display": "0.45",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.03,
+          "display": "0.03",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 0.89,
+          "display": "0.89",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "halves",
+      "statement": "The unshifted TrNc trajectories give a median paired difference of 0.85 [0.41, 1.28] mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "draw_median",
+          "value": 0.85,
+          "display": "0.85",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.41,
+          "display": "0.41",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.28,
+          "display": "1.28",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "criterion": "halves",
+      "statement": "For TrNcZw, the three fitted means are 1.94 / 1.66 / 2.23 mm/yr; later minus earlier is 0.57 [0.28, 0.95] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "whole"
+          },
+          "column": "estimate",
+          "value": 1.94,
+          "display": "1.94",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "early"
+          },
+          "column": "estimate",
+          "value": 1.66,
+          "display": "1.66",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late"
+          },
+          "column": "estimate",
+          "value": 2.23,
+          "display": "2.23",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.57,
+          "display": "0.57",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.28,
+          "display": "0.28",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 0.95,
+          "display": "0.95",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "criterion": "halves",
+      "statement": "The unshifted TrNcZw trajectories give a median paired difference of 1.13 [0.84, 1.51] mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "draw_median",
+          "value": 1.13,
+          "display": "1.13",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.84,
+          "display": "0.84",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.51,
+          "display": "1.51",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "criterion": "halves",
+      "statement": "For TrNcPd, the three fitted means are 1.92 / 1.73 / 2.11 mm/yr; later minus earlier is 0.38 [-0.15, 1.00] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "whole"
+          },
+          "column": "estimate",
+          "value": 1.92,
+          "display": "1.92",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "early"
+          },
+          "column": "estimate",
+          "value": 1.73,
+          "display": "1.73",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late"
+          },
+          "column": "estimate",
+          "value": 2.11,
+          "display": "2.11",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.38,
+          "display": "0.38",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": -0.15,
+          "display": "-0.15",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.0,
+          "display": "1.00",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "criterion": "halves",
+      "statement": "The unshifted TrNcPd trajectories give a median paired difference of 0.70 [0.19, 1.35] mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "draw_median",
+          "value": 0.7,
+          "display": "0.70",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.19,
+          "display": "0.19",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "late-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.35,
+          "display": "1.35",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "criterion": "halves",
+      "statement": "Unadjusted slopes of the gauge average for the whole, early and late windows are 1.92, 1.82 and 2.18 mm/yr, respectively.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/gauge-check.csv",
+          "key": {
+            "period": "whole"
+          },
+          "column": "raw_OLS_mm_per_year",
+          "value": 1.92,
+          "display": "1.92",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/gauge-check.csv",
+          "key": {
+            "period": "early"
+          },
+          "column": "raw_OLS_mm_per_year",
+          "value": 1.82,
+          "display": "1.82",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/gauge-check.csv",
+          "key": {
+            "period": "late"
+          },
+          "column": "raw_OLS_mm_per_year",
+          "value": 2.18,
+          "display": "2.18",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "criterion": "short",
+      "statement": "The four Tr short-window means are 2.15, 1.69, 1.63 and 2.69 mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1900-1919"
+          },
+          "column": "estimate",
+          "value": 2.15,
+          "display": "2.15",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1920-1939"
+          },
+          "column": "estimate",
+          "value": 1.69,
+          "display": "1.69",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "1940-1959"
+          },
+          "column": "estimate",
+          "value": 1.63,
+          "display": "1.63",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "2000-2019"
+          },
+          "column": "estimate",
+          "value": 2.69,
+          "display": "2.69",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "criterion": "short",
+      "statement": "The four TrNc short-window means are 2.27, 1.67, 1.62 and 2.80 mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1900-1919"
+          },
+          "column": "estimate",
+          "value": 2.27,
+          "display": "2.27",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1920-1939"
+          },
+          "column": "estimate",
+          "value": 1.67,
+          "display": "1.67",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "1940-1959"
+          },
+          "column": "estimate",
+          "value": 1.62,
+          "display": "1.62",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "2000-2019"
+          },
+          "column": "estimate",
+          "value": 2.8,
+          "display": "2.80",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "criterion": "short",
+      "statement": "The four TrNcZw short-window means are 1.82, 1.68, 1.47 and 2.97 mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1900-1919"
+          },
+          "column": "estimate",
+          "value": 1.82,
+          "display": "1.82",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1920-1939"
+          },
+          "column": "estimate",
+          "value": 1.68,
+          "display": "1.68",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "1940-1959"
+          },
+          "column": "estimate",
+          "value": 1.47,
+          "display": "1.47",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "2000-2019"
+          },
+          "column": "estimate",
+          "value": 2.97,
+          "display": "2.97",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "criterion": "short",
+      "statement": "The four TrNcPd short-window means are 1.86, 1.78, 1.54 and 2.74 mm/yr.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1900-1919"
+          },
+          "column": "estimate",
+          "value": 1.86,
+          "display": "1.86",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1920-1939"
+          },
+          "column": "estimate",
+          "value": 1.78,
+          "display": "1.78",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "1940-1959"
+          },
+          "column": "estimate",
+          "value": 1.54,
+          "display": "1.54",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "2000-2019"
+          },
+          "column": "estimate",
+          "value": 2.74,
+          "display": "2.74",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "criterion": "after_decade",
+      "statement": "For Tr, the after-decade mean is 2.37 mm/yr; its increase over early is 0.55 [-0.23, 1.20] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade"
+          },
+          "column": "estimate",
+          "value": 2.37,
+          "display": "2.37",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.55,
+          "display": "0.55",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95",
+          "value": -0.23,
+          "display": "-0.23",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "Tr",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.2,
+          "display": "1.20",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "criterion": "after_decade",
+      "statement": "For TrNc, the after-decade mean is 2.43 mm/yr; its increase over early is 0.57 [0.11, 1.10] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade"
+          },
+          "column": "estimate",
+          "value": 2.43,
+          "display": "2.43",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.57,
+          "display": "0.57",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.11,
+          "display": "0.11",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNc",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.1,
+          "display": "1.10",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "criterion": "after_decade",
+      "statement": "For TrNcZw, the after-decade mean is 2.41 mm/yr; its increase over early is 0.75 [0.41, 1.18] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade"
+          },
+          "column": "estimate",
+          "value": 2.41,
+          "display": "2.41",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.75,
+          "display": "0.75",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95",
+          "value": 0.41,
+          "display": "0.41",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcZw",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.18,
+          "display": "1.18",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "criterion": "after_decade",
+      "statement": "For TrNcPd, the after-decade mean is 2.24 mm/yr; its increase over early is 0.52 [-0.06, 1.19] mm/yr under recentering.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/summary.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade"
+          },
+          "column": "estimate",
+          "value": 2.24,
+          "display": "2.24",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade-minus-early"
+          },
+          "column": "estimate",
+          "value": 0.52,
+          "display": "0.52",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade-minus-early"
+          },
+          "column": "lo95",
+          "value": -0.06,
+          "display": "-0.06",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/centered-sensitivity.csv",
+          "key": {
+            "model": "TrNcPd",
+            "period": "after-decade-minus-early"
+          },
+          "column": "hi95",
+          "value": 1.19,
+          "display": "1.19",
+          "atol": 0.005
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Response to Anonymous Referee #1: choice of periods
+
+**Comment addressed:** [RC1](https://doi.org/10.5194/egusphere-2022-935-RC1), reviewer supplement, p. 1, General Comments, second bullet. The referee requested “a table to the manuscript, with the trends for the different GAM models and the different periods”, including 1900–2019 and periods before and after the proposed acceleration, rather than only 20-year windows. Excerpt from Anonymous Referee #1, [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); line wrapping normalized. This independent response concerns that bullet only.
+
+**1. Put the four models on one basis.** Table 3a in the [edited manuscript](revised.md) (lines 422–429) gives the fitted rate for the full 120 years, the earlier 60 years, the later 60 years and the paired difference, in mm/yr. Table 3b (431–438) shows the four Figure 4 windows. Table 3c (440–447) shows what the unshifted author-supplied trajectories actually yield; their absolute levels are not the same as the fitted rates. The point estimates use only the background rate in each respective fit. The archive confirms the reference order at 1900–2019: Tr 2.04, TrNc 2.08, TrNcZw 1.94 and TrNcPd 1.92 mm/yr. The observed gauge-average slope, a different unadjusted quantity, was 1.92 mm/yr (line 449).
+
+**2. Define “before” and “after.”** We used 1900–1959 and 1960–2019, including both endpoints. Every center year contributes once; 2019 is the last rate year because its centered difference needs the 2020 fitted level. This retains the transition decade instead of silently discarding it. We also calculated a prespecified alternative, comparing the same earlier period to 1970–2019, so the result does not hinge on one reading of “after the 1960s.” See §3.2 (lines 234–238), §4.3 (451) and the [full results](supplement/research/summary.csv).
+
+**3. What uncertainty can the fits support?** Each of the 100 rate columns is a full trajectory. Within each model, the same column supplies both period means in each subtraction. We did not treat years as independent, subtract marginal limits or pair draws between models. For TrNcZw, for example, the fitted difference is 0.57 mm/yr, whereas the unshifted trajectories give a median difference of 1.13 [0.84, 1.51] mm/yr. The discrepancy in location varies over time and survives subtraction. These are empirical draw summaries, not a confidence interval for 0.57. As a sensitivity analysis, we removed the year-specific ensemble mean and added the fitted annual rate, leaving the archived scatter and covariance unchanged. Under that unverified assumption the central 95% paired ranges are:
+
+| Model | Fitted later − earlier (mm/yr) | Centered sensitivity range (mm/yr) |
+|---|---:|---:|
+| Tr | 0.44 | −0.26 to 1.06 |
+| TrNc | 0.45 | 0.03 to 0.89 |
+| TrNcZw | 0.57 | 0.28 to 0.95 |
+| TrNcPd | 0.38 | −0.15 to 1.00 |
+
+Tr and TrNcPd are inconclusive even under this assumption. The TrNc interval only narrowly excludes zero and is sensitive to a small number of draws in the tails. The after-decade sensitivity yields the same division between models. Neither the archive’s unshifted quantiles nor the recentered analysis establishes calibrated confidence limits. A documented derivation from the v1 bootstrap output to the fitted-rate error distribution, or joint rate trajectories with verified centering and scale, would resolve this uncertainty. See §3.3 (279–283), §5 (676), the [calibration decision](supplement/research/calibration-amendment.md) and [centered summaries](supplement/research/centered-sensitivity.csv).
+
+**4. Does the interpretation change?** Yes, in scope. The fitted difference remains positive for every specification when all the intervening years are included. It is smaller than the difference between the mid-century and most recent 20-year means in the best-fitting model. The results do not establish a model-independent significant increase or locate a breakpoint. A higher later mean is compatible with the upturn around the 1960s in the wind-adjusted curves. The title (lines 1, 16), Abstract (27), §4.3 (420–453), Figure 4 caption (649), Discussion (676) and Conclusions (720) reflect that distinction. The original short-window null tests remain in Table 2, with their caption (547) distinguished from the new comparison. No GAM, period-specific model, bootstrap simulation or null test was independently refitted or rerun.
+
+[Complete original-to-revised line map and file hashes](changes.md) · [Supplemental report](supplement/research/paper.md).
