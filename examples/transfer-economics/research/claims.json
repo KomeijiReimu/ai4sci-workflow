@@ -1,0 +1,427 @@
+{
+  "claims": [
+    {
+      "id": "C1",
+      "criterion": "index",
+      "statement": "They reported a correlation of 0.87 between the HLI and the Human Development Index across US states in 2016.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "quote",
+          "path": "provenance/scherbov-note.md",
+          "quote": "We found that the correlation coefficient between HDI and HLI for 2016 was 0.87.",
+          "displays": [
+            "2016",
+            "0.87"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "criterion": "index",
+      "statement": "The official HDI combines health, education and income; its standard-of-living indicator is gross national income per capita.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "quote",
+          "path": "provenance/undp-note.md",
+          "quote": "Life expectancy at birth (years)"
+        },
+        {
+          "kind": "quote",
+          "path": "provenance/undp-note.md",
+          "quote": "Expected years of schooling (years)"
+        },
+        {
+          "kind": "quote",
+          "path": "provenance/undp-note.md",
+          "quote": "Mean years of schooling (years)"
+        },
+        {
+          "kind": "quote",
+          "path": "provenance/undp-note.md",
+          "quote": "GNI per capita (2021 PPP $)"
+        },
+        {
+          "kind": "quote",
+          "path": "provenance/undp-note.md",
+          "quote": "The HDI is the geometric mean of the three dimensional indices:"
+        }
+      ]
+    },
+    {
+      "id": "C3",
+      "criterion": "primary",
+      "statement": "Of 217 economies in the frame, 192 entered the primary comparison; 25 lacked the required GDP observations and 0 lacked a life-expectancy change.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/coverage.csv",
+          "key": {
+            "sample": "primary",
+            "region": "ALL"
+          },
+          "column": "frame_n",
+          "value": 217,
+          "display": "217",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/coverage.csv",
+          "key": {
+            "sample": "primary",
+            "region": "ALL"
+          },
+          "column": "used",
+          "value": 192,
+          "display": "192",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/coverage.csv",
+          "key": {
+            "sample": "primary",
+            "region": "ALL"
+          },
+          "column": "missing_growth",
+          "value": 25,
+          "display": "25",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/coverage.csv",
+          "key": {
+            "sample": "primary",
+            "region": "ALL"
+          },
+          "column": "missing_life_gain",
+          "value": 0,
+          "display": "0",
+          "atol": 0
+        }
+      ]
+    },
+    {
+      "id": "C4",
+      "criterion": "primary",
+      "statement": "The adjusted growth contrast corresponded to 1.37 additional life-years gained, with an interval from 0.45 to 2.29 years that crosses the six-month benchmark.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "adjusted"
+          },
+          "column": "slope",
+          "value": 1.37,
+          "display": "1.37",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "adjusted"
+          },
+          "column": "lo95",
+          "value": 0.45,
+          "display": "0.45",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "adjusted"
+          },
+          "column": "hi95",
+          "value": 2.29,
+          "display": "2.29",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C5",
+      "criterion": "rival",
+      "statement": "The unadjusted gradient was 0.91 years versus 1.37 after adjustment; controlling for starting position and region strengthened rather than erased the association.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "unadjusted"
+          },
+          "column": "slope",
+          "value": 0.91,
+          "display": "0.91",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "adjusted"
+          },
+          "column": "slope",
+          "value": 1.37,
+          "display": "1.37",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C6",
+      "criterion": "rival",
+      "statement": "The fraction of variation in longevity gains accounted for by growth alone was 0.042; after removing the variation explained by starting position and region, growth accounted for 0.102 of what remained.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "unadjusted"
+          },
+          "column": "partial_r2",
+          "value": 0.042,
+          "display": "0.042",
+          "atol": 0.0005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "adjusted"
+          },
+          "column": "partial_r2",
+          "value": 0.102,
+          "display": "0.102",
+          "atol": 0.0005
+        }
+      ]
+    },
+    {
+      "id": "C7",
+      "criterion": "robustness",
+      "statement": "Allowing curvature in the two baseline variables gave a gradient of 1.49 years, with an interval from 0.61 to 2.38.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "quadratic_baselines"
+          },
+          "column": "slope",
+          "value": 1.49,
+          "display": "1.49",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "quadratic_baselines"
+          },
+          "column": "lo95",
+          "value": 0.61,
+          "display": "0.61",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "quadratic_baselines"
+          },
+          "column": "hi95",
+          "value": 2.38,
+          "display": "2.38",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C8",
+      "criterion": "robustness",
+      "statement": "Ending the comparison in 2015 instead gave a gradient of 1.08 years, with an interval from 0.44 to 1.73.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "shorter_endpoint"
+          },
+          "column": "endpoint",
+          "value": 2015.0,
+          "display": "2015",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "shorter_endpoint"
+          },
+          "column": "slope",
+          "value": 1.08,
+          "display": "1.08",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "shorter_endpoint"
+          },
+          "column": "lo95",
+          "value": 0.44,
+          "display": "0.44",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "shorter_endpoint"
+          },
+          "column": "hi95",
+          "value": 1.73,
+          "display": "1.73",
+          "atol": 0.005
+        }
+      ]
+    },
+    {
+      "id": "C9",
+      "criterion": "robustness",
+      "statement": "Leaving out one region at a time gave point estimates from 1.166 to 1.816 years; omitting East Asia and Pacific gave an interval from −0.27 to 2.61.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "omit_1"
+          },
+          "column": "slope",
+          "value": 1.166,
+          "display": "1.166",
+          "atol": 0.0005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "omit_1"
+          },
+          "column": "lo95",
+          "value": -0.27,
+          "display": "-0.27",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "omit_1"
+          },
+          "column": "hi95",
+          "value": 2.61,
+          "display": "2.61",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "omit_2"
+          },
+          "column": "slope",
+          "value": 1.816,
+          "display": "1.816",
+          "atol": 0.0005
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "criterion": "index",
+      "statement": "On the 166 economies with both outcomes, the adjusted growth contrast was associated with a longevity gain of 1.53 years and an HDI gain of 0.0373 index points.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "matched_life"
+          },
+          "column": "n",
+          "value": 166.0,
+          "display": "166",
+          "atol": 0
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "matched_life"
+          },
+          "column": "slope",
+          "value": 1.53,
+          "display": "1.53",
+          "atol": 0.005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "matched_hdi"
+          },
+          "column": "slope",
+          "value": 0.0373,
+          "display": "0.0373",
+          "atol": 5e-05
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "criterion": "index",
+      "statement": "The corresponding partial R-squared values were 0.116 for longevity and 0.490 for HDI.",
+      "status": "supported",
+      "evidence": [
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "matched_life"
+          },
+          "column": "partial_r2",
+          "value": 0.116,
+          "display": "0.116",
+          "atol": 0.0005
+        },
+        {
+          "kind": "number",
+          "path": "research/estimates.csv",
+          "key": {
+            "model": "matched_hdi"
+          },
+          "column": "partial_r2",
+          "value": 0.49,
+          "display": "0.490",
+          "atol": 0.0005
+        }
+      ]
+    }
+  ]
+}

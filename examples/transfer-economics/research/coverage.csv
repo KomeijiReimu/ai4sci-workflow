@@ -1,0 +1,25 @@
+sample,region,frame_n,used,missing_growth,missing_life_gain,missing_hdi_gain,singleton_excluded
+primary,ALL,217,192,25,0,,0
+primary,East Asia & Pacific,37,31,6,0,,0
+primary,Europe & Central Asia,58,51,7,0,,0
+primary,Latin America & Caribbean,42,34,8,0,,0
+primary,"Middle East, North Africa, Afghanistan & Pakistan",23,21,2,0,,0
+primary,North America,3,3,0,0,,0
+primary,South Asia,6,6,0,0,,0
+primary,Sub-Saharan Africa,48,46,2,0,,0
+short,ALL,217,192,25,0,,0
+short,East Asia & Pacific,37,31,6,0,,0
+short,Europe & Central Asia,58,51,7,0,,0
+short,Latin America & Caribbean,42,34,8,0,,0
+short,"Middle East, North Africa, Afghanistan & Pakistan",23,21,2,0,,0
+short,North America,3,3,0,0,,0
+short,South Asia,6,6,0,0,,0
+short,Sub-Saharan Africa,48,46,2,0,,0
+common,ALL,217,166,25,0,46,0
+common,East Asia & Pacific,37,26,6,0,11,0
+common,Europe & Central Asia,58,47,7,0,10,0
+common,Latin America & Caribbean,42,27,8,0,13,0
+common,"Middle East, North Africa, Afghanistan & Pakistan",23,19,2,0,2,0
+common,North America,3,2,0,0,1,0
+common,South Asia,6,5,0,0,1,0
+common,Sub-Saharan Africa,48,40,2,0,8,0

@@ -1,0 +1,6 @@
+{
+  "sources": [
+    {"id":"mortality-index","title":"Measuring inequalities of development at the sub-national level: From the human development index to the human life indicator","origin":"https://doi.org/10.1371/journal.pone.0232014","locator":"Results and discussion: final paragraph, Fig. 6; brief attributed excerpt and original note","access":"provided","path":"provenance/scherbov-note.md","sha256":"e5e9ea14035e4898129cf0493dcdaf60d89d2b3a056ed1fe739063b39d773ad8"},
+    {"id":"hdi-construction","title":"Human Development Report 2025: Technical Notes","origin":"https://hdr.undp.org/sites/default/files/2025_HDR/HDR25_Technical_Notes.pdf","locator":"Technical note 1, pp. 3–4, goalposts table and steps 1–2; brief attributed snippets and original note","access":"provided","path":"provenance/undp-note.md","sha256":"e5b814889eaf196da25f49bf0ba2f18e9d1638999b40b0020b4a475e1e1ff0e1"}
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "command": "OPENBLAS_NUM_THREADS=1 python3 analyze.py --out research",
+  "environment": "Linux x86_64; CPython 3.11.14; NumPy 2.4.4",
+  "plan_sha256": "53dc89f7de8d419918b37fe0f08397c1f8fb1513ffd0758529cc876df2955d62",
+  "frame_sha256": "bc576b537d0b28de0e07d1823b398d9ebf9b7266f3c68d38cac3c26cde2f635e",
+  "outputs": ["research/estimates.csv", "research/coverage.csv"],
+  "sha256": {
+    "research/estimates.csv": "421df884aa6e045381d398cfadd3ba3c586c56b5bab61321d8c91222d3a2c5f2",
+    "research/coverage.csv": "0384feb25aa88bd3488398fdf5dbd66f7a604d050ce00f42b239e341aad947d1"
+  }
+}
