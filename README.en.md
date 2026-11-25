@@ -4,13 +4,25 @@
 
 AI4Sci Workflow is a research workflow for [OpenCode](https://opencode.ai/). Start with a broad topic, a dataset, a draft or a reviewer's objection. For computational work, the protocol, code, commands and raw results stay in your study directory so a collaborator can repeat an analysis or revisit a conclusion during revision.
 
-## Where to start
+## Built-in research skills
 
-- **Find papers or choose a question**. Ask for an annotated reading list or start with a disagreement between papers, an unexpected observation or a decision you need to make. The workflow checks what the closest original studies already answered and whether the available data can distinguish the remaining explanations. You can stop with a recommended question and a low-cost test.
-- **Run an experiment or reproduce a finding**. Agree on the baseline, comparison conditions, metric and budget first. Test competing changes separately against the same baseline and keep each result, including negative findings. If a result fits two explanations, choose a follow-up on which their predictions differ. A previously examined test set can show how sensitive an estimate is to an analysis choice. Independent confirmation requires data that did not guide selection or tuning.
-- **Write, prepare a submission or respond to reviewers**. Start from existing results or supply the venue's requirements and template for a Word manuscript or LaTeX source with a compiled PDF. To revise a paper written elsewhere, bring the submitted version, the reviewer comments and whatever study records you have. Cite existing results where they answer a comment. If a new comparison is needed, record its plan separately before running it and save the results. Update the affected passages and figures and explain the changes in the response letter.
+| Task | Skill | What you get |
+| --- | --- | --- |
+| Start or resume a study | [`ai4sci`](skills/ai4sci/SKILL.md) | Selects the skills your question calls for. A reading-list request ends with the list. When you resume a study, it reads the design and results before choosing the next step. |
+| Find papers or choose a question | [`ai4sci-idea`](skills/ai4sci-idea/SKILL.md) | An annotated reading list with sources. For a new study, it starts from a disagreement in the literature or an unexpected observation and proposes a small test that can distinguish competing explanations with the data available. |
+| Run or reproduce an experiment | [`ai4sci-experiment`](skills/ai4sci-experiment/SKILL.md) | Sets the metric, conditions and budget up front, compares alternatives against the same baseline and keeps commands and raw results even for changes that did not help. It distinguishes sensitivity checks on a reused test set from independent confirmation. |
+| Plot results | [`ai4sci-figures`](skills/ai4sci-figures/SKILL.md) | Plots drawn from result files, with units, a definition of any error bars and a command to regenerate the figure. You can also request a separate illustration of the method. |
+| Write or revise a manuscript | [`ai4sci-paper`](skills/ai4sci-paper/SKILL.md) | A draft from existing results or a submission in the venue's format (Word, or LaTeX source and compiled PDF). For a paper written elsewhere, start with the submitted version, reviewer comments and available records. Plan any new comparison before running it, then cite the results in the revision and point-by-point response. |
+| Check the findings | [`ai4sci-review`](skills/ai4sci-review/SKILL.md) | Checks citations against the original passages and recalculates key metrics from the data. The review identifies the passage and evidence behind each concern and which claims need narrower wording or another test. |
+
+---
+## Collaboration and continuity
 
 With [omo-slim](https://github.com/alvinunreal/oh-my-opencode-slim), a multi-agent plugin for OpenCode, one agent can look for the closest papers and counterevidence while another checks the data and compute requirements. The lead agent coordinates them. An agent who did not run the experiment or write the draft can recompute the decisive result from the inputs and check whether the claim holds for the population and conditions studied.
+
+With [Magic Context](https://docs.cortexkit.io/magic-context/getting-started/introduction/) enabled, you can return to a long session days later and find the discussion behind a baseline choice. A new session in the same OpenCode project can recall the decisions and reasons saved in project memory.
+
+To hand a multi-session study to a colleague, share the study directory. Its `research/handoff.md` records progress, evidence locations and the next step, as in the [electricity forecast handoff](examples/power-forecast/research/handoff.md).
 
 ---
 ## Get started
