@@ -5,7 +5,15 @@ description: Help with a research question, literature search, study design, ana
 
 # Run a study
 
-The user's request can be just a checkout path and a research goal. Resolve `KIT` from this file's location in the checkout. Read the relevant `$KIT/skills/<name>/SKILL.md` yourself. From an external project, use the user's current directory as `STUDY`. From the checkout, use the named `studies/<topic>/` if supplied. For a new topic that needs files, choose a fresh, descriptive folder there. Give both paths to collaborators. Run experiments from `STUDY` and keep research outputs there. Do not install tools, copy skills or edit project configuration to start a study.
+The user's request can be just a checkout path and a research goal. Resolve `KIT` from this file's location and read the relevant `$KIT/skills/<name>/SKILL.md`. Do not install tools, copy skills or edit project configuration to start a study.
+
+## Choose the study directory
+
+- **New study:** From the checkout, create an unused `studies/<topic>/` only when the task needs files. If the natural name is taken, choose a more specific name rather than reusing the occupied folder. A reading list returned in chat needs no directory. From an external project, use the user's current study directory as `STUDY`.
+- **Continuing a study:** Use the directory the user names, or reuse the one clearly identified by the conversation and its local records. Switching from reading to analysis, figures or writing does not start a new study. If the intended directory is unclear, inspect the names and handoffs read-only. If several fit, show those paths and ask which one; if none fit, ask for the location. Do not create files, dispatch writers or run experiments until the study is identified.
+- **Working in the selected study:** Give collaborators the resolved `KIT` and `STUDY` paths. Run experiments from `STUDY` and keep task outputs there. Use project memory to find leads; verify study-specific decisions and results against this study's records. When reusing material from a different study, cite its source and version, leave the original untouched and write any derived files in the receiving study.
+
+## Choose the work
 
 Start at the stage the goal needs. A request to find papers can end with an annotated reading list. A request for ideas can end with candidate questions, their closest prior work and a feasible first test. Use the available search tools when the user has supplied only a topic. Neither quick request needs a manuscript, experiment run record or handoff. For field, laboratory or observational work, help design the protocol and analyze supplied measurements. Identify who must collect missing observations; do not report a proposed physical procedure or a simulation as a performed experiment.
 
@@ -23,7 +31,8 @@ Choose tools from the current session. A scholarly search connector such as `pap
 ## Delegate by responsibility (omo-slim)
 
 - Check the current session's actual roles and permissions. For substantive work, send one read-only task to locate the closest studies and counterevidence, another to inspect the available data, evaluation and resources. Each brief names inputs, scope, output, budget and validation owner. Do not assign fixed agent names.
-- The coordinator reconciles these findings, freezes the question and gives a single owner each writable area. Independent experiments may run in separate directories from a shared baseline. The analyst returns code, exit status and raw result paths. The writer cites them. A separate reviewer receives the frozen design, draft, references and run outputs, not the analyst's self-rating. With only one worker, label the result self-checked. Shared project memory is not a blinded review.
+- Before parallel work in the same study, including work in separate sessions, agree on one owner for each output. Share baseline inputs read-only. Give each task distinct writable paths; use separate working directories for runs that generate the same filenames. Record active writers and their paths in the study handoff when work spans sessions. If another session owns the draft or its ownership is unclear, return edits in a separate file. One designated editor merges changes into the canonical manuscript and handoff.
+- The coordinator reconciles findings and freezes the question. The analyst returns code, exit status and raw result paths. The writer cites them. A separate reviewer receives the frozen design, draft, references and run outputs, not the analyst's self-rating. With only one worker, label the result self-checked. Shared project memory is not a blinded review.
 - Investigate missing evidence once and return a precisely identified gap to the same owner. After a bounded repair, recheck the affected claims. Stop when the answer is supported, the declared budget is exhausted, or the remaining dependency is unavailable. Do not keep running to turn a negative result positive.
 
 ## Files and commands

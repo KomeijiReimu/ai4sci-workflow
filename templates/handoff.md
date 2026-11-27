@@ -1,5 +1,6 @@
 # Study handoff
 
+- Study directory and research question:
 - Requested deliverable and current status:
 - Frozen question, comparison and amendments:
 - Command, environment and actual input version:
@@ -12,3 +13,5 @@
 For a submission or revision, also link the original sent version, reviewer concern, supplemental decision and results, response, and exact final file that was opened and checked. Identify anything still promised rather than completed.
 
 When work splits across questions, experimental branches or review rounds, identify the current candidate or manuscript, its parent, and the observed reason to continue it. Point to alternatives that were ruled out, the reason an issue reopened, and what evidence would change the next decision. A single-pass study needs no extra records.
+
+For concurrent tasks, list each active owner and their writable paths, including who will merge the manuscript and update this handoff. Clear or transfer assignments as tasks finish.
