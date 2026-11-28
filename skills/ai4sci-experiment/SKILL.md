@@ -9,6 +9,8 @@ Use this stage for benign computational research. For design only, return the pr
 
 ## Freeze the comparison
 
+For a publication-oriented comparison, get the [scientific review of the design](../ai4sci/references/publication.md) before the formal run. Revisit the reviewer if an observed result changes the main scientific decision.
+
 Name the claim, strongest feasible baseline, unit of analysis, inputs available at prediction time and what result would count against the claim. For reproduction, locate the reference result and distinguish matched conditions from substitutions. Fix the primary metric, units and direction, uncertainty estimate (or deterministic rationale), consequential effect size or tolerance, and split or analytic reference. Identify observations already seen and who or what had access to the held-out outcomes.
 
 Before formal evaluation, use the [plan template](../../templates/plan.json) and [file contract](../../checks/contract.md) to write `research/plan.json`. For finite planned cells, put `required_observations` on the corresponding criterion and add `bounds` for a numeric prediction. Declare `matched_conditions` for quantities meant to stay fixed across arms. Set a study-specific ceiling on trials, time or compute, including repairs. Reserve enough for the decisive comparison. State when to stop for adequate evidence, an informative miss, an unavailable input or an inconclusive result. From the checkout, `python3 ai4sci.py freeze PROJECT` records the raw plan digest, not an external timestamp.

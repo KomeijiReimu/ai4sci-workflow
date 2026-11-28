@@ -1,6 +1,6 @@
 # AI4Sci Workflow
 
-[中文](README.md) · English · [Read the studies](#completed-studies)
+[中文](README.md) · English · [Get started](#get-started) · [Read the studies](#completed-studies)
 
 AI4Sci Workflow is a research workflow for [OpenCode](https://opencode.ai/). Start with a broad topic, a dataset, a draft or a reviewer's objection. For computational work, the protocol, code, commands and raw results stay in your study directory so a collaborator can repeat an analysis or revisit a conclusion during revision.
 
@@ -18,7 +18,11 @@ AI4Sci Workflow is a research workflow for [OpenCode](https://opencode.ai/). Sta
 ---
 ## Collaboration and continuity
 
-With [omo-slim](https://github.com/alvinunreal/oh-my-opencode-slim), a multi-agent plugin for OpenCode, one agent can look for the closest papers and counterevidence while another checks the data and compute requirements. The lead agent coordinates them. An agent who did not run the experiment or write the draft can recompute the decisive result from the inputs and check whether the claim holds for the population and conditions studied.
+For a [study aimed at publication](skills/ai4sci/references/publication.md), the lead agent in [omo-slim](https://github.com/alvinunreal/oh-my-opencode-slim) assigns work to the roles available in your configuration:
+
+- **Choosing a question.** Two Explorer agents or their equivalents work in parallel. One checks what the target venue has published recently and looks for prior answers elsewhere. The other checks the data, controls and compute costs. The lead asks Oracle or another configured scientific reviewer to challenge the leading idea with the strongest counterevidence. If you asked only for an idea, you get the recommendation and the reasoning here.
+- **Running the study.** The reviewer checks the baseline, data split and metrics before the investigator runs and analyzes the planned comparison. The lead brings the reviewer back if the comparison or the main conclusion changes materially.
+- **Delivering the manuscript.** The writer drafts from the measured results. A scientific reviewer who did not analyze the data or write the paper recalculates key results from the original materials and checks the exact manuscript to be delivered. If the design reviewer helped shape the plan, the lead opens a fresh review session. Work done by a single agent is labeled self-checked.
 
 With [Magic Context](https://docs.cortexkit.io/magic-context/getting-started/introduction/) enabled, you can return to a long session days later and find the discussion behind a baseline choice. A new session in the same OpenCode project can recall the decisions and reasons saved in project memory.
 
@@ -34,15 +38,17 @@ cd ai4sci-workflow
 pwd
 ```
 
-To work in the workflow checkout, run `opencode` from the repository root and describe what you want to study:
+Run `opencode` from the repository root and say what you want to study and how far you want to take it. For papers only, try “Use ai4sci to give me a reading list on day-ahead load forecasting.” If you're aiming for publication, you can name a venue or give a target category such as CCF B:
 
-> Use ai4sci to look for studies of short-term electricity demand forecasts with gaps in the input series. Find the closest comparison and a usable dataset. Recommend a small first experiment, but don't run it yet.
+> Use ai4sci to suggest a day-ahead load forecasting question for ACM e-Energy.
+
+> Use ai4sci to design and run a day-ahead load forecasting study and write it up for ACM e-Energy.
 
 When a new study needs files, OpenCode gives it its own directory under `studies/`. Literature, experiments and manuscripts for the same study stay in that directory. If it's clear which study you mean, just say what you want to do next. Otherwise, OpenCode asks which study to resume before writing any files. This repository ignores study files under `studies/` by default.
 
 To work in your own study directory, run `opencode` there. Replace the path in this prompt with the checkout path printed by `pwd`:
 
-> Read `/path/to/ai4sci-workflow` and use it with the reviewer comments and the submitted Word manuscript in this directory. Check whether our existing results answer the requested comparison, then prepare the revised manuscript and a point-by-point response.
+> Read `/path/to/ai4sci-workflow` and use it to revise the submitted Word manuscript in this directory. Address the reviewer comments and give me the revision and a point-by-point response.
 
 ---
 ## Literature search and document tools

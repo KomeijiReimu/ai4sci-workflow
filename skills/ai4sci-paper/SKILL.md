@@ -5,6 +5,8 @@ description: Draft a research manuscript from results and literature, produce a 
 
 # Draft from the evidence
 
+For a manuscript intended for submission, arrange the [independent final review](../ai4sci/references/publication.md) of the requested deliverable as part of the writing assignment.
+
 For a manuscript from outside this workflow, start with [submission and revision](references/submission.md). Preserve the supplied files and revise a new copy in the requested format. Hand the exact revised manuscript, reply and cited material to `ai4sci-review`. A supplied Word or PDF does not need a reconstructed plan or run record. If the revision calls for a new comparison, keep its plan, results and audit in a separate supplement.
 
 Inventory each primary result, its raw output, figure/table and what it actually establishes. If the request starts with a results folder, reconstruct the study design from contemporaneous records. Label retrospective criteria as retrospective. Do not call a reconstructed plan preregistered.
