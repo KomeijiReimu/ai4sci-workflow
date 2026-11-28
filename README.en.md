@@ -21,8 +21,12 @@ AI4Sci Workflow is a research workflow for [OpenCode](https://opencode.ai/). Sta
 For a [study aimed at publication](skills/ai4sci/references/publication.md), the lead agent in [omo-slim](https://github.com/alvinunreal/oh-my-opencode-slim) assigns work to the roles available in your configuration:
 
 - **Choosing a question.** Two Explorer agents or their equivalents work in parallel. One checks what the target venue has published recently and looks for prior answers elsewhere. The other checks the data, controls and compute costs. The lead asks Oracle or another configured scientific reviewer to challenge the leading idea with the strongest counterevidence. If you asked only for an idea, you get the recommendation and the reasoning here.
-- **Running the study.** The reviewer checks the baseline, data split and metrics before the investigator runs and analyzes the planned comparison. The lead brings the reviewer back if the comparison or the main conclusion changes materially.
-- **Delivering the manuscript.** The writer drafts from the measured results. A scientific reviewer who did not analyze the data or write the paper recalculates key results from the original materials and checks the exact manuscript to be delivered. If the design reviewer helped shape the plan, the lead opens a fresh review session. Work done by a single agent is labeled self-checked.
+- **Running the study.** The methods reviewer checks the baseline, data split and metrics before the investigator runs and analyzes the comparison. Before drafting, the same reviewer interprets the first decisive result and weighs competing explanations. The lead brings that reviewer back if the comparison or the main conclusion changes materially.
+- **Delivering the manuscript.** The writer drafts from the measured results. The lead opens a fresh session with a strong scientific reviewer who took no part in methods review, analysis or writing. That reviewer recalculates key results from the original materials, checks the exact manuscript to be delivered and reviews any corrections to the issues they raised. Work done by a single agent is labeled self-checked.
+
+**If you ask only for a [remote experiment package](skills/ai4sci/references/remote-package.md)**, the workflow prepares code and launch instructions without running the experiment locally or remotely. Before coding starts, the lead asks a methods specialist to look for flaws that could invalidate the comparison. The same reviewer returns if the implementation materially departs from the design.
+
+Before handoff, the lead selects two reviewers whose configured models suit their specialties and opens a fresh session for each. Neither helped design the study or write the package. They inspect the same final package: one checks that the code implements the agreed controls and metrics, and the other checks dependencies, data paths and remote launch instructions. An author's check is labeled a self-check. Any independent review that has not returned stays pending.
 
 With [Magic Context](https://docs.cortexkit.io/magic-context/getting-started/introduction/) enabled, you can return to a long session days later and find the discussion behind a baseline choice. A new session in the same OpenCode project can recall the decisions and reasons saved in project memory.
 
@@ -43,6 +47,8 @@ Run `opencode` from the repository root and say what you want to study and how f
 > Use ai4sci to suggest a day-ahead load forecasting question for ACM e-Energy.
 
 > Use ai4sci to design and run a day-ahead load forecasting study and write it up for ACM e-Energy.
+
+> Use ai4sci to prepare a day-ahead load forecasting experiment package for my cluster without running it.
 
 When a new study needs files, OpenCode gives it its own directory under `studies/`. Literature, experiments and manuscripts for the same study stay in that directory. If it's clear which study you mean, just say what you want to do next. Otherwise, OpenCode asks which study to resume before writing any files. This repository ignores study files under `studies/` by default.
 

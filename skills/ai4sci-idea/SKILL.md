@@ -11,6 +11,8 @@ description: Find relevant papers, screen questions for novelty, publication fit
 
 ## When a publication target matters
 
+If the commission ends with a [remote experiment package](../ai4sci/references/remote-package.md), use the strong methods reviewer when choosing the question as well as when settling its design. A literature search on its own still ends at the reading list.
+
 If the author specifies only a band (e.g. CCF B) and the field is clear, choose a relevant venue and track as a working target. Cite the venue's entry in the applicable ranking directory and its edition, and verify the track in the venue's own program. Explain the choice rather than waiting for the author to name a venue.
 
 For fit, inspect actual recent accepted papers in that track. Give the years or date range searched. For each comparison that bears on the decision, cite the official program or proceedings entry and the exact section, page or table in the paper. Compare the contribution and the evidence behind it with what the proposed study could deliver. Select papers for relevance, not to meet a quota. Use this sample to judge fit; search separately for work that could already answer the question.

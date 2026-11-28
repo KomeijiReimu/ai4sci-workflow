@@ -5,7 +5,9 @@ description: Independently check a scientific draft against sources, data and fr
 
 # Review the evidence
 
-For a [publication-oriented study](../ai4sci/references/publication.md), use a strong final reviewer who did not perform the analysis or write the paper. If that reviewer materially shaped the design, use a fresh qualified session. Check the version being returned and follow any material correction into the replacement file before recording the final review. If independent review is unavailable, label the work self-checked and the independent review pending.
+For a pre-run [remote experiment package](../ai4sci/references/remote-package.md), review the archive itself. Its two final reviewers check scientific implementation and launch instructions separately; neither may have designed or built it. A manuscript and measured results are not inputs to this review.
+
+For a [publication-oriented study](../ai4sci/references/publication.md), open a fresh strong final review session separate from methods review, analysis and writing. Check the version being returned and follow any material correction into the replacement file before recording the final review. If independent review is unavailable, label the work self-checked and the independent review pending.
 
 Read the manuscript, its cited evidence and the criteria, raw results and code available for this work. First find important **unmarked** assertions, especially in the abstract, results and conclusions. A machine can only check the claims someone declared. Compare populations, data splits, denominators, effect size and units, direction of change and how broadly each sentence is worded. Resolve a DOI to metadata before trusting attribution. A matching quote alone does not establish entailment. Recompute at least the decisive metric independently from its inputs where possible.
 

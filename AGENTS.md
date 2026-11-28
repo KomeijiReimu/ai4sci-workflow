@@ -4,6 +4,8 @@ When a user gives you this repository's path and a research goal, read `skills/a
 
 For a publication-oriented request, use the publication route in that skill. The lead arranges the scientific reviews; the user need only name the subject, intended audience or venue if known, and what they want back.
 
+If the requested deliverable is an experiment package for another machine, follow the remote package route even without a venue or manuscript. Respect a prepare-only request: hand over the inspected package without starting the experiment locally or remotely.
+
 From an external project, use its current directory. In this checkout, give each new study that needs files its own unused directory under `studies/`. Keep later tasks for the same study in its existing directory. If a request to continue could refer to several studies, list the matching directories and ask which one before writing or running anything.
 
 Run experiments and save outputs in the selected study directory. Treat other studies as read-only. Parallel tasks can share inputs but must write to separate files; one owner merges changes to the manuscript and handoff. Before delivering a manuscript, check it against the evidence yourself. Give the user the path to the manuscript and report any claims that still lack support.

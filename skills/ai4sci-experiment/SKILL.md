@@ -7,6 +7,8 @@ description: Design and run bounded computational comparisons, choose follow-ups
 
 Use this stage for benign computational research. For design only, return the proposed comparison and stop before execution. Do not design or run exploits or experiments that facilitate harmful biological or physical activities.
 
+For a runnable package that another machine will execute, follow [remote package review](../ai4sci/references/remote-package.md) from design to handoff. When asked only to prepare it, skip the pilot and formal run on both machines. Keep the frozen design and unrun software distinct from measured results.
+
 ## Freeze the comparison
 
 For a publication-oriented comparison, get the [scientific review of the design](../ai4sci/references/publication.md) before the formal run. Revisit the reviewer if an observed result changes the main scientific decision.

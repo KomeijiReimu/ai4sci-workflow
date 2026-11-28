@@ -15,6 +15,8 @@ The user's request can be just a checkout path and a research goal. Resolve `KIT
 
 ## Choose the work
 
+For “prepare the whole pipeline for another machine,” use the [remote experiment package route](references/remote-package.md), even without a publication target. It includes a strong methods reviewer during design and two fresh strong reviewers of the final archive. For a preparation-only brief, finish at the package, not at measured results. Work from the `KIT` the session actually loaded; record that checkout and revision in the handoff so a second clone can be identified on resume.
+
 If the brief asks for a publishable idea, names a target venue or tier, or commissions a submission manuscript, follow [publication-oriented research](references/publication.md) for the stages requested. Arrange the reviews yourself. A venue target sets the standard for the work; the requested deliverable sets where to stop. An idea ends with a recommendation and a proposed first test. A commission through the manuscript continues through execution, writing and final review without asking the user to start each stage. A simple request for papers still ends with the reading list.
 
 Start at the stage the goal needs. A request to find papers can end with an annotated reading list. A request for ideas can end with candidate questions, their closest prior work and a feasible first test. Use the available search tools when the user has supplied only a topic. Neither quick request needs a manuscript, experiment run record or handoff. For field, laboratory or observational work, help design the protocol and analyze supplied measurements. Identify who must collect missing observations; do not report a proposed physical procedure or a simulation as a performed experiment.
